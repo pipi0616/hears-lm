@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "HEARS-LM: A hearing-loss–specific protein language model for variant pathogenicity"
+abstract: >
+  HEARS-LM (Hereditary EAR Sequence Language Model) is a domain-adapted
+  protein language model that couples ESM-2 sequence embeddings, refined
+  through low-rank adaptation, with a curated panel of 100 hearing-loss–
+  relevant biological descriptors via cross-attention fusion. Four task-
+  specific heads (pathogenicity, thermodynamic ΔΔG, mechanism, severity)
+  are trained jointly under a thermodynamic auxiliary objective. The model
+  produces per-residue tolerance maps that outperform AlphaMissense on the
+  most clinically actionable syndromic hearing-loss genes, aligns with
+  ClinGen HL-VCEP expert classifications, and prospectively predicts
+  ClinVar reclassifications.
+type: software
+authors:
+  - family-names: "[Author 1]"
+    given-names: "[First name]"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/pipi0616/hears-lm"
+license: MIT
+version: "1.0.0"
+date-released: 2026-05-20
+keywords:
+  - hereditary hearing loss
+  - variant effect prediction
+  - protein language model
+  - ESM-2
+  - low-rank adaptation
+  - ACMG
+  - ClinVar
+  - gene therapy
+preferred-citation:
+  type: article
+  title: >
+    A hearing-loss–specific protein language model learns transferable
+    variant biophysics, aligns with expert clinical decisions, and
+    prospectively predicts ClinVar reclassifications
+  authors:
+    - family-names: "[Author 1]"
+      given-names: "[First name]"
+  year: 2026
+  journal: "[Journal]"
+  doi: "[DOI]"

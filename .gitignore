@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data — track via Zenodo, not git
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.h5
+*.hdf5
+
+# Raw data — exceeds GitHub limits
+data/raw/
+data/external/
+data/features/
+data/splits/
+checkpoints/
+logs/
+
+# Eval outputs that exceed git limits
+eval_results/comprehensive_benchmark*/
+eval_results/hl_vcep_*/
+eval_results/multiclass_valdb/
+*.parquet
+
+# Temporary
+*.log
+*.tmp
+*.bak
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Project-specific archives
+Archive_Experiments/
+*.zip
