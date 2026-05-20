@@ -30,15 +30,13 @@ hears-lm/
 │   ├── data/               Data partitioning + 100-feature engineering
 │   ├── model/              Training + inference (ESM-2 + LoRA + cross-attention)
 │   ├── evaluation/         Benchmarks, ESM-2 zero-shot, ACMG analysis, HL-VCEP validation
-│   └── figures/            Publication figure generation
-├── figures/                Publication figures (PNG + PDF, 300 dpi)
-├── tables/                 Result tables (CSV)
+│   └── figures/            Publication figure generation scripts
 ├── requirements.txt
 ├── LICENSE                 MIT
 └── CITATION.cff
 ```
 
-The manuscript itself is not included in this repository; it is being submitted to a peer-reviewed journal and will appear on bioRxiv as a preprint. A link will be added here once available.
+This repository contains source code only. The rendered publication figures, result tables, trained model checkpoints, processed feature data, and the manuscript itself are not included here. The manuscript is under peer review and will appear on bioRxiv as a preprint; data and checkpoints will be deposited at Zenodo on acceptance. Links will be added once available.
 
 ## Installation
 
@@ -115,7 +113,7 @@ Raw ClinVar, gnomAD, AlphaFold, and DVD data should be obtained from the respect
 
 ## Reproducing the paper
 
-The figures (`figures/*.png`, `figures/*.pdf`) and tables (`tables/*.csv`) in this repository correspond exactly to the publication. To regenerate them from scratch, the scripts in `src/figures/` read pre-computed prediction CSVs from `eval_results/`, which are released alongside the checkpoint on Zenodo.
+The scripts in `src/figures/` regenerate every figure in the publication from pre-computed prediction CSVs. Both the input CSVs and the rendered figure outputs (PNG + PDF, 300 dpi) are released alongside the model checkpoint at Zenodo. To reproduce the figures, download the Zenodo deposit, place the `eval_results/` directory at the repository root, and run the four scripts in `src/figures/` in order.
 
 ## Citation
 
