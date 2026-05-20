@@ -33,11 +33,12 @@ hears-lm/
 │   └── figures/            Publication figure generation
 ├── figures/                Publication figures (PNG + PDF, 300 dpi)
 ├── tables/                 Result tables (CSV)
-├── docs/                   Manuscript + supplementary material
 ├── requirements.txt
 ├── LICENSE                 MIT
 └── CITATION.cff
 ```
+
+The manuscript itself is not included in this repository; it is being submitted to a peer-reviewed journal and will appear on bioRxiv as a preprint. A link will be added here once available.
 
 ## Installation
 
