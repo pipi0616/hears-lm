@@ -14,12 +14,17 @@ abstract: >
   ClinVar reclassifications.
 type: software
 authors:
-  - family-names: "[Author 1]"
-    given-names: "[First name]"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Ye"
+    given-names: "Shaopei"
+    orcid: "https://orcid.org/0009-0006-3598-0469"
+    affiliation: "Universitat de Barcelona, Barcelona, Spain"
+  - family-names: "Chen"
+    given-names: "Peng"
+    orcid: "https://orcid.org/0009-0001-1105-6638"
+    affiliation: "Department of Otorhinolaryngology, Meishan People's Hospital, China"
 repository-code: "https://github.com/pipi0616/hears-lm"
 license: MIT
-version: "1.0.0"
+version: "1.0.2"
 date-released: 2026-05-20
 keywords:
   - hereditary hearing loss
@@ -33,12 +38,14 @@ keywords:
 preferred-citation:
   type: article
   title: >
-    A hearing-loss–specific protein language model learns transferable
-    variant biophysics, aligns with expert clinical decisions, and
-    prospectively predicts ClinVar reclassifications
+    HEARS-LM: a hearing-loss–specialized protein language model for
+    clinical variant interpretation
   authors:
-    - family-names: "[Author 1]"
-      given-names: "[First name]"
+    - family-names: "Ye"
+      given-names: "Shaopei"
+      orcid: "https://orcid.org/0009-0006-3598-0469"
+    - family-names: "Chen"
+      given-names: "Peng"
+      orcid: "https://orcid.org/0009-0001-1105-6638"
   year: 2026
-  journal: "[Journal]"
-  doi: "[DOI]"
+  journal: "NAR Genomics and Bioinformatics"
