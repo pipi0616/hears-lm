@@ -1,0 +1,26 @@
+{
+  "title": "HEARS-LM: A hearing-loss–specific protein language model for variant pathogenicity",
+  "description": "HEARS-LM (Hereditary EAR Sequence Language Model) is a domain-adapted protein language model that couples ESM-2 sequence embeddings, refined through low-rank adaptation, with 100 curated hearing-loss–relevant biological descriptors via cross-attention fusion. Four task-specific heads are trained jointly under a thermodynamic auxiliary objective.",
+  "upload_type": "software",
+  "license": "mit-license",
+  "creators": [
+    {
+      "name": "Ye, Shaopei",
+      "affiliation": "Universitat de Barcelona, Barcelona, Spain",
+      "orcid": "0009-0006-3598-0469"
+    },
+    {
+      "name": "Chen, Peng",
+      "affiliation": "Department of Otorhinolaryngology, Meishan People's Hospital, China",
+      "orcid": "0009-0001-1105-6638"
+    }
+  ],
+  "keywords": ["hereditary hearing loss", "variant effect prediction", "protein language model", "ESM-2", "low-rank adaptation", "ACMG", "ClinVar"],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/pipi0616/hears-lm",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
