@@ -4,17 +4,17 @@ Rebuild train + val splits per the v7 design:
 
 Train (v7):
   ClinVar pre-2024 missense (current train.csv)
-  - 50 (修 MAVE 泄漏)
-  - V_gene 10 个 hold-out 基因的所有变异
-  + V3_dvd_full B 子集 (排除 V_func MAVE 13 基因防泄漏)
+  - 50 (fixing MAVE leakage)
+  - all variants in the 10 hold-out genes for V_gene
+  + V3_dvd_full B subset (exclude V_func MAVE 13 genes to prevent leakage)
 
-Val (v7), 4 个干净维度:
-  V_time:   V2_temporal  (不变)
-  V_gene:   10 hold-out 基因 (取代 V1_otof)
-  V_db:     V3_dvd_strong (不变)
-  V_func:   MAVE (扣 50 个 train 泄漏)
+Val (v7), 4 clean validation dimensions:
+  V_time:   V2_temporal  (unchanged)
+  V_gene:   10 hold-out genes (replacing V1_otof)
+  V_db:     V3_dvd_strong (unchanged)
+  V_func:   MAVE (minus 50 training-set leakage variants)
 
-V3_dvd_full 命运: B 全吃进 train, P 4,580 留作 supp val
+V3_dvd_full disposition: all B variants absorbed into train, P (4,580) kept as supplementary val
 """
 import warnings; warnings.filterwarnings('ignore')
 from pathlib import Path
@@ -40,13 +40,13 @@ mave_genes_13 = set(mave.gene.unique())
 print(f'MAVE covers {len(mave_genes_13)} genes: {sorted(mave_genes_13)}')
 
 # ============== Pick 10 hold-out genes for V_gene ==============
-# 准则: 多样化(不同 family / mechanism), 中等-中低频(每基因 30-200 变异),
-# 不在 MAVE 13(避免跟 V_func 冲突), 不全是 dominant 模式
-# 数据驱动: 看 train 里每个基因变异数
+# Criteria: diverse (different family/mechanism), medium-low frequency (30-200 variants per gene),
+# not in MAVE 13 (avoid V_func conflict), not all dominant inheritance
+# data-driven: check variant count per gene in train
 gene_counts = train.gene.value_counts()
 print(f'\nTrain has variants in {len(gene_counts)} genes')
 
-# 候选 hold-out:
+# candidate hold-out genes:
 HOLDOUT_GENES = [
     'OTOF',      # synapse,AR,profound
     'CLDN14',    # tight junction,AR,DFNB29
@@ -59,7 +59,7 @@ HOLDOUT_GENES = [
     'TBC1D24',   # multi-syndrome,AR/AD
     'ACTG1',     # cytoskeleton,AD
 ]
-# 检查这 10 基因没有跟 MAVE 13 重叠
+# verify these 10 genes have no overlap with MAVE 13
 overlap_mave = set(HOLDOUT_GENES) & mave_genes_13
 assert len(overlap_mave) == 0, f'Holdout in MAVE: {overlap_mave}'
 print(f'\nHold-out 10 genes (none in MAVE 13):')
@@ -107,39 +107,39 @@ print(f'  V_gene final: {len(v_gene)}  (P={int((v_gene.y==1).sum())}, B={int((v_
 # ============== Build train_v7 ==============
 print(f'\n========== Building train_v7 ==========')
 
-# Step 1: 从 current train 删 hold-out 基因
+# Step 1: remove hold-out genes from current train
 train_clean = train[~train.gene.isin(HOLDOUT_GENES)].copy()
 print(f'  After removing hold-out genes: {len(train_clean)} (was {len(train)})')
 
-# Step 2: 删 MAVE 50 个泄漏
+# Step 2: remove 50 MAVE leakage variants
 mave_keys = gp_set(mave)
 train_clean['_key'] = list(zip(train_clean.gene, train_clean.protein_change))
 train_clean = train_clean[~train_clean._key.isin(mave_keys)].copy()
 print(f'  After removing MAVE leak:      {len(train_clean)}')
 
-# Step 3: 吃 V3_dvd_full B 子集进 train
+# Step 3: absorb V3_dvd_full B subset into train
 v3f_b = v3f[v3f.y == 0].copy()
 print(f'  V3_dvd_full B pool:            {len(v3f_b)}')
 
-# 排除已在 train 的
+# exclude variants already in train
 v3f_b['_key'] = list(zip(v3f_b.gene, v3f_b.protein_change))
 v3f_b_new = v3f_b[~v3f_b._key.isin(set(train_clean._key))].copy()
 print(f'    not already in train_clean:  {len(v3f_b_new)}')
 
-# 排除在 hold-out genes (那些归 V_gene)
+# exclude hold-out gene variants (those belong to V_gene)
 v3f_b_new = v3f_b_new[~v3f_b_new.gene.isin(HOLDOUT_GENES)].copy()
 print(f'    not in hold-out genes:       {len(v3f_b_new)}')
 
-# 排除在 MAVE 13 genes (防 V_func 泄漏)
+# exclude MAVE 13 gene variants (prevent V_func leakage)
 v3f_b_new = v3f_b_new[~v3f_b_new.gene.isin(mave_genes_13)].copy()
 print(f'    not in MAVE 13 genes:        {len(v3f_b_new)}')
 
-# 排除在 V2_temporal (防 V_time 泄漏)
+# exclude V2_temporal variants (prevent V_time leakage)
 v2_keys = gp_set(v2)
 v3f_b_new = v3f_b_new[~v3f_b_new._key.isin(v2_keys)].copy()
 print(f'    not in V2_temporal:          {len(v3f_b_new)}')
 
-# 排除在 V3_dvd_strong (防 V_db 泄漏)
+# exclude V3_dvd_strong variants (prevent V_db leakage)
 v3s_keys = gp_set(v3s)
 v3f_b_new = v3f_b_new[~v3f_b_new._key.isin(v3s_keys)].copy()
 print(f'    not in V3_dvd_strong:        {len(v3f_b_new)}')

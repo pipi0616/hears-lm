@@ -89,11 +89,11 @@ print(hhl_in.nlargest(5, 'Hair_cell')[['gene','Hair_cell','Supporting_cell','HC_
 print(f'\nTop 5 supporting-cell-enriched HHL genes:')
 print(hhl_in.nlargest(5, 'Supporting_cell')[['gene','Supporting_cell','Hair_cell']].to_string(index=False))
 
-print(f'\nTop 5 dark-cell-enriched HHL genes (内淋巴 K+ 相关):')
+print(f'\nTop 5 dark-cell-enriched HHL genes (endolymph K+ related):')
 print(hhl_in.nlargest(5, 'Dark_cell')[['gene','Dark_cell','Endothelial','Pericyte_SM_1']].to_string(index=False))
 
 # Genes NOT in author atlas (HHL panel - found)
 missing = set(PANEL) - set(hhl_in.gene)
 print(f'\n⚠️  HHL genes NOT in author 3,374 expressed-genes list ({len(missing)}):')
-print('  → 这些基因在 utricle 表达过低,作者过滤掉了 (与我们之前发现 13% silent 一致)')
+print('  → these genes have too-low utricle expression; filtered by the atlas authors (consistent with our earlier 13% silent finding)')
 print(' ', ', '.join(sorted(missing)[:30]))
