@@ -10,33 +10,48 @@
 
 ---
 
-## What this is
+## Overview
 
-HEARS-LM couples a domain-adapted 30-layer ESM-2 protein language model with one hundred curated hearing-loss–specific biological descriptors through cross-attention fusion. Four task-specific heads—pathogenicity, thermodynamic ΔΔG, mechanism, and ordinal severity—are trained jointly under a thermodynamic auxiliary objective supervised by FoldX folding free-energy estimates.
+Hearing loss is the most common sensory disability worldwide, and a significant fraction of cases have a genetic basis — yet translating a genetic finding into a clinical action remains hard. The central bottleneck is the **variant of uncertain significance (VUS)**: a missense change detected in a patient whose effect on protein function is unknown. Clinicians cannot confidently counsel families, guide treatment decisions, or determine eligibility for emerging gene therapies (such as the active DB-OTO programme for *OTOF*, NCT05788536) without knowing whether a VUS is truly pathogenic.
 
-Key results from the accompanying paper:
+General-purpose variant effect predictors such as AlphaMissense were trained on the broad proteome. They lack the domain-specific supervision — curated hearing-loss variant databases, gene-therapy target landscapes, clinical expert panel decisions — needed to resolve the hard cases in audiology.
 
-- Per-residue tolerance maps significantly outperform **AlphaMissense** on twelve of twenty-six clinically actionable syndromic hearing-loss genes (paired bootstrap; no significant losses).
-- Auxiliary thermodynamic head generalizes to ten genes never seen during folding-energy supervision (aggregate Spearman ρ = 0.817).
-- Predictions agree with ClinGen Hearing Loss Variant Curation Expert Panel (HL-VCEP) PP3/BP4 evidence codes (Mann–Whitney p < 10⁻⁶).
-- Anticipates ClinVar VUS-to-pathogenic upgrades sixteen months ahead of expert reclassification (AUROC 0.748).
-- Releases a 1,997-residue OTOF tolerance landscape (AUROC 0.950) directly relevant to the active DB-OTO gene-therapy programme (NCT05788536).
+**HEARS-LM** is a protein language model built specifically for the hearing-loss domain. It couples a domain-adapted 30-layer ESM-2 backbone with one hundred curated hearing-loss–specific biological descriptors through cross-attention fusion. Four task-specific heads are trained jointly:
 
-## Repository layout
+- **Pathogenicity** — variant-level binary classification
+- **Thermodynamic ΔΔG** — predicted folding free-energy change
+- **Mechanism** — mechanism-of-disease probability vector
+- **Ordinal severity** — predicted clinical severity grade
 
-```
-hears-lm/
-├── src/
-│   ├── data/               Data partitioning + 100-feature engineering
-│   ├── model/              Training + inference (ESM-2 + LoRA + cross-attention)
-│   ├── evaluation/         Benchmarks, ESM-2 zero-shot, ACMG analysis, HL-VCEP validation
-│   └── figures/            Publication figure generation scripts
-├── requirements.txt
-├── LICENSE                 MIT
-└── CITATION.cff
-```
+A thermodynamic auxiliary objective, supervised by FoldX folding free-energy estimates, allows biophysical signal to propagate across all heads and generalize to unseen genes.
 
-This repository contains source code only. The rendered publication figures, result tables, trained model checkpoints, processed feature data, and the manuscript itself are not included here. The manuscript is under peer review and will appear on bioRxiv as a preprint; data and checkpoints will be deposited at Zenodo on acceptance. Links will be added once available.
+---
+
+## Why HEARS-LM?
+
+| Capability | HEARS-LM | AlphaMissense (general) |
+|---|---|---|
+| Domain-specific training data | Hearing-loss curated variants | Broad proteome |
+| Expert panel alignment (HL-VCEP PP3/BP4) | Yes (Mann–Whitney p < 10⁻⁶) | Not evaluated |
+| Thermodynamic generalization to unseen genes | Yes (Spearman ρ = 0.817, 10 held-out genes) | No dedicated head |
+| Prospective VUS reclassification | Yes (AUROC 0.748, 16 months ahead) | Not demonstrated |
+| Hearing-loss gene benchmarks | Outperforms on 12/26 actionable genes | Baseline |
+| Gene-therapy target landscapes | OTOF tolerance map (AUROC 0.950) | Not available |
+| Mechanism prediction | Yes | No |
+
+---
+
+## Key Results
+
+| Result | Value |
+|---|---|
+| Genes where tolerance maps outperform AlphaMissense | 12 of 26 (no significant losses; paired bootstrap) |
+| Thermodynamic generalization — Spearman ρ (10 held-out genes) | 0.817 |
+| Agreement with HL-VCEP PP3/BP4 evidence codes | Mann–Whitney p < 10⁻⁶ |
+| Prospective VUS-to-pathogenic reclassification (16 months ahead) | AUROC 0.748 |
+| OTOF tolerance landscape (1,997 residues; DB-OTO gene therapy target) | AUROC 0.950 |
+
+---
 
 ## Installation
 
@@ -49,7 +64,9 @@ pip install -r requirements.txt
 
 GPU recommended (training was performed on a single NVIDIA A100; inference works on consumer GPUs and CPU). For Apple Silicon, install the MPS-compatible build of PyTorch.
 
-## Quick start
+---
+
+## Quick Start
 
 ### Inference on a list of variants
 
@@ -82,7 +99,7 @@ python src/figures/04_make_supp_figures.py
 
 ### Training from scratch
 
-Training requires preprocessed feature files and FoldX ΔΔG targets (released via Zenodo separately; see *Data availability* below).
+Training requires preprocessed feature files and FoldX ΔΔG targets (released via Zenodo; see *Data Availability* below).
 
 ```bash
 # 1. Build splits + features
@@ -100,24 +117,38 @@ python src/model/train.py --epochs 3 --batch-size 32 --lr 1e-4
 python src/model/predict_splits.py --checkpoint checkpoints/hears_lm_t30_ep2.pt
 ```
 
-## Data availability
+---
 
-This repository contains source code only. The pre-trained model weights and curated feature data (~4 GB processed; ~6 GB checkpoints) are too large for GitHub and will be deposited at Zenodo on paper acceptance. The released artifacts will include:
+## Data Availability
+
+This repository contains source code only. Pre-trained model weights and curated feature data (~4 GB processed; ~6 GB checkpoints) will be deposited at Zenodo on paper acceptance. Released artifacts will include:
 
 - HEARS-LM checkpoint (`hears_lm_t30_ep2.pt`)
 - Three held-out evaluation cohorts with computed predictions
 - Per-residue tolerance landscapes for 36 hearing-loss genes
 - VUS reclassification catalogue and OTOF candidate map
 
-Raw ClinVar, gnomAD, AlphaFold, and DVD data should be obtained from the respective primary sources, all of which are open-access. See `docs/data_dictionary.md` for the per-feature provenance.
+Raw ClinVar, gnomAD, AlphaFold, and DVD data should be obtained from the respective primary sources (all open-access). See `docs/data_dictionary.md` for per-feature provenance.
 
-## Reproducing the paper
+---
 
-The scripts in `src/figures/` regenerate every figure in the publication from pre-computed prediction CSVs. Both the input CSVs and the rendered figure outputs (PNG + PDF, 300 dpi) are released alongside the model checkpoint at Zenodo. To reproduce the figures, download the Zenodo deposit, place the `eval_results/` directory at the repository root, and run the four scripts in `src/figures/` in order.
+## Repository Layout
+
+```
+hears-lm/
+├── src/
+│   ├── data/               Data partitioning + 100-feature engineering
+│   ├── model/              Training + inference (ESM-2 + LoRA + cross-attention)
+│   ├── evaluation/         Benchmarks, ESM-2 zero-shot, ACMG analysis, HL-VCEP validation
+│   └── figures/            Publication figure generation scripts
+├── requirements.txt
+├── LICENSE                 MIT
+└── CITATION.cff
+```
+
+---
 
 ## Citation
-
-If you use HEARS-LM or any of the released resources in your work, please cite the manuscript and this software repository:
 
 ```bibtex
 @article{hears_lm_2026,
@@ -139,14 +170,12 @@ If you use HEARS-LM or any of the released resources in your work, please cite t
 }
 ```
 
-## Acknowledgements
-
-This work uses ESM-2 sequence representations (Lin et al., 2023), AlphaFold2 monomer structures (Jumper et al., 2021), FoldX folding free-energy estimates (Schymkowitz et al., 2005), ClinVar (Landrum et al., 2020), the Deafness Variation Database (Azaiez et al., 2018), the ClinGen Hearing Loss Variant Curation Expert Panel, and the broader hearing-loss research community whose curated annotations underpin the feature panel.
+---
 
 ## License
 
-MIT (see [LICENSE](LICENSE)). Pretrained models and any data files released on Zenodo will be distributed under the same license unless otherwise stated.
+MIT (see [LICENSE](LICENSE)). Pretrained models and data files released on Zenodo will be distributed under the same license unless otherwise stated.
 
 ## Contact
 
-For questions about the model, contact: shaopeiye55@gmail.com. For clinical reclassification submissions to ClinGen HL-VCEP based on HEARS-LM predictions, follow the panel's standard submission process; this software is provided as a research tool and is not a clinical decision-support device.
+For questions about the model, contact: shaopeiye55@gmail.com
