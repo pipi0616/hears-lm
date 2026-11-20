@@ -1,0 +1,4 @@
+calibration_population,n,n_P,n_B,PP3_supporting,BP4_supporting,PP3_moderate,BP4_moderate,PP3_strong,BP4_strong
+pooled test sets (reported),3431,2539,892,0.9747863775438596,0.15641788959064326,0.9999701666666667,0.01683218347368421,,
+temporal test set only,1124,603,521,0.9063845518212196,0.37493378100250613,0.9619336212865496,0.15370759984126983,,
+withheld-gene and literature-evidence sets only,2307,1936,371,0.9963272371929824,,,,,

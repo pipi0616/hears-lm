@@ -1,0 +1,124 @@
+{
+  "panel_genes": 163,
+  "clinvar_2025-01": {
+    "snv_rows_panel": 114357,
+    "genes": 163,
+    "by_vclass": {
+      "missense": 50692,
+      "synonymous": 29859,
+      "unparsed": 29795,
+      "nonsense": 3977,
+      "stoploss": 34
+    },
+    "missense_by_status": {
+      "VUS": 37820,
+      "CONFLICT": 4686,
+      "B": 3749,
+      "P": 3563,
+      "OTHER": 874
+    },
+    "missense_definitive_ge1star": 6630,
+    "missense_P_ge1star": 2952,
+    "missense_B_ge1star": 3678,
+    "missense_VUS": 37820,
+    "missense_conflicting": 4686
+  },
+  "clinvar_2025-06": {
+    "snv_rows_panel": 125519,
+    "genes": 163,
+    "by_vclass": {
+      "missense": 57024,
+      "synonymous": 32106,
+      "unparsed": 31914,
+      "nonsense": 4437,
+      "stoploss": 38
+    },
+    "missense_by_status": {
+      "VUS": 43017,
+      "CONFLICT": 5356,
+      "P": 3979,
+      "B": 3815,
+      "OTHER": 857
+    },
+    "missense_definitive_ge1star": 7150,
+    "missense_P_ge1star": 3400,
+    "missense_B_ge1star": 3750,
+    "missense_VUS": 43017,
+    "missense_conflicting": 5356
+  },
+  "clinvar_2026-01": {
+    "snv_rows_panel": 133994,
+    "genes": 163,
+    "by_vclass": {
+      "missense": 62736,
+      "unparsed": 33704,
+      "synonymous": 32864,
+      "nonsense": 4648,
+      "stoploss": 42
+    },
+    "missense_by_status": {
+      "VUS": 47609,
+      "CONFLICT": 5744,
+      "P": 4119,
+      "B": 3792,
+      "OTHER": 1472
+    },
+    "missense_definitive_ge1star": 7275,
+    "missense_P_ge1star": 3543,
+    "missense_B_ge1star": 3732,
+    "missense_VUS": 47609,
+    "missense_conflicting": 5744
+  },
+  "clinvar_2026-04": {
+    "snv_rows_panel": 140506,
+    "genes": 163,
+    "by_vclass": {
+      "missense": 66082,
+      "unparsed": 35127,
+      "synonymous": 34457,
+      "nonsense": 4796,
+      "stoploss": 44
+    },
+    "missense_by_status": {
+      "VUS": 50485,
+      "CONFLICT": 5987,
+      "P": 4253,
+      "B": 3908,
+      "OTHER": 1449
+    },
+    "missense_definitive_ge1star": 7537,
+    "missense_P_ge1star": 3687,
+    "missense_B_ge1star": 3850,
+    "missense_VUS": 50485,
+    "missense_conflicting": 5987
+  },
+  "dvd": {
+    "all_rows": 248432,
+    "missense_rows": 45333,
+    "missense_rows_in_panel": 45333,
+    "genes": 127,
+    "unparsed_protein_change": 436,
+    "basis_by_status": {
+      "B": {
+        "clinvar+literature": 2,
+        "clinvar_only": 2634,
+        "literature": 26,
+        "maf_cutoff": 1066,
+        "manual_curation": 56,
+        "prediction_only": 33832,
+        "unspecified": 0,
+        "unspecified_with_pmid": 8
+      },
+      "P": {
+        "clinvar+literature": 1816,
+        "clinvar_only": 1715,
+        "literature": 3772,
+        "maf_cutoff": 0,
+        "manual_curation": 165,
+        "prediction_only": 0,
+        "unspecified": 16,
+        "unspecified_with_pmid": 225
+      }
+    }
+  }
+}

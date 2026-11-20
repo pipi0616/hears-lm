@@ -1,0 +1,27 @@
+=== release_full/seed2 config: {"backbone": "facebook/esm2_t30_150M_UR50D", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.1, "lora_targets": ["query", "value"], "window": 32, "feature_groups": ["plm", "cons", "struct", "hear"], "use_lm_logits": false, "use_sequence": true, "beta_ddg": 0.3, "epochs": 3, "batch_size": 8, "lr_lora": 0.0001, "lr_head": 0.001, "weight_decay": 0.01, "warmup_frac": 0.06, "grad_clip": 1.0, "head_dropout": 0.3, "seed": 2, "device": "mps", "arm": "release_full", "dev_gene_fold": null, "cv_fold": null, "all_data": true, "exclude_genes": []}
+train n=11309 (P=7199) features=103 ddg_targets=8696 trainable=1,791,682 steps=4242
+  ep0 step 200/1414 loss=0.7049 elapsed=3.1min
+  ep0 step 400/1414 loss=0.4527 elapsed=6.0min
+  ep0 step 600/1414 loss=0.4325 elapsed=8.8min
+  ep0 step 800/1414 loss=0.4332 elapsed=11.5min
+  ep0 step 1000/1414 loss=0.3613 elapsed=14.1min
+  ep0 step 1200/1414 loss=0.3858 elapsed=16.6min
+  ep0 step 1400/1414 loss=0.3849 elapsed=20.0min
+epoch 0: {"epoch": 0, "loss": 0.44953339237356205, "loss_path": 0.3350837860339423, "loss_ddg": 0.38149867290887807, "time_min": 20.141431168715158}
+  ep1 step 200/1414 loss=0.3413 elapsed=22.5min
+  ep1 step 400/1414 loss=0.3327 elapsed=24.8min
+  ep1 step 600/1414 loss=0.3361 elapsed=28.8min
+  ep1 step 800/1414 loss=0.3166 elapsed=31.0min
+  ep1 step 1000/1414 loss=0.3427 elapsed=33.2min
+  ep1 step 1200/1414 loss=0.3378 elapsed=36.1min
+  ep1 step 1400/1414 loss=0.3092 elapsed=38.5min
+epoch 1: {"epoch": 1, "loss": 0.32995240389905567, "loss_path": 0.26801392586889927, "loss_ddg": 0.20646158419055483, "time_min": 38.71456764936447}
+  ep2 step 200/1414 loss=0.2601 elapsed=42.0min
+  ep2 step 400/1414 loss=0.2635 elapsed=44.6min
+  ep2 step 600/1414 loss=0.2779 elapsed=48.6min
+  ep2 step 800/1414 loss=0.2551 elapsed=51.3min
+  ep2 step 1000/1414 loss=0.2478 elapsed=54.1min
+  ep2 step 1200/1414 loss=0.2872 elapsed=57.8min
+  ep2 step 1400/1414 loss=0.2571 elapsed=60.5min
+epoch 2: {"epoch": 2, "loss": 0.26327624409611017, "loss_path": 0.21994972172171165, "loss_ddg": 0.14442173489372745, "time_min": 60.70316131512324}
+done in 60.7 min: {}

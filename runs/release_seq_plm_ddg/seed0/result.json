@@ -1,0 +1,68 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [
+   "plm"
+  ],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.3,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 0,
+  "device": "mps",
+  "arm": "release_seq_plm_ddg",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "all_data": true,
+  "exclude_genes": []
+ },
+ "n_train": 11309,
+ "n_features": 4,
+ "feat_cols": [
+  "plm_llr",
+  "plm_lp_wt",
+  "plm_lp_mut",
+  "plm_entropy"
+ ],
+ "n_trainable": 1779010,
+ "final": {},
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.5162623181591361,
+   "loss_path": 0.40597981678999046,
+   "loss_ddg": 0.3676083220613204,
+   "time_min": 21.315670104821525
+  },
+  {
+   "epoch": 1,
+   "loss": 0.3923153907476886,
+   "loss_path": 0.3260174996266998,
+   "loss_ddg": 0.22099296057094917,
+   "time_min": 42.915156165758766
+  },
+  {
+   "epoch": 2,
+   "loss": 0.3233006963311382,
+   "loss_path": 0.27476828333116865,
+   "loss_ddg": 0.1617747042864914,
+   "time_min": 64.37219365437825
+  }
+ ],
+ "runtime_min": 64.37513156731923
+}

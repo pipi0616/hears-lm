@@ -1,0 +1,284 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [
+   "cons",
+   "struct",
+   "hear"
+  ],
+  "use_lm_logits": false,
+  "use_sequence": false,
+  "beta_ddg": 0.0,
+  "epochs": 10,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 2,
+  "device": "mps",
+  "arm": "feat_only",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "exclude_genes": []
+ },
+ "n_train": 7361,
+ "n_features": 99,
+ "feat_cols": [
+  "cons_phylop100",
+  "cons_phylop_mammal",
+  "cons_phylop_primate",
+  "cons_phastcons100",
+  "cons_gerp_rs",
+  "cons_missing",
+  "plddt",
+  "plddt_missing",
+  "in_domain",
+  "in_transmembrane",
+  "in_signal_or_propeptide",
+  "in_disulfide",
+  "in_binding_or_active_site",
+  "annot_missing",
+  "rel_pos",
+  "wang_utricle_Stromal_Fibrocyte",
+  "wang_utricle_Transitional_epi",
+  "wang_utricle_HC_precursor",
+  "wang_utricle_Immune",
+  "wang_utricle_Schwann_nonmyelin",
+  "wang_utricle_Supporting_cell",
+  "wang_utricle_Cartilage",
+  "wang_utricle_Hair_cell",
+  "wang_utricle_Endothelial",
+  "wang_utricle_Pericyte_SM_1",
+  "wang_utricle_Pericyte_SM_2",
+  "wang_utricle_Dark_cell",
+  "wang_utricle_Schwann_myelin",
+  "kolla_cochlea_Hair_cell",
+  "kolla_cochlea_Supporting_cell",
+  "kelley_mouse_adult_Connective",
+  "kelley_mouse_adult_Endothelial",
+  "kelley_mouse_adult_Erythroid",
+  "kelley_mouse_adult_Hair_cell",
+  "kelley_mouse_adult_Immune",
+  "kelley_mouse_adult_Schwann_cell",
+  "kelley_mouse_adult_Stria",
+  "kelley_human_fetal_Connective",
+  "kelley_human_fetal_Endothelial",
+  "kelley_human_fetal_Hair_cell",
+  "kelley_human_fetal_Immune",
+  "kelley_human_fetal_Pericyte",
+  "kelley_human_fetal_Schwann_cell",
+  "kelley_human_fetal_Stria",
+  "kelley_human_fetal_Supporting_cell",
+  "in_wang",
+  "in_kolla",
+  "in_kelley_mouse_adult",
+  "in_kelley_human_fetal",
+  "n_sources",
+  "HC_specificity",
+  "Stria_specificity",
+  "hpo_AR",
+  "hpo_AD",
+  "hpo_SNHL",
+  "hpo_progressive_HL",
+  "hpo_congenital_onset",
+  "hpo_childhood_onset",
+  "hpo_vestibular",
+  "hpo_visual_USH",
+  "hpo_renal",
+  "hpo_thyroid_pendred",
+  "hpo_n_total",
+  "hpo_is_syndromic",
+  "cgd_AD",
+  "cgd_AR",
+  "cgd_XL",
+  "cgd_digenic",
+  "cgd_pediatric",
+  "cgd_adult",
+  "cgd_HHL_condition",
+  "cgd_n_conditions",
+  "cgd_in_db",
+  "impc_in_db",
+  "impc_phenotyped",
+  "impc_significant_any",
+  "impc_hearing_significant",
+  "impc_vestibular_significant",
+  "impc_n_hearing_sig",
+  "impc_n_vestibular_sig",
+  "impc_n_top_systems_significant",
+  "impc_abr_significant",
+  "impc_lethal_or_untested",
+  "n_rx_HHL_pathways",
+  "n_cp_complexes_total",
+  "n_string_partners",
+  "gnomad_in_db",
+  "gnomad_lof_oe",
+  "gnomad_lof_oe_upper",
+  "gnomad_lof_pLI",
+  "gnomad_mis_oe",
+  "gnomad_mis_oeuf",
+  "gnomad_mis_z",
+  "gnomad_mis_pphen_oe",
+  "gnomad_syn_z",
+  "gnomad_loeuf_constrained",
+  "gnomad_pLI_high",
+  "gnomad_mis_constrained",
+  "gene_desc_missing"
+ ],
+ "n_trainable": 70721,
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.941432221127801,
+   "auprc": 0.9536903961889243
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.7213718820861679,
+   "auprc": 0.9757017459203712
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.9546834710308899,
+   "auprc": 0.9469822338811834
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.7068972271487284,
+   "auprc": 0.8570967170051673
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.43538581944363,
+   "loss_path": 0.43538581944363,
+   "loss_ddg": null,
+   "time_min": 0.08355741500854492,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9367843511450382,
+    "auprc": 0.9498064964548684
+   }
+  },
+  {
+   "epoch": 1,
+   "loss": 0.361221238394368,
+   "loss_path": 0.361221238394368,
+   "loss_ddg": null,
+   "time_min": 0.1644092321395874,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9283094270705081,
+    "auprc": 0.9407316011626363
+   }
+  },
+  {
+   "epoch": 2,
+   "loss": 0.34324478378962325,
+   "loss_path": 0.34324478378962325,
+   "loss_ddg": null,
+   "time_min": 0.2443068504333496,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9381181769679061,
+    "auprc": 0.949530157162598
+   }
+  },
+  {
+   "epoch": 3,
+   "loss": 0.334677832576787,
+   "loss_path": 0.334677832576787,
+   "loss_ddg": null,
+   "time_min": 0.3243220488230387,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9406421858327177,
+    "auprc": 0.951897454204427
+   }
+  },
+  {
+   "epoch": 4,
+   "loss": 0.3240153995533671,
+   "loss_path": 0.3240153995533671,
+   "loss_ddg": null,
+   "time_min": 0.4057098825772603,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9355120865139949,
+    "auprc": 0.947868583779598
+   }
+  },
+  {
+   "epoch": 5,
+   "loss": 0.315734364343888,
+   "loss_path": 0.315734364343888,
+   "loss_ddg": null,
+   "time_min": 0.48614914814631144,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9404472420586063,
+    "auprc": 0.9523323529480037
+   }
+  },
+  {
+   "epoch": 6,
+   "loss": 0.30158510022010887,
+   "loss_path": 0.30158510022010887,
+   "loss_ddg": null,
+   "time_min": 0.5666067163149516,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9435817327423459,
+    "auprc": 0.954843068040243
+   }
+  },
+  {
+   "epoch": 7,
+   "loss": 0.2978085481329648,
+   "loss_path": 0.2978085481329648,
+   "loss_ddg": null,
+   "time_min": 0.6454685648282369,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9412526676516457,
+    "auprc": 0.9528186387588609
+   }
+  },
+  {
+   "epoch": 8,
+   "loss": 0.2919561638052896,
+   "loss_path": 0.2919561638052896,
+   "loss_ddg": null,
+   "time_min": 0.7257620493570963,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9414168308298448,
+    "auprc": 0.9536079438883105
+   }
+  },
+  {
+   "epoch": 9,
+   "loss": 0.28289326688529565,
+   "loss_path": 0.28289326688529565,
+   "loss_ddg": null,
+   "time_min": 0.8058274189631144,
+   "dev": {
+    "n": 889,
+    "auroc": 0.941432221127801,
+    "auprc": 0.9536903961889243
+   }
+  }
+ ],
+ "runtime_min": 0.810601818561554
+}

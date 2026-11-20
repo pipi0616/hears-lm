@@ -1,0 +1,117 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 64,
+  "lora_alpha": 128,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [
+   "plm"
+  ],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.3,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 0,
+  "device": "mps",
+  "arm": "seq_plm_ddg_r64",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "exclude_genes": []
+ },
+ "n_train": 7361,
+ "n_features": 4,
+ "feat_cols": [
+  "plm_llr",
+  "plm_lp_wt",
+  "plm_lp_mut",
+  "plm_entropy"
+ ],
+ "n_trainable": 5465410,
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.9482424279734055,
+   "auprc": 0.9616464179053421,
+   "ddg_spearman": 0.839593955095111,
+   "n_ddg": 708
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.686032746431906,
+   "auprc": 0.9723675517197037,
+   "ddg_spearman": 0.845880505566934,
+   "n_ddg": 1059
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.9646897858232911,
+   "auprc": 0.9681152979675919,
+   "ddg_spearman": 0.7693521278926856,
+   "n_ddg": 576
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.8073783627855297,
+   "auprc": 0.918628016303773,
+   "ddg_spearman": 0.8508456905883021,
+   "n_ddg": 1020
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.5092921845744345,
+   "loss_path": 0.3860573247691918,
+   "loss_ddg": 0.41078284893732975,
+   "time_min": 10.454182887077332,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9407114421735204,
+    "auprc": 0.9560452727288219,
+    "ddg_spearman": 0.8229472597327083,
+    "n_ddg": 708
+   }
+  },
+  {
+   "epoch": 1,
+   "loss": 0.3506237823803314,
+   "loss_path": 0.28613899581247576,
+   "loss_ddg": 0.21494928001953,
+   "time_min": 21.359454703330993,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9505458425675121,
+    "auprc": 0.9638371902910148,
+    "ddg_spearman": 0.816989338373521,
+    "n_ddg": 708
+   }
+  },
+  {
+   "epoch": 2,
+   "loss": 0.2592606674728108,
+   "loss_path": 0.21339350746869717,
+   "loss_ddg": 0.15289052802084435,
+   "time_min": 32.49536123673121,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9482424279734055,
+    "auprc": 0.9616464179053421,
+    "ddg_spearman": 0.839593955095111,
+    "n_ddg": 708
+   }
+  }
+ ],
+ "runtime_min": 35.950144271055855
+}

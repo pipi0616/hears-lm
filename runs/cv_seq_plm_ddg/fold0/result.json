@@ -1,0 +1,75 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [
+   "plm"
+  ],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.3,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 0,
+  "device": "mps",
+  "arm": "cv_seq_plm_ddg",
+  "dev_gene_fold": null,
+  "cv_fold": 0,
+  "exclude_genes": []
+ },
+ "n_train": 8910,
+ "n_features": 4,
+ "feat_cols": [
+  "plm_llr",
+  "plm_lp_wt",
+  "plm_lp_mut",
+  "plm_entropy"
+ ],
+ "n_trainable": 1779010,
+ "final": {
+  "cvtest": {
+   "n": 2399,
+   "auroc": 0.9247264610698964,
+   "auprc": 0.9509042396536078,
+   "ddg_spearman": 0.6203185784247185,
+   "n_ddg": 1681
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.5599755316076522,
+   "loss_path": 0.4495372405322519,
+   "loss_ddg": 0.3681276204847,
+   "time_min": 12.458132100105285
+  },
+  {
+   "epoch": 1,
+   "loss": 0.4204585458581709,
+   "loss_path": 0.3577738549055354,
+   "loss_ddg": 0.2089489617272526,
+   "time_min": 25.01058699687322
+  },
+  {
+   "epoch": 2,
+   "loss": 0.337070499302709,
+   "loss_path": 0.29174804072944144,
+   "loss_ddg": 0.15107485789222946,
+   "time_min": 37.48445912996928
+  }
+ ],
+ "runtime_min": 38.98077423175176
+}

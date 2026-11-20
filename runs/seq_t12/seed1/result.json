@@ -1,0 +1,96 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t12_35M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.0,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 1,
+  "device": "mps",
+  "arm": "seq_t12",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "exclude_genes": []
+ },
+ "n_train": 7361,
+ "n_features": 0,
+ "feat_cols": [],
+ "n_trainable": 770561,
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.9324930230649267,
+   "auprc": 0.944187586064774
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.6968620781645991,
+   "auprc": 0.9722088384620702
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.952252275956428,
+   "auprc": 0.9574313798859934
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.7701054865844712,
+   "auprc": 0.8978651656477383
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.42751809754828546,
+   "loss_path": 0.42751809754828546,
+   "loss_ddg": null,
+   "time_min": 2.879518230756124,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9245413691209061,
+    "auprc": 0.9405280547699478
+   }
+  },
+  {
+   "epoch": 1,
+   "loss": 0.33003172451523044,
+   "loss_path": 0.33003172451523044,
+   "loss_ddg": null,
+   "time_min": 5.9689154624938965,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9323904210785521,
+    "auprc": 0.9451635991790944
+   }
+  },
+  {
+   "epoch": 2,
+   "loss": 0.26727760289861424,
+   "loss_path": 0.26727760289861424,
+   "loss_ddg": null,
+   "time_min": 9.010222347577413,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9324930230649267,
+    "auprc": 0.944187586064774
+   }
+  }
+ ],
+ "runtime_min": 9.927050348122915
+}

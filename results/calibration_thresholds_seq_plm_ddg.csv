@@ -1,0 +1,9 @@
+arm,evidence,threshold,required_posterior,n_calibration
+seq_plm_ddg,PP3_supporting,0.9450225035087719,0.09992012488836323,3431
+seq_plm_ddg,BP4_supporting,0.0865812088245614,0.01881189786935249,3431
+seq_plm_ddg,PP3_moderate,0.9998328122807018,0.2108130918429401,3431
+seq_plm_ddg,BP4_moderate,,0.00790474604736121,3431
+seq_plm_ddg,PP3_strong,,0.6073367385780529,3431
+seq_plm_ddg,BP4_strong,,0.0013741867606120593,3431
+seq_plm_ddg,PP3_very_strong,,0.9810803910197667,3431
+seq_plm_ddg,BP4_very_strong,,4.104327347747371e-05,3431

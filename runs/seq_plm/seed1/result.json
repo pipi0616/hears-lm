@@ -1,0 +1,103 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [
+   "plm"
+  ],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.0,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 1,
+  "device": "mps",
+  "arm": "seq_plm",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "exclude_genes": []
+ },
+ "n_train": 7361,
+ "n_features": 4,
+ "feat_cols": [
+  "plm_llr",
+  "plm_lp_wt",
+  "plm_lp_mut",
+  "plm_entropy"
+ ],
+ "n_trainable": 1778881,
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.9414758269720103,
+   "auprc": 0.9572715106914931
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.7019307723089236,
+   "auprc": 0.9744743502854282
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.9586828395516499,
+   "auprc": 0.964004915560968
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.8183187674950319,
+   "auprc": 0.9251670945390893
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.39538689967135904,
+   "loss_path": 0.39538689967135904,
+   "loss_ddg": null,
+   "time_min": 16.97875400384267,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9319902733316917,
+    "auprc": 0.9504005343432375
+   }
+  },
+  {
+   "epoch": 1,
+   "loss": 0.29971619447881315,
+   "loss_path": 0.29971619447881315,
+   "loss_ddg": null,
+   "time_min": 32.1112847050031,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9430661577608143,
+    "auprc": 0.9581440534272232
+   }
+  },
+  {
+   "epoch": 2,
+   "loss": 0.24064254501266213,
+   "loss_path": 0.24064254501266213,
+   "loss_ddg": null,
+   "time_min": 47.56823604901631,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9414758269720103,
+    "auprc": 0.9572715106914931
+   }
+  }
+ ],
+ "runtime_min": 52.674782967567445
+}

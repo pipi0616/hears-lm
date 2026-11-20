@@ -1,7 +1,8 @@
 {
-  "title": "HEARS-LM: A hearing-loss–specific protein language model for variant pathogenicity",
-  "description": "HEARS-LM (Hereditary EAR Sequence Language Model) is a domain-adapted protein language model that couples ESM-2 sequence embeddings, refined through low-rank adaptation, with 100 curated hearing-loss–relevant biological descriptors via cross-attention fusion. Four task-specific heads are trained jointly under a thermodynamic auxiliary objective.",
+  "title": "HEARS-LM v2.0: hearing-loss-adapted protein language model for missense variant interpretation (code, models, labelled benchmark and precomputed scores)",
+  "description": "<p>HEARS-LM v2.0 is the release that accompanies the paper \"HEARS-LM: a hearing-loss-adapted protein language model for missense variant interpretation, evaluated with leakage-controlled benchmarks\". HEARS-LM fine-tunes ESM-2 with low-rank adapters on the proteins of the 163 genes of the Genomics England PanelApp hearing-loss panel and combines it with whole-protein log-probabilities, conservation, structural annotation and gene-level descriptors, without allele frequency. Its score is calibrated to ACMG/AMP evidence strengths (PP3/BP4) and is meant to be used within ACMG/AMP-ClinGen classification, not to classify variants.</p><p>The release contains the code of the whole analysis and the command-line scoring tool, the labelled benchmark with recorded provenance, the annotation and descriptor tables, the weights and predictions of every trained model, the calibrated thresholds, all result tables and precomputed scores for the unresolved ClinVar missense variants of the panel genes. See README.md and REPRODUCE.md. Version 2.0 is a complete rebuild of the study and supersedes releases v1.0.x.</p>",
   "upload_type": "software",
+  "version": "v2.0",
   "license": "mit-license",
   "creators": [
     {
@@ -11,11 +12,11 @@
     },
     {
       "name": "Chen, Peng",
-      "affiliation": "Department of Otorhinolaryngology, Meishan People's Hospital, China",
+      "affiliation": "Department of Otorhinolaryngology, The Second People's Hospital of Meishan, Meishan, China",
       "orcid": "0009-0001-1105-6638"
     }
   ],
-  "keywords": ["hereditary hearing loss", "variant effect prediction", "protein language model", "ESM-2", "low-rank adaptation", "ACMG", "ClinVar"],
+  "keywords": ["hereditary hearing loss", "missense variant interpretation", "protein language model", "ESM-2", "low-rank adaptation", "ACMG/AMP", "PP3/BP4 calibration", "ClinVar"],
   "related_identifiers": [
     {
       "identifier": "https://github.com/pipi0616/hears-lm",

@@ -1,0 +1,18 @@
+=== seq_plm/seed2 config: {"backbone": "facebook/esm2_t30_150M_UR50D", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.1, "lora_targets": ["query", "value"], "window": 32, "feature_groups": ["plm"], "use_lm_logits": false, "use_sequence": true, "beta_ddg": 0.0, "epochs": 3, "batch_size": 8, "lr_lora": 0.0001, "lr_head": 0.001, "weight_decay": 0.01, "warmup_frac": 0.06, "grad_clip": 1.0, "head_dropout": 0.3, "seed": 2, "device": "mps", "arm": "seq_plm", "dev_gene_fold": null, "cv_fold": null, "exclude_genes": []}
+train n=7361 (P=4205) features=4 ddg_targets=0 trainable=1,778,881 steps=2763
+  ep0 step 200/921 loss=0.4851 elapsed=2.5min
+  ep0 step 400/921 loss=0.4032 elapsed=5.1min
+  ep0 step 600/921 loss=0.3574 elapsed=7.7min
+  ep0 step 800/921 loss=0.3792 elapsed=10.2min
+epoch 0: {"epoch": 0, "loss": 0.396800241705099, "loss_path": 0.396800241705099, "loss_ddg": null, "time_min": 11.757136102517446, "dev": {"n": 889, "auroc": 0.9355095214643356, "auprc": 0.9514567867194357}}
+  ep1 step 200/921 loss=0.3078 elapsed=14.8min
+  ep1 step 400/921 loss=0.3232 elapsed=17.1min
+  ep1 step 600/921 loss=0.2967 elapsed=19.4min
+  ep1 step 800/921 loss=0.3037 elapsed=22.0min
+epoch 1: {"epoch": 1, "loss": 0.30656222809962097, "loss_path": 0.30656222809962097, "loss_ddg": null, "time_min": 23.471123882134755, "dev": {"n": 889, "auroc": 0.9411680210128869, "auprc": 0.9565435315757977}}
+  ep2 step 200/921 loss=0.2360 elapsed=26.5min
+  ep2 step 400/921 loss=0.2821 elapsed=28.9min
+  ep2 step 600/921 loss=0.2521 elapsed=31.3min
+  ep2 step 800/921 loss=0.2088 elapsed=33.9min
+epoch 2: {"epoch": 2, "loss": 0.2438103906384565, "loss_path": 0.2438103906384565, "loss_ddg": null, "time_min": 35.3620111544927, "dev": {"n": 889, "auroc": 0.9387004432405811, "auprc": 0.9544371809566362}}
+done in 39.1 min: {"dev": {"n": 889, "auroc": 0.9387004432405811, "auprc": 0.9544371809566362}, "test_db": {"n": 1127, "auroc": 0.6897258903561424, "auprc": 0.9740676969435261}, "test_time": {"n": 1233, "auroc": 0.9601405041309268, "auprc": 0.9653554459735079}, "test_gene": {"n": 1201, "auroc": 0.8132011367764269, "auprc": 0.9232969132511744}}

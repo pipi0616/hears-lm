@@ -1,0 +1,65 @@
+# HEARS-LM revision experiment queue (run by code/model/run_queue.py; order = priority)
+# ---- tier 1, seed 0
+--name seq --seed 0 --beta-ddg 0
+--name seq_plm --seed 0 --features plm --beta-ddg 0
+--name seq_plm_ddg --seed 0 --features plm
+--name seq_plm_ddg_hear --seed 0 --features plm hear
+--name full --seed 0 --features plm cons struct hear
+# ---- tier 1, seed 1
+--name seq --seed 1 --beta-ddg 0
+--name seq_plm --seed 1 --features plm --beta-ddg 0
+--name seq_plm_ddg --seed 1 --features plm
+--name seq_plm_ddg_hear --seed 1 --features plm hear
+--name full --seed 1 --features plm cons struct hear
+# ---- tier 1, seed 2
+--name seq --seed 2 --beta-ddg 0
+--name seq_plm --seed 2 --features plm --beta-ddg 0
+--name seq_plm_ddg --seed 2 --features plm
+--name seq_plm_ddg_hear --seed 2 --features plm hear
+--name full --seed 2 --features plm cons struct hear
+# ---- tier 2a: remaining candidate arms for model selection (2 seeds)
+--name seq_plm_ddg_cons --seed 0 --features plm cons
+--name seq_plm_ddg_struct --seed 0 --features plm struct
+--name seq_ddg --seed 0
+--name seq_plm_ddg_cons --seed 1 --features plm cons
+--name seq_plm_ddg_struct --seed 1 --features plm struct
+--name seq_ddg --seed 1
+# ---- tier 1b: leave-gene-family-out cross-validation (full model and sequence-only model)
+--name cv_full --cv-fold 0 --features plm cons struct hear
+--name cv_seq_plm_ddg --cv-fold 0 --features plm
+--name cv_full --cv-fold 1 --features plm cons struct hear
+--name cv_seq_plm_ddg --cv-fold 1 --features plm
+--name cv_full --cv-fold 2 --features plm cons struct hear
+--name cv_seq_plm_ddg --cv-fold 2 --features plm
+--name cv_full --cv-fold 3 --features plm cons struct hear
+--name cv_seq_plm_ddg --cv-fold 3 --features plm
+--name cv_full --cv-fold 4 --features plm cons struct hear
+--name cv_seq_plm_ddg --cv-fold 4 --features plm
+# ---- inference with the leave-family-out sequence-only models (MAVE variants + saturation maps)
+!results/external_predictions_cv_seq_plm_ddg.csv /opt/anaconda3/envs/pipi/bin/python code/eval/predict_external.py --cv-arm cv_seq_plm_ddg --saturation KCNQ4 OTOF GJB2 > logs/predict_external.log 2>&1
+!results/external_predictions_cv_full.csv /opt/anaconda3/envs/pipi/bin/python code/eval/predict_external.py --cv-arm cv_full --saturation KCNQ4 OTOF GJB2 > logs/predict_external_full.log 2>&1
+# ---- tier 2b: diagnostic allele-frequency arm
+--name full_af --seed 0 --features plm cons struct hear af
+--name full_af --seed 1 --features plm cons struct hear af
+# ---- tier 3
+!runs/frozen/seed4/result.json /opt/anaconda3/envs/pipi/bin/python code/model/frozen_probe.py facebook/esm2_t30_150M_UR50D frozen 5 > logs/frozen.log 2>&1
+--name feat_only --seed 0 --no-sequence --features cons struct hear --beta-ddg 0 --epochs 10
+--name feat_only --seed 1 --no-sequence --features cons struct hear --beta-ddg 0 --epochs 10
+--name feat_only --seed 2 --no-sequence --features cons struct hear --beta-ddg 0 --epochs 10
+--name feat_plm_only --seed 0 --no-sequence --features plm cons struct hear --beta-ddg 0 --epochs 10
+--name feat_plm_only --seed 1 --no-sequence --features plm cons struct hear --beta-ddg 0 --epochs 10
+--name feat_plm_only --seed 2 --no-sequence --features plm cons struct hear --beta-ddg 0 --epochs 10
+--name seq_plm_ddg_b0.1 --seed 0 --features plm --beta-ddg 0.1
+--name seq_plm_ddg_b1.0 --seed 0 --features plm --beta-ddg 1.0
+--name seq_plm_ddg_r4 --seed 0 --features plm --lora-r 4
+--name seq_plm_ddg_r64 --seed 0 --features plm --lora-r 64
+--name seq_t12 --seed 0 --beta-ddg 0 --backbone facebook/esm2_t12_35M_UR50D
+--name seq_t12 --seed 1 --beta-ddg 0 --backbone facebook/esm2_t12_35M_UR50D
+--name seq_t12 --seed 2 --beta-ddg 0 --backbone facebook/esm2_t12_35M_UR50D
+# ---- release models: selected configurations retrained on every labelled variant (no evaluation data left)
+--name release_full --seed 0 --all-data --features plm cons struct hear
+--name release_full --seed 1 --all-data --features plm cons struct hear
+--name release_full --seed 2 --all-data --features plm cons struct hear
+--name release_seq_plm_ddg --seed 0 --all-data --features plm
+--name release_seq_plm_ddg --seed 1 --all-data --features plm
+--name release_seq_plm_ddg --seed 2 --all-data --features plm

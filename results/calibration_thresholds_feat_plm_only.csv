@@ -1,0 +1,9 @@
+arm,evidence,threshold,required_posterior,n_calibration
+feat_plm_only,PP3_supporting,0.9979137474269005,0.09992012488836323,3431
+feat_plm_only,BP4_supporting,0.11392413226900584,0.01881189786935249,3431
+feat_plm_only,PP3_moderate,0.9998522625730994,0.2108130918429401,3431
+feat_plm_only,BP4_moderate,0.01239201299122807,0.00790474604736121,3431
+feat_plm_only,PP3_strong,,0.6073367385780529,3431
+feat_plm_only,BP4_strong,,0.0013741867606120593,3431
+feat_plm_only,PP3_very_strong,,0.9810803910197667,3431
+feat_plm_only,BP4_very_strong,,4.104327347747371e-05,3431

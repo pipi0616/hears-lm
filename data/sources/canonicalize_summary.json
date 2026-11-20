@@ -1,0 +1,41 @@
+{
+  "n_genes": 163,
+  "n_reference_identical_to_uniprot": 137,
+  "n_source_transcripts": 305,
+  "n_source_identical_to_reference": 276,
+  "clinvar_2025-01": {
+    "ok": 50414,
+    "not_in_reference_isoform": 233,
+    "ref_mismatch_reference": 45,
+    "renumbered": 22,
+    "ok_without_uniprot_pos": 514
+  },
+  "clinvar_2025-06": {
+    "ok": 56724,
+    "not_in_reference_isoform": 242,
+    "ref_mismatch_reference": 58,
+    "renumbered": 26,
+    "ok_without_uniprot_pos": 591
+  },
+  "clinvar_2026-01": {
+    "ok": 62387,
+    "not_in_reference_isoform": 280,
+    "ref_mismatch_reference": 69,
+    "renumbered": 27,
+    "ok_without_uniprot_pos": 663
+  },
+  "clinvar_2026-04": {
+    "ok": 65713,
+    "not_in_reference_isoform": 289,
+    "ref_mismatch_reference": 80,
+    "renumbered": 31,
+    "ok_without_uniprot_pos": 696
+  },
+  "dvd": {
+    "ok": 44429,
+    "not_in_reference_isoform": 416,
+    "ref_mismatch_reference": 52,
+    "renumbered": 5916,
+    "ok_without_uniprot_pos": 854
+  }
+}

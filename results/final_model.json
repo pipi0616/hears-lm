@@ -1,0 +1,66 @@
+{
+ "final_arm": "full",
+ "best_dev_arm": "full",
+ "best_dev_auroc_mean": 0.9663123478070536,
+ "best_dev_auroc_sd": 0.0009976207687786146,
+ "eligible_within_1sd": [
+  "full"
+ ],
+ "dev_table": [
+  {
+   "arm": "full",
+   "n_seeds": 3,
+   "auroc_mean": 0.9663,
+   "auroc_sd": 0.001
+  },
+  {
+   "arm": "seq",
+   "n_seeds": 3,
+   "auroc_mean": 0.9322,
+   "auroc_sd": 0.0012
+  },
+  {
+   "arm": "seq_ddg",
+   "n_seeds": 2,
+   "auroc_mean": 0.9351,
+   "auroc_sd": 0.0005
+  },
+  {
+   "arm": "seq_plm",
+   "n_seeds": 3,
+   "auroc_mean": 0.9395,
+   "auroc_sd": 0.0017
+  },
+  {
+   "arm": "seq_plm_ddg",
+   "n_seeds": 3,
+   "auroc_mean": 0.9394,
+   "auroc_sd": 0.0023
+  },
+  {
+   "arm": "seq_plm_ddg_cons",
+   "n_seeds": 2,
+   "auroc_mean": 0.952,
+   "auroc_sd": 0.0007
+  },
+  {
+   "arm": "seq_plm_ddg_hear",
+   "n_seeds": 3,
+   "auroc_mean": 0.9553,
+   "auroc_sd": 0.0009
+  },
+  {
+   "arm": "seq_plm_ddg_struct",
+   "n_seeds": 2,
+   "auroc_mean": 0.946,
+   "auroc_sd": 0.0006
+  }
+ ],
+ "rule": "highest mean dev AUROC; simplest arm within 1 SD (across seeds) of the best is selected",
+ "seeds": [
+  "seed0",
+  "seed1",
+  "seed2"
+ ],
+ "locked_at": "2026-10-08 04:40:04"
+}

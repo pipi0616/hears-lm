@@ -1,0 +1,40 @@
+{
+  "model": "facebook/esm2_t30_150M_UR50D",
+  "n_genes": 163,
+  "n_residues": 150223,
+  "n_forward": 278,
+  "seconds": 148.9,
+  "spearman_wt_vs_masked_llr": 0.988935076540366,
+  "auroc": {
+    "fit": {
+      "wt_marginal": 0.8421245454367349,
+      "masked_marginal": 0.8444574929658549,
+      "n": 7361
+    },
+    "dev": {
+      "wt_marginal": 0.8373322457522777,
+      "masked_marginal": 0.8415363621439711,
+      "n": 889
+    },
+    "test_time": {
+      "wt_marginal": 0.8941456612113876,
+      "masked_marginal": 0.9007656685786455,
+      "n": 1233
+    },
+    "test_gene": {
+      "wt_marginal": 0.7477688269692373,
+      "masked_marginal": 0.7534331217903516,
+      "n": 1201
+    },
+    "test_db": {
+      "wt_marginal": 0.6117113512071495,
+      "masked_marginal": 0.6131786047752434,
+      "n": 1127
+    }
+  },
+  "variants_v8_used": {
+    "path": "data/variants_v8.csv",
+    "rows": 11811,
+    "modified": "2026-10-06 21:02:40"
+  }
+}

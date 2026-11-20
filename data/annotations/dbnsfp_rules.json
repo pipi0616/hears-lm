@@ -1,0 +1,325 @@
+{
+ "written_by": "code/data/05_annotate_dbnsfp.py",
+ "lookup": {
+  "key": "GRCh38 genomic variant (chrom, pos, ref_nt, alt_nt) of data/variants_v8.csv",
+  "id_format": "chr<chrom>:g.<pos><ref_nt>><alt_nt> with assembly=hg38",
+  "endpoint": "POST https://myvariant.info/v1/variant",
+  "fields": "dbnsfp,gnomad_exome,gnomad_genome",
+  "max_ids_per_request": 500
+ },
+ "not_queried": "rows whose alleles are not a single A/C/G/T substitution (multi-nucleotide substitution, IUPAC ambiguity code, indel) are left unannotated: queried = 0, skip_reason gives the cause",
+ "missing_values": "NaN (empty cell) wherever a value is not served; nothing is imputed; no row is dropped",
+ "R1_multi_transcript_rule": "A score served as a list has one value per transcript (transcripts without value dropped, so not aligned with transcript ids); scalars and lists are treated uniformly and the MOST DAMAGING value across transcripts is used: max where higher_is_pathogenic is true, min where it is false. Raw scores only, no rankscores.",
+ "R2_several_amino_acid_changes": "A genomic variant with several amino-acid changes (overlapping reading frames / genes, or a splice-site row of another transcript) has several dbNSFP rows; MyVariant.info serves the scores of the FIRST row only (dbnsfp.aa[0]). If that row is not the ref1>alt1 change of the variant (dbnsfp_score_aa_match = 0), predictors with masked_if_other_aa_change = true are set to NaN and dbnsfp_scores_masked = 1.",
+ "mask_scores_of_other_aa_change": true,
+ "availability_rule": "a column exists if at least one retrieved record carries a value at its source path (the field list of /metadata/fields is incomplete and is reported for information)",
+ "predictors": {
+  "sc_alphamissense": {
+   "dbnsfp_column": "AlphaMissense_score",
+   "source_path": "dbnsfp.alphamissense.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 5,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_revel": {
+   "dbnsfp_column": "REVEL_score",
+   "source_path": "dbnsfp.revel.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 4,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_metarnn": {
+   "dbnsfp_column": "MetaRNN_score",
+   "source_path": "dbnsfp.metarnn.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": "uses population allele frequencies as input features"
+  },
+  "sc_bayesdel_addaf": {
+   "dbnsfp_column": "BayesDel_addAF_score",
+   "source_path": "dbnsfp.bayesdel.add_af.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": "uses population allele frequency as input feature"
+  },
+  "sc_bayesdel_noaf": {
+   "dbnsfp_column": "BayesDel_noAF_score",
+   "source_path": "dbnsfp.bayesdel.no_af.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_vest4": {
+   "dbnsfp_column": "VEST4_score",
+   "source_path": "dbnsfp.vest4.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_primateai": {
+   "dbnsfp_column": "PrimateAI_score",
+   "source_path": "dbnsfp.primateai.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 5,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_esm1b": {
+   "dbnsfp_column": "ESM1b_score",
+   "source_path": "dbnsfp.esm1b.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": false,
+   "aggregation_across_transcripts": "min",
+   "masked_if_other_aa_change": true,
+   "note": "log-likelihood ratio; more negative = more deleterious"
+  },
+  "sc_polyphen2_hvar": {
+   "dbnsfp_column": "Polyphen2_HVAR_score",
+   "source_path": "dbnsfp.polyphen2.hvar.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 4,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_mutpred": {
+   "dbnsfp_column": "MutPred_score",
+   "source_path": "dbnsfp.mutpred.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 3,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": "MutPred (v1) general score"
+  },
+  "sc_cadd_phred": {
+   "dbnsfp_column": "CADD_phred",
+   "source_path": "dbnsfp.cadd.phred",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": false,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": false,
+   "note": "defined per genomic variant (GRCh38 model), therefore not masked by rule R2"
+  },
+  "sc_eve": {
+   "dbnsfp_column": "EVE_score",
+   "source_path": "dbnsfp.eve.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 1,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_sift": {
+   "dbnsfp_column": "SIFT_score",
+   "source_path": "dbnsfp.sift.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 3,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": false,
+   "aggregation_across_transcripts": "min",
+   "masked_if_other_aa_change": true,
+   "note": "smaller = more deleterious"
+  },
+  "sc_sift4g": {
+   "dbnsfp_column": "SIFT4G_score",
+   "source_path": "dbnsfp.sift4g.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": false,
+   "aggregation_across_transcripts": "min",
+   "masked_if_other_aa_change": true,
+   "note": "smaller = more deleterious; separate column, never mixed with sc_sift"
+  },
+  "sc_clinpred": {
+   "dbnsfp_column": "ClinPred_score",
+   "source_path": "dbnsfp.clinpred.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": "uses population allele frequencies as input features"
+  },
+  "sc_varity_r": {
+   "dbnsfp_column": "VARITY_R_score",
+   "source_path": "dbnsfp.varity.r.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_mpc": {
+   "dbnsfp_column": "MPC_score",
+   "source_path": "dbnsfp.mpc.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 2,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  },
+  "sc_deogen2": {
+   "dbnsfp_column": "DEOGEN2_score",
+   "source_path": "dbnsfp.deogen2.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_pathogenic": true,
+   "aggregation_across_transcripts": "max",
+   "masked_if_other_aa_change": true,
+   "note": ""
+  }
+ },
+ "predictors_not_available": [],
+ "sift_rule": "SIFT and SIFT4G are both served and are given as separate columns (sc_sift, sc_sift4g); SIFT4G is never substituted for a missing SIFT value.",
+ "conservation": {
+  "cons_phylop100": {
+   "description": "phyloP 100-way vertebrate",
+   "source_path": "dbnsfp.phylop.100way_vertebrate.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_more_conserved": true,
+   "aggregation": "one value per genomic position; max if several distinct values"
+  },
+  "cons_phylop_mammal": {
+   "description": "phyloP mammalian (470-way; 30-way in dbNSFP < 4.4)",
+   "source_path": "dbnsfp.phylop.470way_mammalian.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_more_conserved": true,
+   "aggregation": "one value per genomic position; max if several distinct values"
+  },
+  "cons_phylop_primate": {
+   "description": "phyloP 17-way primate",
+   "source_path": "dbnsfp.phylop.17way_primate.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_more_conserved": true,
+   "aggregation": "one value per genomic position; max if several distinct values"
+  },
+  "cons_phastcons100": {
+   "description": "phastCons 100-way vertebrate",
+   "source_path": "dbnsfp.phastcons.100way_vertebrate.score",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_more_conserved": true,
+   "aggregation": "one value per genomic position; max if several distinct values"
+  },
+  "cons_gerp_rs": {
+   "description": "GERP++ rejected substitutions",
+   "source_path": "dbnsfp.gerp++.rs",
+   "available_in_served_version": true,
+   "n_records_with_value": 6,
+   "in_index_field_list": true,
+   "higher_is_more_conserved": true,
+   "aggregation": "one value per genomic position; max if several distinct values"
+  }
+ },
+ "conservation_not_available": [],
+ "allele_frequency": {
+  "af_gnomad_exome": {
+   "source_path": "gnomad_exome.af.af",
+   "meaning": "global allele frequency",
+   "gnomad_release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)"
+  },
+  "af_gnomad_genome": {
+   "source_path": "gnomad_genome.af.af",
+   "meaning": "global allele frequency",
+   "gnomad_release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)"
+  },
+  "af_gnomad_exome_popmax_derived": {
+   "source_paths": [
+    "gnomad_exome.af.af_afr",
+    "gnomad_exome.af.af_amr",
+    "gnomad_exome.af.af_eas",
+    "gnomad_exome.af.af_nfe",
+    "gnomad_exome.af.af_sas"
+   ],
+   "meaning": "DERIVED max allele frequency over the continental groups afr, amr, eas, nfe, sas (not the official gnomAD popmax / faf95 field, which is not served)",
+   "gnomad_release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)"
+  },
+  "af_gnomad_genome_popmax_derived": {
+   "source_paths": [
+    "gnomad_genome.af.af_afr",
+    "gnomad_genome.af.af_amr",
+    "gnomad_genome.af.af_eas",
+    "gnomad_genome.af.af_nfe",
+    "gnomad_genome.af.af_sas"
+   ],
+   "meaning": "DERIVED max allele frequency over the continental groups afr, amr, eas, nfe, sas (not the official gnomAD popmax / faf95 field, which is not served)",
+   "gnomad_release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)"
+  },
+  "af_any": "max over the available global AFs (af_gnomad_exome, af_gnomad_genome); NaN if the variant is in none of these gnomAD sources",
+  "af_popmax_any_derived": "max over the available af_*_popmax_derived",
+  "af_present": "1 if a global AF exists in at least one gnomAD source, 0 if not, NaN if not queried",
+  "qc_filter": "AFs are given whatever the gnomAD QC filter; <object>_filter holds the filter flags (\"PASS\" = record without filter flag)",
+  "not_available": [
+   "joint exome+genome AF",
+   "official popmax / grpmax / faf95",
+   "gnomAD v4.x",
+   "gnomAD fields inside dbnsfp"
+  ]
+ },
+ "bookkeeping": {
+  "hgvs_id": "id that was queried (empty if not queried)",
+  "queried": "1 if the row was queried",
+  "skip_reason": "why a row was not queried",
+  "found": "1 if exactly one document with the queried _id was returned",
+  "has_dbnsfp": "1 if that document has a dbnsfp block whose coordinates agree with the query",
+  "dbnsfp_aa_match": "1 if ANY amino-acid annotation of the dbNSFP record (any dbnsfp.aa row, any dbnsfp.hgvsp string) has ref1 and alt1; 0 if a dbnsfp block exists but none matches; NaN without dbnsfp block",
+  "dbnsfp_score_aa_match": "1 if the first dbnsfp.aa row - the row the served scores belong to - has ref1 and alt1; 0 otherwise; NaN without dbnsfp block",
+  "dbnsfp_aapos_match": "1 if a matching annotation also has amino-acid position ref_pos",
+  "dbnsfp_n_aa_rows": "number of dbNSFP rows (distinct amino-acid changes) of the genomic variant",
+  "dbnsfp_aa_annot": "amino-acid annotations found: dbNSFP rows separated by \"|\" (the first one is the row the served scores belong to), transcript positions by \"/\", \"noAA\" = row without amino-acid change (splice-site row of another transcript)",
+  "dbnsfp_scores_masked": "1 if rule R2 set the substitution-specific predictors to NaN",
+  "<gnomad object>_filter": "gnomAD QC filter of the record, NaN if the variant is not in that source"
+ },
+ "documents": "notfound answers, several documents for one id, a returned _id different from the query and blocks whose own coordinates contradict the query are counted in the summary and never used"
+}

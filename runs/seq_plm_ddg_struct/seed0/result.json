@@ -1,0 +1,127 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [
+   "plm",
+   "struct"
+  ],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.3,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 0,
+  "device": "mps",
+  "arm": "seq_plm_ddg_struct",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "exclude_genes": []
+ },
+ "n_train": 7361,
+ "n_features": 13,
+ "feat_cols": [
+  "plm_llr",
+  "plm_lp_wt",
+  "plm_lp_mut",
+  "plm_entropy",
+  "plddt",
+  "plddt_missing",
+  "in_domain",
+  "in_transmembrane",
+  "in_signal_or_propeptide",
+  "in_disulfide",
+  "in_binding_or_active_site",
+  "annot_missing",
+  "rel_pos"
+ ],
+ "n_trainable": 1780162,
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.9464417631125338,
+   "auprc": 0.960918096546348,
+   "ddg_spearman": 0.8489472865034339,
+   "n_ddg": 708
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.6864912631719354,
+   "auprc": 0.9735522543849413,
+   "ddg_spearman": 0.8453656446372364,
+   "n_ddg": 1059
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.9637925590696205,
+   "auprc": 0.9667792507080528,
+   "ddg_spearman": 0.7795751103014734,
+   "n_ddg": 576
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.8162068990078136,
+   "auprc": 0.9211489970976731,
+   "ddg_spearman": 0.8367586704250294,
+   "n_ddg": 1020
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.5033387300901188,
+   "loss_path": 0.3789680783296091,
+   "loss_ddg": 0.4145688225942928,
+   "time_min": 10.414314333597819,
+   "dev": {
+    "n": 889,
+    "auroc": 0.939680292210457,
+    "auprc": 0.95588738750811,
+    "ddg_spearman": 0.8107704153171047,
+    "n_ddg": 708
+   }
+  },
+  {
+   "epoch": 1,
+   "loss": 0.35535266795210807,
+   "loss_path": 0.29026336161759514,
+   "loss_ddg": 0.21696434503504106,
+   "time_min": 22.611310803890227,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9470984158253304,
+    "auprc": 0.9616882169047226,
+    "ddg_spearman": 0.8405714370208304,
+    "n_ddg": 708
+   }
+  },
+  {
+   "epoch": 2,
+   "loss": 0.2745321000462052,
+   "loss_path": 0.2277627876483462,
+   "loss_ddg": 0.15589770109942674,
+   "time_min": 34.89234843254089,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9464417631125338,
+    "auprc": 0.960918096546348,
+    "ddg_spearman": 0.8489472865034339,
+    "n_ddg": 708
+   }
+  }
+ ],
+ "runtime_min": 38.304335816701254
+}

@@ -1,0 +1,3187 @@
+{
+ "written_by": "code/data/05_annotate_dbnsfp.py",
+ "input": {
+  "file": "data/vus_2026-04_for_annotation.csv",
+  "sha256": "cd04604a52aeea864286262901481dc265a7f9c0b2428789263707d93144b08f",
+  "bytes": 2600352,
+  "modified_utc": "2026-10-07T16:13:59Z",
+  "n_rows": 54710
+ },
+ "output": "data/annotations/dbnsfp_vus.csv",
+ "n_variants": 54710,
+ "n_rows_written": 54710,
+ "partition_sizes": {
+  "fit": 0,
+  "dev": 0,
+  "test_db": 0,
+  "test_time": 0,
+  "test_gene": 0,
+  "vus": 54710
+ },
+ "query": {
+  "n_queried": 54710,
+  "n_unique_ids": 54710,
+  "n_not_queried": 0,
+  "not_queried_by_reason": {},
+  "not_queried_variants": [],
+  "not_queried_that_differ_at_one_base_only": 0,
+  "n_found": 54710,
+  "n_not_found": 0,
+  "frac_not_found": 0.0,
+  "not_found_variants": [],
+  "n_notfound_answers": 0,
+  "n_ids_with_several_documents": 0,
+  "n_ids_without_unique_exact_document": 0
+ },
+ "dbnsfp": {
+  "version": "4.8a",
+  "n_with_dbnsfp_block": 54710,
+  "n_found_without_dbnsfp_block": 0,
+  "found_without_dbnsfp_block": [],
+  "coordinates_vs_query": {
+   "agree": 54710,
+   "not_given": 0,
+   "CONTRADICT": 0
+  },
+  "n_block_is_list": 0,
+  "n_aa_rows_without_amino_acid_change": 25,
+  "n_aa_rows_with_non_scalar_ref_or_alt": 0
+ },
+ "columns": {
+  "predictors": [
+   "sc_alphamissense",
+   "sc_revel",
+   "sc_metarnn",
+   "sc_bayesdel_addaf",
+   "sc_bayesdel_noaf",
+   "sc_vest4",
+   "sc_primateai",
+   "sc_esm1b",
+   "sc_polyphen2_hvar",
+   "sc_mutpred",
+   "sc_cadd_phred",
+   "sc_eve",
+   "sc_sift",
+   "sc_sift4g",
+   "sc_clinpred",
+   "sc_varity_r",
+   "sc_mpc",
+   "sc_deogen2"
+  ],
+  "predictors_not_available": [],
+  "conservation": [
+   "cons_phylop100",
+   "cons_phylop_mammal",
+   "cons_phylop_primate",
+   "cons_phastcons100",
+   "cons_gerp_rs"
+  ],
+  "conservation_not_available": [],
+  "allele_frequency": [
+   "af_gnomad_exome",
+   "af_gnomad_genome",
+   "af_gnomad_exome_popmax_derived",
+   "af_gnomad_genome_popmax_derived",
+   "af_any",
+   "af_popmax_any_derived",
+   "af_present"
+  ],
+  "allele_frequency_not_available": [
+   "joint exome+genome AF",
+   "official popmax / grpmax / faf95",
+   "gnomAD v4.x",
+   "gnomAD fields inside dbnsfp"
+  ],
+  "source_paths": {
+   "sc_alphamissense": "dbnsfp.alphamissense.score",
+   "sc_revel": "dbnsfp.revel.score",
+   "sc_metarnn": "dbnsfp.metarnn.score",
+   "sc_bayesdel_addaf": "dbnsfp.bayesdel.add_af.score",
+   "sc_bayesdel_noaf": "dbnsfp.bayesdel.no_af.score",
+   "sc_vest4": "dbnsfp.vest4.score",
+   "sc_primateai": "dbnsfp.primateai.score",
+   "sc_esm1b": "dbnsfp.esm1b.score",
+   "sc_polyphen2_hvar": "dbnsfp.polyphen2.hvar.score",
+   "sc_mutpred": "dbnsfp.mutpred.score",
+   "sc_cadd_phred": "dbnsfp.cadd.phred",
+   "sc_eve": "dbnsfp.eve.score",
+   "sc_sift": "dbnsfp.sift.score",
+   "sc_sift4g": "dbnsfp.sift4g.score",
+   "sc_clinpred": "dbnsfp.clinpred.score",
+   "sc_varity_r": "dbnsfp.varity.r.score",
+   "sc_mpc": "dbnsfp.mpc.score",
+   "sc_deogen2": "dbnsfp.deogen2.score",
+   "cons_phylop100": "dbnsfp.phylop.100way_vertebrate.score",
+   "cons_phylop_mammal": "dbnsfp.phylop.470way_mammalian.score",
+   "cons_phylop_primate": "dbnsfp.phylop.17way_primate.score",
+   "cons_phastcons100": "dbnsfp.phastcons.100way_vertebrate.score",
+   "cons_gerp_rs": "dbnsfp.gerp++.rs"
+  }
+ },
+ "flags_by_group": {
+  "overall": {
+   "queried": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "found": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "has_dbnsfp": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 54557,
+    "of": 54710,
+    "frac": 0.9972
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 54575,
+    "of": 54710,
+    "frac": 0.9975
+   },
+   "af_present_among_queried": {
+    "n": 30659,
+    "of": 54710,
+    "frac": 0.5604
+   }
+  },
+  "fit": {
+   "queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "found": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "has_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "af_present_among_queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   }
+  },
+  "dev": {
+   "queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "found": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "has_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "af_present_among_queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   }
+  },
+  "test_db": {
+   "queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "found": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "has_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "af_present_among_queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   }
+  },
+  "test_time": {
+   "queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "found": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "has_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "af_present_among_queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   }
+  },
+  "test_gene": {
+   "queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "found": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "has_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   },
+   "af_present_among_queried": {
+    "n": 0,
+    "of": 0,
+    "frac": null
+   }
+  },
+  "vus": {
+   "queried": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "found": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "has_dbnsfp": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "dbnsfp_aa_match_among_dbnsfp": {
+    "n": 54710,
+    "of": 54710,
+    "frac": 1.0
+   },
+   "dbnsfp_score_aa_match_among_dbnsfp": {
+    "n": 54557,
+    "of": 54710,
+    "frac": 0.9972
+   },
+   "dbnsfp_aapos_match_among_dbnsfp": {
+    "n": 54575,
+    "of": 54710,
+    "frac": 0.9975
+   },
+   "af_present_among_queried": {
+    "n": 30659,
+    "of": 54710,
+    "frac": 0.5604
+   }
+  }
+ },
+ "coverage_by_group": {
+  "overall": {
+   "n_variants": 54710,
+   "sc_alphamissense": {
+    "n": 54032,
+    "frac": 0.9876
+   },
+   "sc_revel": {
+    "n": 50607,
+    "frac": 0.925
+   },
+   "sc_metarnn": {
+    "n": 54557,
+    "frac": 0.9972
+   },
+   "sc_bayesdel_addaf": {
+    "n": 54549,
+    "frac": 0.9971
+   },
+   "sc_bayesdel_noaf": {
+    "n": 54549,
+    "frac": 0.9971
+   },
+   "sc_vest4": {
+    "n": 54397,
+    "frac": 0.9943
+   },
+   "sc_primateai": {
+    "n": 53985,
+    "frac": 0.9867
+   },
+   "sc_esm1b": {
+    "n": 52816,
+    "frac": 0.9654
+   },
+   "sc_polyphen2_hvar": {
+    "n": 48779,
+    "frac": 0.8916
+   },
+   "sc_mutpred": {
+    "n": 43171,
+    "frac": 0.7891
+   },
+   "sc_cadd_phred": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "sc_eve": {
+    "n": 27042,
+    "frac": 0.4943
+   },
+   "sc_sift": {
+    "n": 49091,
+    "frac": 0.8973
+   },
+   "sc_sift4g": {
+    "n": 54269,
+    "frac": 0.9919
+   },
+   "sc_clinpred": {
+    "n": 54544,
+    "frac": 0.997
+   },
+   "sc_varity_r": {
+    "n": 51819,
+    "frac": 0.9472
+   },
+   "sc_mpc": {
+    "n": 44484,
+    "frac": 0.8131
+   },
+   "sc_deogen2": {
+    "n": 53154,
+    "frac": 0.9716
+   },
+   "cons_phylop100": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "cons_phylop_mammal": {
+    "n": 52558,
+    "frac": 0.9607
+   },
+   "cons_phylop_primate": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "cons_phastcons100": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "cons_gerp_rs": {
+    "n": 54693,
+    "frac": 0.9997
+   },
+   "af_gnomad_exome": {
+    "n": 26312,
+    "frac": 0.4809
+   },
+   "af_gnomad_genome": {
+    "n": 22787,
+    "frac": 0.4165
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 26312,
+    "frac": 0.4809
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 22787,
+    "frac": 0.4165
+   },
+   "af_any": {
+    "n": 30659,
+    "frac": 0.5604
+   },
+   "af_popmax_any_derived": {
+    "n": 30659,
+    "frac": 0.5604
+   }
+  },
+  "fit": {
+   "n_variants": 0,
+   "sc_alphamissense": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_revel": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_metarnn": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_addaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_noaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_vest4": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_primateai": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_esm1b": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_polyphen2_hvar": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mutpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_cadd_phred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_eve": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift4g": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_clinpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_varity_r": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mpc": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_deogen2": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_mammal": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_primate": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phastcons100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_gerp_rs": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_any": {
+    "n": 0,
+    "frac": null
+   },
+   "af_popmax_any_derived": {
+    "n": 0,
+    "frac": null
+   }
+  },
+  "dev": {
+   "n_variants": 0,
+   "sc_alphamissense": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_revel": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_metarnn": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_addaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_noaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_vest4": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_primateai": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_esm1b": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_polyphen2_hvar": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mutpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_cadd_phred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_eve": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift4g": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_clinpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_varity_r": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mpc": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_deogen2": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_mammal": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_primate": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phastcons100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_gerp_rs": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_any": {
+    "n": 0,
+    "frac": null
+   },
+   "af_popmax_any_derived": {
+    "n": 0,
+    "frac": null
+   }
+  },
+  "test_db": {
+   "n_variants": 0,
+   "sc_alphamissense": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_revel": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_metarnn": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_addaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_noaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_vest4": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_primateai": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_esm1b": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_polyphen2_hvar": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mutpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_cadd_phred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_eve": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift4g": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_clinpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_varity_r": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mpc": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_deogen2": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_mammal": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_primate": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phastcons100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_gerp_rs": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_any": {
+    "n": 0,
+    "frac": null
+   },
+   "af_popmax_any_derived": {
+    "n": 0,
+    "frac": null
+   }
+  },
+  "test_time": {
+   "n_variants": 0,
+   "sc_alphamissense": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_revel": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_metarnn": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_addaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_noaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_vest4": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_primateai": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_esm1b": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_polyphen2_hvar": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mutpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_cadd_phred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_eve": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift4g": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_clinpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_varity_r": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mpc": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_deogen2": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_mammal": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_primate": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phastcons100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_gerp_rs": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_any": {
+    "n": 0,
+    "frac": null
+   },
+   "af_popmax_any_derived": {
+    "n": 0,
+    "frac": null
+   }
+  },
+  "test_gene": {
+   "n_variants": 0,
+   "sc_alphamissense": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_revel": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_metarnn": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_addaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_bayesdel_noaf": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_vest4": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_primateai": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_esm1b": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_polyphen2_hvar": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mutpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_cadd_phred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_eve": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_sift4g": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_clinpred": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_varity_r": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_mpc": {
+    "n": 0,
+    "frac": null
+   },
+   "sc_deogen2": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_mammal": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phylop_primate": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_phastcons100": {
+    "n": 0,
+    "frac": null
+   },
+   "cons_gerp_rs": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 0,
+    "frac": null
+   },
+   "af_any": {
+    "n": 0,
+    "frac": null
+   },
+   "af_popmax_any_derived": {
+    "n": 0,
+    "frac": null
+   }
+  },
+  "vus": {
+   "n_variants": 54710,
+   "sc_alphamissense": {
+    "n": 54032,
+    "frac": 0.9876
+   },
+   "sc_revel": {
+    "n": 50607,
+    "frac": 0.925
+   },
+   "sc_metarnn": {
+    "n": 54557,
+    "frac": 0.9972
+   },
+   "sc_bayesdel_addaf": {
+    "n": 54549,
+    "frac": 0.9971
+   },
+   "sc_bayesdel_noaf": {
+    "n": 54549,
+    "frac": 0.9971
+   },
+   "sc_vest4": {
+    "n": 54397,
+    "frac": 0.9943
+   },
+   "sc_primateai": {
+    "n": 53985,
+    "frac": 0.9867
+   },
+   "sc_esm1b": {
+    "n": 52816,
+    "frac": 0.9654
+   },
+   "sc_polyphen2_hvar": {
+    "n": 48779,
+    "frac": 0.8916
+   },
+   "sc_mutpred": {
+    "n": 43171,
+    "frac": 0.7891
+   },
+   "sc_cadd_phred": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "sc_eve": {
+    "n": 27042,
+    "frac": 0.4943
+   },
+   "sc_sift": {
+    "n": 49091,
+    "frac": 0.8973
+   },
+   "sc_sift4g": {
+    "n": 54269,
+    "frac": 0.9919
+   },
+   "sc_clinpred": {
+    "n": 54544,
+    "frac": 0.997
+   },
+   "sc_varity_r": {
+    "n": 51819,
+    "frac": 0.9472
+   },
+   "sc_mpc": {
+    "n": 44484,
+    "frac": 0.8131
+   },
+   "sc_deogen2": {
+    "n": 53154,
+    "frac": 0.9716
+   },
+   "cons_phylop100": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "cons_phylop_mammal": {
+    "n": 52558,
+    "frac": 0.9607
+   },
+   "cons_phylop_primate": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "cons_phastcons100": {
+    "n": 54710,
+    "frac": 1.0
+   },
+   "cons_gerp_rs": {
+    "n": 54693,
+    "frac": 0.9997
+   },
+   "af_gnomad_exome": {
+    "n": 26312,
+    "frac": 0.4809
+   },
+   "af_gnomad_genome": {
+    "n": 22787,
+    "frac": 0.4165
+   },
+   "af_gnomad_exome_popmax_derived": {
+    "n": 26312,
+    "frac": 0.4809
+   },
+   "af_gnomad_genome_popmax_derived": {
+    "n": 22787,
+    "frac": 0.4165
+   },
+   "af_any": {
+    "n": 30659,
+    "frac": 0.5604
+   },
+   "af_popmax_any_derived": {
+    "n": 30659,
+    "frac": 0.5604
+   }
+  }
+ },
+ "genes_without_any_value": {
+  "sc_alphamissense": {
+   "BSND": 121,
+   "DSPP": 344
+  },
+  "sc_revel": {
+   "ALMS1": 3147,
+   "KIAA1024L": 4,
+   "S1PR2": 74,
+   "USH1G": 226
+  },
+  "sc_vest4": {
+   "GRXCR2": 53
+  },
+  "sc_esm1b": {
+   "KIAA1024L": 4,
+   "OTOGL": 539,
+   "POU3F4": 53,
+   "PTPRQ": 213
+  },
+  "sc_polyphen2_hvar": {
+   "CEACAM16": 165,
+   "COL11A2": 994,
+   "FDXR": 94,
+   "KIAA1024L": 4,
+   "OTOG": 558,
+   "OTOGL": 539,
+   "POU3F4": 53,
+   "PTPRQ": 213
+  },
+  "sc_mutpred": {
+   "CEACAM16": 165,
+   "KIAA1024L": 4
+  },
+  "sc_eve": {
+   "ADGRV1": 2262,
+   "AP1S1": 20,
+   "ATP11A": 179,
+   "BSND": 121,
+   "CDH23": 1863,
+   "CEP250": 810,
+   "CLDN9": 56,
+   "COL11A2": 994,
+   "COL9A1": 482,
+   "COL9A2": 491,
+   "COL9A3": 641,
+   "CRLS1": 40,
+   "DAP3": 53,
+   "DIAPH1": 832,
+   "DMXL2": 818,
+   "DNAJC3": 55,
+   "DSPP": 344,
+   "EPS8L2": 199,
+   "ESPN": 286,
+   "ESRRB": 109,
+   "EYA4": 521,
+   "FDXR": 94,
+   "GGPS1": 36,
+   "GPR156": 115,
+   "GRXCR2": 53,
+   "HAAO": 50,
+   "ILDR1": 172,
+   "KCNJ16": 12,
+   "KIAA1024L": 4,
+   "LETM1": 150,
+   "LHX3": 146,
+   "LOXHD1": 798,
+   "MN1": 328,
+   "MPZL2": 38,
+   "MRPL49": 32,
+   "MYO6": 374,
+   "NLRP12": 770,
+   "OSBPL2": 93,
+   "OTOA": 205,
+   "OTOG": 558,
+   "OTOGL": 539,
+   "PKHD1L1": 642,
+   "PLXNB2": 290,
+   "POU3F4": 53,
+   "PSMC3": 43,
+   "PTPRQ": 213,
+   "RDX": 109,
+   "RFC4": 60,
+   "RNF220": 65,
+   "S1PR2": 74,
+   "SALL4": 325,
+   "SLC12A2": 341,
+   "SLC26A5": 125,
+   "SLC52A2": 255,
+   "SLITRK6": 200,
+   "SMPX": 31,
+   "SPATA5L1": 123,
+   "TMC1": 220,
+   "TRIOBP": 450,
+   "USH1C": 368,
+   "USH1G": 226,
+   "USP48": 67,
+   "WHRN": 403
+  },
+  "sc_sift": {
+   "ACTG1": 140,
+   "ALMS1": 3147,
+   "DSPP": 344,
+   "S1PR2": 74,
+   "TUBB4B": 21,
+   "USH1G": 226
+  },
+  "sc_clinpred": {
+   "KIAA1024L": 4
+  },
+  "sc_varity_r": {
+   "COL11A2": 994,
+   "ESRRB": 109,
+   "FDXR": 94,
+   "KIAA1024L": 4,
+   "MYO6": 374,
+   "OTOGL": 539,
+   "POU3F4": 53,
+   "PTPRQ": 213
+  },
+  "sc_mpc": {
+   "ACTG1": 140,
+   "ALMS1": 3147,
+   "DSPP": 344,
+   "GREB1L": 210,
+   "KIAA1024L": 4,
+   "LOXHD1": 798,
+   "MN1": 328,
+   "MYO15A": 1044,
+   "OTOG": 558,
+   "PTPRQ": 213,
+   "STRC": 179,
+   "TPRN": 220,
+   "TUBB4B": 21,
+   "USH1G": 226,
+   "WFS1": 926
+  },
+  "sc_deogen2": {
+   "KIAA1024L": 4,
+   "OTOGL": 539,
+   "POU3F4": 53
+  },
+  "cons_phylop_mammal": {
+   "CEACAM16": 165,
+   "CLDN9": 56,
+   "DFNB59": 81,
+   "DIAPH1": 832,
+   "DNAJC3": 55,
+   "HARS2": 133,
+   "NLRP12": 770
+  }
+ },
+ "values_per_record": {
+  "sc_alphamissense": {
+   "one_value": 13762,
+   "several_identical_values": 971,
+   "several_distinct_values": 39422,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_revel": {
+   "one_value": 14857,
+   "several_identical_values": 35815,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_metarnn": {
+   "one_value": 7819,
+   "several_identical_values": 42384,
+   "several_distinct_values": 4478,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_bayesdel_addaf": {
+   "one_value": 54702,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_bayesdel_noaf": {
+   "one_value": 54702,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_vest4": {
+   "one_value": 15336,
+   "several_identical_values": 1275,
+   "several_distinct_values": 37867,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_primateai": {
+   "one_value": 53986,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_esm1b": {
+   "one_value": 15108,
+   "several_identical_values": 13421,
+   "several_distinct_values": 24316,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_polyphen2_hvar": {
+   "one_value": 18684,
+   "several_identical_values": 14479,
+   "several_distinct_values": 15649,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_mutpred": {
+   "one_value": 15944,
+   "several_identical_values": 27285,
+   "several_distinct_values": 1,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_cadd_phred": {
+   "one_value": 54710,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_eve": {
+   "one_value": 21174,
+   "several_identical_values": 5868,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_sift": {
+   "one_value": 16254,
+   "several_identical_values": 9828,
+   "several_distinct_values": 23070,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_sift4g": {
+   "one_value": 14737,
+   "several_identical_values": 11557,
+   "several_distinct_values": 28040,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_clinpred": {
+   "one_value": 54697,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_varity_r": {
+   "one_value": 33612,
+   "several_identical_values": 18210,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_mpc": {
+   "one_value": 44241,
+   "several_identical_values": 0,
+   "several_distinct_values": 247,
+   "non_numeric_values_ignored": 0
+  },
+  "sc_deogen2": {
+   "one_value": 24988,
+   "several_identical_values": 12741,
+   "several_distinct_values": 15458,
+   "non_numeric_values_ignored": 0
+  },
+  "cons_phylop100": {
+   "one_value": 54710,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "cons_phylop_mammal": {
+   "one_value": 52558,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "cons_phylop_primate": {
+   "one_value": 54710,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "cons_phastcons100": {
+   "one_value": 54710,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  },
+  "cons_gerp_rs": {
+   "one_value": 54693,
+   "several_identical_values": 0,
+   "several_distinct_values": 0,
+   "non_numeric_values_ignored": 0
+  }
+ },
+ "amino_acid_match": {
+  "definition": "1 if ANY amino-acid annotation of the dbNSFP record (any dbnsfp.aa row, any dbnsfp.hgvsp string) has ref1 and alt1; 0 if a dbnsfp block exists but none matches; NaN without dbnsfp block",
+  "n_with_dbnsfp": 54710,
+  "dbnsfp_aa_match": {
+   "n_1": 54710,
+   "n_0": 0,
+   "rate": 1.0
+  },
+  "mismatch_by_gene": {},
+  "mismatch_examples": [],
+  "match_only_in_a_non_first_dbnsfp_row": {
+   "meaning": "the genomic variant has the ref1>alt1 change, but the scores served belong to another amino-acid change of the same genomic variant (rule R2)",
+   "n": 153,
+   "by_gene": {
+    "SLC52A2": 18,
+    "P2RX2": 16,
+    "CLRN1": 9,
+    "SYNE4": 7,
+    "MRPL49": 6,
+    "MYO15A": 6,
+    "PLXNB2": 6,
+    "EPS8L2": 6,
+    "ATP2B2": 5,
+    "PAX2": 5,
+    "SERAC1": 4,
+    "PNPT1": 4,
+    "PDZD7": 4,
+    "KARS": 3,
+    "HSD17B4": 3,
+    "MYH14": 3,
+    "PCDH15": 3,
+    "MYO7A": 3,
+    "OSBPL2": 3,
+    "ADGRV1": 3,
+    "POU4F3": 2,
+    "ACTG1": 2,
+    "MITF": 2,
+    "DIAPH1": 2,
+    "CIB2": 2,
+    "ATP6V1B1": 2,
+    "ESPN": 2,
+    "DNMT1": 2,
+    "KIT": 2,
+    "TMC1": 1,
+    "TBC1D24": 1,
+    "CDH23": 1,
+    "CHD7": 1,
+    "RFC4": 1,
+    "RDX": 1,
+    "PRPS1": 1,
+    "MARVELD2": 1,
+    "CLPP": 1,
+    "EDNRB": 1,
+    "ESRRB": 1,
+    "EYA1": 1,
+    "NLRP12": 1,
+    "FOXI1": 1,
+    "MYO3A": 1,
+    "GIPC3": 1,
+    "HGF": 1,
+    "TMPRSS3": 1
+   },
+   "examples": [
+    {
+     "variant_id": "ACTG1:K50R",
+     "hgvs_id": "chr17:g.81512117T>C",
+     "dbnsfp_aa_annot": "noAA|K50R",
+     "dbnsfp_hgvsp": ""
+    },
+    {
+     "variant_id": "ACTG1:A114V",
+     "hgvs_id": "chr17:g.81511925G>A",
+     "dbnsfp_aa_annot": "noAA|A114V/A105V",
+     "dbnsfp_hgvsp": ""
+    },
+    {
+     "variant_id": "ADGRV1:Q6280P",
+     "hgvs_id": "chr5:g.91163818A>C",
+     "dbnsfp_aa_annot": "K185Q|Q6280P/Q2598P/Q308P",
+     "dbnsfp_hgvsp": "p.K185Q;p.Lys185Gln"
+    },
+    {
+     "variant_id": "ADGRV1:G6286A",
+     "hgvs_id": "chr5:g.91163836G>C",
+     "dbnsfp_aa_annot": "A191P|G6286A/G2604A/G314A",
+     "dbnsfp_hgvsp": "p.A191P;p.Ala191Pro"
+    },
+    {
+     "variant_id": "ADGRV1:G6286D",
+     "hgvs_id": "chr5:g.91163836G>A",
+     "dbnsfp_aa_annot": "A191T|G6286D/G2604D/G314D",
+     "dbnsfp_hgvsp": "p.A191T;p.Ala191Thr"
+    },
+    {
+     "variant_id": "ATP2B2:V1113M",
+     "hgvs_id": "chr3:g.10338259C>T",
+     "dbnsfp_aa_annot": "R352H|V1068M/V1113M/V1102M/V866M/V1082M",
+     "dbnsfp_hgvsp": "p.Arg352His"
+    },
+    {
+     "variant_id": "ATP2B2:R1121G",
+     "hgvs_id": "chr3:g.10338235G>C",
+     "dbnsfp_aa_annot": "A360G|R1076G/R1121G/R1110G/R874G/R1090G",
+     "dbnsfp_hgvsp": "p.Ala360Gly"
+    },
+    {
+     "variant_id": "ATP2B2:R1121W",
+     "hgvs_id": "chr3:g.10338235G>A",
+     "dbnsfp_aa_annot": "A360V|R1076W/R1121W/R1110W/R874W/R1090W",
+     "dbnsfp_hgvsp": "p.Ala360Val"
+    },
+    {
+     "variant_id": "ATP2B2:G1126S",
+     "hgvs_id": "chr3:g.10338220C>T",
+     "dbnsfp_aa_annot": "G365E|G1081S/G1126S/G1115S/G879S/G1095S",
+     "dbnsfp_hgvsp": "p.Gly365Glu"
+    },
+    {
+     "variant_id": "ATP2B2:V1144L",
+     "hgvs_id": "chr3:g.10329116C>A",
+     "dbnsfp_aa_annot": "R383L/R1156L|V1099L/V1144L/V897L/V1113L",
+     "dbnsfp_hgvsp": "p.Arg1156Leu;p.Arg383Leu"
+    },
+    {
+     "variant_id": "ATP6V1B1:G337C",
+     "hgvs_id": "chr2:g.70963261G>T",
+     "dbnsfp_aa_annot": "D337Y|G337C",
+     "dbnsfp_hgvsp": "p.Asp337Tyr;p.D337Y"
+    },
+    {
+     "variant_id": "ATP6V1B1:G337V",
+     "hgvs_id": "chr2:g.70963262G>T",
+     "dbnsfp_aa_annot": "noAA|G337V",
+     "dbnsfp_hgvsp": ""
+    },
+    {
+     "variant_id": "CDH23:N221T",
+     "hgvs_id": "chr10:g.71570827A>C",
+     "dbnsfp_aa_annot": "noAA|N221T/N109T",
+     "dbnsfp_hgvsp": ""
+    },
+    {
+     "variant_id": "CHD7:V573F",
+     "hgvs_id": "chr8:g.60781051G>T",
+     "dbnsfp_aa_annot": "noAA|V573F",
+     "dbnsfp_hgvsp": ""
+    },
+    {
+     "variant_id": "CIB2:S181I",
+     "hgvs_id": "chr15:g.78105739C>A",
+     "dbnsfp_aa_annot": "R138M|S181I/S138I/S132I",
+     "dbnsfp_hgvsp": "p.Arg138Met;p.R138M"
+    },
+    {
+     "variant_id": "CIB2:R186Q",
+     "hgvs_id": "chr15:g.78105318C>T",
+     "dbnsfp_aa_annot": "G121R|R186Q/R143Q/R137Q",
+     "dbnsfp_hgvsp": "p.Gly121Arg"
+    },
+    {
+     "variant_id": "CLPP:R228H",
+     "hgvs_id": "chr19:g.6368559G>A",
+     "dbnsfp_aa_annot": "A32T|R228H/R141H",
+     "dbnsfp_hgvsp": "p.Ala32Thr"
+    },
+    {
+     "variant_id": "CLRN1:L90V",
+     "hgvs_id": "chr3:g.150941747G>C",
+     "dbnsfp_aa_annot": "A139G|L14V/L90V",
+     "dbnsfp_hgvsp": "p.Ala139Gly;p.Leu14Val"
+    },
+    {
+     "variant_id": "CLRN1:V95G",
+     "hgvs_id": "chr3:g.150941731A>C",
+     "dbnsfp_aa_annot": "S144R|V19G/V95G",
+     "dbnsfp_hgvsp": "p.Ser144Arg;p.Val19Gly"
+    },
+    {
+     "variant_id": "CLRN1:V99I",
+     "hgvs_id": "chr3:g.150941720C>T",
+     "dbnsfp_aa_annot": "R148H|V23I/V99I",
+     "dbnsfp_hgvsp": "p.Arg148His;p.Val23Ile"
+    },
+    {
+     "variant_id": "CLRN1:I102V",
+     "hgvs_id": "chr3:g.150941711T>C",
+     "dbnsfp_aa_annot": "H151R|I26V/I102V",
+     "dbnsfp_hgvsp": "p.His151Arg;p.Ile26Val"
+    },
+    {
+     "variant_id": "CLRN1:I107V",
+     "hgvs_id": "chr3:g.150941696T>C",
+     "dbnsfp_aa_annot": "H156R|I31V/I107V",
+     "dbnsfp_hgvsp": "p.His156Arg;p.Ile31Val"
+    },
+    {
+     "variant_id": "CLRN1:V110L",
+     "hgvs_id": "chr3:g.150941687C>A",
+     "dbnsfp_aa_annot": "C159F|V34L/V110L",
+     "dbnsfp_hgvsp": "p.Cys159Phe;p.Val34Leu"
+    },
+    {
+     "variant_id": "CLRN1:T112N",
+     "hgvs_id": "chr3:g.150941680G>T",
+     "dbnsfp_aa_annot": "N161K|T36N/T112N",
+     "dbnsfp_hgvsp": "p.Asn161Lys;p.Thr36Asn"
+    },
+    {
+     "variant_id": "CLRN1:M113V",
+     "hgvs_id": "chr3:g.150941678T>C",
+     "dbnsfp_aa_annot": "H162R|M37V/M113V",
+     "dbnsfp_hgvsp": "p.His162Arg;p.Met37Val"
+    },
+    {
+     "variant_id": "CLRN1:V191I",
+     "hgvs_id": "chr3:g.150928064C>T",
+     "dbnsfp_aa_annot": "noAA|V191I/V204I",
+     "dbnsfp_hgvsp": ""
+    },
+    {
+     "variant_id": "DIAPH1:V1229D",
+     "hgvs_id": "chr5:g.141516984A>T",
+     "dbnsfp_aa_annot": "S1247T|V1229D/V1185D/V1220D/V31D",
+     "dbnsfp_hgvsp": "p.Ser1247Thr"
+    },
+    {
+     "variant_id": "DIAPH1:T1230I",
+     "hgvs_id": "chr5:g.141516981G>A",
+     "dbnsfp_aa_annot": "H1248Y|T1230I/T1186I/T1221I/T32I",
+     "dbnsfp_hgvsp": "p.His1248Tyr"
+    },
+    {
+     "variant_id": "DNMT1:R149C",
+     "hgvs_id": "chr19:g.10180350G>A",
+     "dbnsfp_aa_annot": "P149S/P28S/P204S|R149C/R28C",
+     "dbnsfp_hgvsp": "p.P149S;p.Pro149Ser;p.Pro204Ser;p.Pro28Ser"
+    },
+    {
+     "variant_id": "DNMT1:R149S",
+     "hgvs_id": "chr19:g.10180350G>T",
+     "dbnsfp_aa_annot": "P149T/P28T/P204T|R149S/R28S",
+     "dbnsfp_hgvsp": "p.P149T;p.Pro149Thr;p.Pro204Thr;p.Pro28Thr"
+    }
+   ]
+  },
+  "records_with_several_aa_rows": 315,
+  "records_with_several_aa_rows_by_gene": {
+   "SLC52A2": 30,
+   "P2RX2": 28,
+   "MYO15A": 17,
+   "CLRN1": 17,
+   "SYNE4": 15,
+   "PLXNB2": 14,
+   "GIPC3": 10,
+   "POU4F3": 10,
+   "PCDH15": 10,
+   "ADGRV1": 10,
+   "EPS8L2": 10,
+   "PAX2": 9,
+   "PDZD7": 9,
+   "ATP2B2": 9,
+   "DIAPH1": 8,
+   "MRPL49": 8,
+   "OSBPL2": 8,
+   "HSD17B4": 6,
+   "PNPT1": 6,
+   "KARS": 6,
+   "SERAC1": 6,
+   "MYO3A": 5,
+   "MYH14": 5,
+   "EDNRB": 5,
+   "MYO7A": 4,
+   "EYA4": 3,
+   "HGF": 2,
+   "ESPN": 2,
+   "ATP6V1B1": 2,
+   "CIB2": 2,
+   "CISD2": 2,
+   "DMXL2": 2,
+   "DNMT1": 2,
+   "EDN3": 2,
+   "MITF": 2,
+   "KIT": 2,
+   "ACTG1": 2,
+   "PRPS1": 1,
+   "RNF220": 1,
+   "RFC4": 1,
+   "PBX1": 1,
+   "TBC1D24": 1,
+   "TMC1": 1,
+   "RDX": 1,
+   "TMPRSS3": 1,
+   "LRTOMT": 1,
+   "OTOG": 1,
+   "NLRP12": 1,
+   "MYO6": 1,
+   "MARVELD2": 1,
+   "LOXHD1": 1,
+   "ILDR1": 1,
+   "FOXI1": 1,
+   "EYA1": 1,
+   "ESRRB": 1,
+   "CRLS1": 1,
+   "COL4A5": 1,
+   "CLPP": 1,
+   "CHD7": 1,
+   "CDH23": 1,
+   "AIFM1": 1,
+   "USH1C": 1
+  },
+  "hgvsp_vs_first_aa_row": {
+   "n_checked": 54685,
+   "n_not_consistent": 20
+  },
+  "position_check": {
+   "definition": "1 if a matching annotation also has amino-acid position ref_pos",
+   "n_substitution_matches_but_position_differs": 135,
+   "by_gene": {
+    "DMXL2": 114,
+    "MASP1": 18,
+    "USH1C": 3
+   },
+   "examples": [
+    {
+     "variant_id": "DMXL2:V2664L",
+     "hgvs_id": "chr15:g.51458795C>G",
+     "dbnsfp_aa_annot": "V2642L/V2643L/V2006L",
+     "dbnsfp_hgvsp": "p.V2006L;p.V2642L;p.V2643L;p.Val2006Leu;p.Val2642Leu;p.Val2643Leu"
+    },
+    {
+     "variant_id": "DMXL2:E2665G",
+     "hgvs_id": "chr15:g.51458791T>C",
+     "dbnsfp_aa_annot": "E2643G/E2644G/E2007G",
+     "dbnsfp_hgvsp": "p.E2007G;p.E2643G;p.E2644G;p.Glu2007Gly;p.Glu2643Gly;p.Glu2644Gly"
+    },
+    {
+     "variant_id": "DMXL2:L2668V",
+     "hgvs_id": "chr15:g.51458783G>C",
+     "dbnsfp_aa_annot": "L2646V/L2647V/L2010V",
+     "dbnsfp_hgvsp": "p.L2010V;p.L2646V;p.L2647V;p.Leu2010Val;p.Leu2646Val;p.Leu2647Val"
+    },
+    {
+     "variant_id": "DMXL2:A2675V",
+     "hgvs_id": "chr15:g.51458761G>A",
+     "dbnsfp_aa_annot": "A2653V/A2654V/A2017V",
+     "dbnsfp_hgvsp": "p.A2017V;p.A2653V;p.A2654V;p.Ala2017Val;p.Ala2653Val;p.Ala2654Val"
+    },
+    {
+     "variant_id": "DMXL2:E2681D",
+     "hgvs_id": "chr15:g.51458742T>A",
+     "dbnsfp_aa_annot": "E2659D/E2660D/E2023D",
+     "dbnsfp_hgvsp": "p.E2023D;p.E2659D;p.E2660D;p.Glu2023Asp;p.Glu2659Asp;p.Glu2660Asp"
+    },
+    {
+     "variant_id": "DMXL2:M2684I",
+     "hgvs_id": "chr15:g.51458733C>A",
+     "dbnsfp_aa_annot": "M2662I/M2663I/M2026I",
+     "dbnsfp_hgvsp": "p.M2026I;p.M2662I;p.M2663I;p.Met2026Ile;p.Met2662Ile;p.Met2663Ile"
+    },
+    {
+     "variant_id": "DMXL2:V2690A",
+     "hgvs_id": "chr15:g.51458716A>G",
+     "dbnsfp_aa_annot": "V2668A/V2669A/V2032A",
+     "dbnsfp_hgvsp": "p.V2032A;p.V2668A;p.V2669A;p.Val2032Ala;p.Val2668Ala;p.Val2669Ala"
+    },
+    {
+     "variant_id": "DMXL2:K2692E",
+     "hgvs_id": "chr15:g.51458711T>C",
+     "dbnsfp_aa_annot": "K2670E/K2671E/K2034E",
+     "dbnsfp_hgvsp": "p.K2034E;p.K2670E;p.K2671E;p.Lys2034Glu;p.Lys2670Glu;p.Lys2671Glu"
+    },
+    {
+     "variant_id": "DMXL2:N2694S",
+     "hgvs_id": "chr15:g.51458623T>C",
+     "dbnsfp_aa_annot": "N2672S/N2673S/N2036S",
+     "dbnsfp_hgvsp": "p.Asn2036Ser;p.Asn2672Ser;p.Asn2673Ser;p.N2036S;p.N2672S;p.N2673S"
+    },
+    {
+     "variant_id": "DMXL2:N2696Y",
+     "hgvs_id": "chr15:g.51458618T>A",
+     "dbnsfp_aa_annot": "N2674Y/N2675Y/N2038Y",
+     "dbnsfp_hgvsp": "p.Asn2038Tyr;p.Asn2674Tyr;p.Asn2675Tyr;p.N2038Y;p.N2674Y;p.N2675Y"
+    },
+    {
+     "variant_id": "DMXL2:L2700S",
+     "hgvs_id": "chr15:g.51458605A>G",
+     "dbnsfp_aa_annot": "L2678S/L2679S/L2042S",
+     "dbnsfp_hgvsp": "p.L2042S;p.L2678S;p.L2679S;p.Leu2042Ser;p.Leu2678Ser;p.Leu2679Ser"
+    },
+    {
+     "variant_id": "DMXL2:H2704R",
+     "hgvs_id": "chr15:g.51458593T>C",
+     "dbnsfp_aa_annot": "H2682R/H2683R/H2046R",
+     "dbnsfp_hgvsp": "p.H2046R;p.H2682R;p.H2683R;p.His2046Arg;p.His2682Arg;p.His2683Arg"
+    },
+    {
+     "variant_id": "DMXL2:V2711D",
+     "hgvs_id": "chr15:g.51458572A>T",
+     "dbnsfp_aa_annot": "V2689D/V2690D/V2053D",
+     "dbnsfp_hgvsp": "p.V2053D;p.V2689D;p.V2690D;p.Val2053Asp;p.Val2689Asp;p.Val2690Asp"
+    },
+    {
+     "variant_id": "DMXL2:V2711I",
+     "hgvs_id": "chr15:g.51458573C>T",
+     "dbnsfp_aa_annot": "V2689I/V2690I/V2053I",
+     "dbnsfp_hgvsp": "p.V2053I;p.V2689I;p.V2690I;p.Val2053Ile;p.Val2689Ile;p.Val2690Ile"
+    },
+    {
+     "variant_id": "DMXL2:W2722R",
+     "hgvs_id": "chr15:g.51458540A>G",
+     "dbnsfp_aa_annot": "W2700R/W2701R/W2064R",
+     "dbnsfp_hgvsp": "p.Trp2064Arg;p.Trp2700Arg;p.Trp2701Arg;p.W2064R;p.W2700R;p.W2701R"
+    },
+    {
+     "variant_id": "DMXL2:G2724R",
+     "hgvs_id": "chr15:g.51458534C>T",
+     "dbnsfp_aa_annot": "G2702R/G2703R/G2066R",
+     "dbnsfp_hgvsp": "p.G2066R;p.G2702R;p.G2703R;p.Gly2066Arg;p.Gly2702Arg;p.Gly2703Arg"
+    },
+    {
+     "variant_id": "DMXL2:E2726D",
+     "hgvs_id": "chr15:g.51458526T>A",
+     "dbnsfp_aa_annot": "E2704D/E2705D/E2068D",
+     "dbnsfp_hgvsp": "p.E2068D;p.E2704D;p.E2705D;p.Glu2068Asp;p.Glu2704Asp;p.Glu2705Asp"
+    },
+    {
+     "variant_id": "DMXL2:D2728H",
+     "hgvs_id": "chr15:g.51458522C>G",
+     "dbnsfp_aa_annot": "D2706H/D2707H/D2070H",
+     "dbnsfp_hgvsp": "p.Asp2070His;p.Asp2706His;p.Asp2707His;p.D2070H;p.D2706H;p.D2707H"
+    },
+    {
+     "variant_id": "DMXL2:D2728V",
+     "hgvs_id": "chr15:g.51458521T>A",
+     "dbnsfp_aa_annot": "D2706V/D2707V/D2070V",
+     "dbnsfp_hgvsp": "p.Asp2070Val;p.Asp2706Val;p.Asp2707Val;p.D2070V;p.D2706V;p.D2707V"
+    },
+    {
+     "variant_id": "DMXL2:K2732E",
+     "hgvs_id": "chr15:g.51458510T>C",
+     "dbnsfp_aa_annot": "K2710E/K2711E/K2074E",
+     "dbnsfp_hgvsp": "p.K2074E;p.K2710E;p.K2711E;p.Lys2074Glu;p.Lys2710Glu;p.Lys2711Glu"
+    },
+    {
+     "variant_id": "DMXL2:K2732R",
+     "hgvs_id": "chr15:g.51458509T>C",
+     "dbnsfp_aa_annot": "K2710R/K2711R/K2074R",
+     "dbnsfp_hgvsp": "p.K2074R;p.K2710R;p.K2711R;p.Lys2074Arg;p.Lys2710Arg;p.Lys2711Arg"
+    },
+    {
+     "variant_id": "DMXL2:R2740C",
+     "hgvs_id": "chr15:g.51457447G>A",
+     "dbnsfp_aa_annot": "R2718C/R2719C/R2082C",
+     "dbnsfp_hgvsp": "p.Arg2082Cys;p.Arg2718Cys;p.Arg2719Cys;p.R2082C;p.R2718C;p.R2719C"
+    },
+    {
+     "variant_id": "DMXL2:R2740H",
+     "hgvs_id": "chr15:g.51457446C>T",
+     "dbnsfp_aa_annot": "R2718H/R2719H/R2082H",
+     "dbnsfp_hgvsp": "p.Arg2082His;p.Arg2718His;p.Arg2719His;p.R2082H;p.R2718H;p.R2719H"
+    },
+    {
+     "variant_id": "DMXL2:Y2747C",
+     "hgvs_id": "chr15:g.51457425T>C",
+     "dbnsfp_aa_annot": "Y2725C/Y2726C/Y2089C",
+     "dbnsfp_hgvsp": "p.Tyr2089Cys;p.Tyr2725Cys;p.Tyr2726Cys;p.Y2089C;p.Y2725C;p.Y2726C"
+    },
+    {
+     "variant_id": "DMXL2:S2753A",
+     "hgvs_id": "chr15:g.51457408A>C",
+     "dbnsfp_aa_annot": "S2731A/S2732A/S2095A",
+     "dbnsfp_hgvsp": "p.S2095A;p.S2731A;p.S2732A;p.Ser2095Ala;p.Ser2731Ala;p.Ser2732Ala"
+    },
+    {
+     "variant_id": "DMXL2:A2756T",
+     "hgvs_id": "chr15:g.51457399C>T",
+     "dbnsfp_aa_annot": "A2734T/A2735T/A2098T",
+     "dbnsfp_hgvsp": "p.A2098T;p.A2734T;p.A2735T;p.Ala2098Thr;p.Ala2734Thr;p.Ala2735Thr"
+    },
+    {
+     "variant_id": "DMXL2:V2759L",
+     "hgvs_id": "chr15:g.51457390C>A",
+     "dbnsfp_aa_annot": "V2737L/V2738L/V2101L",
+     "dbnsfp_hgvsp": "p.V2101L;p.V2737L;p.V2738L;p.Val2101Leu;p.Val2737Leu;p.Val2738Leu"
+    },
+    {
+     "variant_id": "DMXL2:P2761L",
+     "hgvs_id": "chr15:g.51457383G>A",
+     "dbnsfp_aa_annot": "P2739L/P2740L/P2103L",
+     "dbnsfp_hgvsp": "p.P2103L;p.P2739L;p.P2740L;p.Pro2103Leu;p.Pro2739Leu;p.Pro2740Leu"
+    },
+    {
+     "variant_id": "DMXL2:S2764F",
+     "hgvs_id": "chr15:g.51457374G>A",
+     "dbnsfp_aa_annot": "S2742F/S2743F/S2106F",
+     "dbnsfp_hgvsp": "p.S2106F;p.S2742F;p.S2743F;p.Ser2106Phe;p.Ser2742Phe;p.Ser2743Phe"
+    },
+    {
+     "variant_id": "DMXL2:G2769S",
+     "hgvs_id": "chr15:g.51457360C>T",
+     "dbnsfp_aa_annot": "G2747S/G2748S/G2111S",
+     "dbnsfp_hgvsp": "p.G2111S;p.G2747S;p.G2748S;p.Gly2111Ser;p.Gly2747Ser;p.Gly2748Ser"
+    }
+   ]
+  },
+  "scores_masked": {
+   "n_variants": 153,
+   "masking_enabled": true,
+   "n_values_per_column": {
+    "sc_alphamissense": 123,
+    "sc_revel": 65,
+    "sc_metarnn": 124,
+    "sc_bayesdel_addaf": 153,
+    "sc_bayesdel_noaf": 153,
+    "sc_vest4": 81,
+    "sc_primateai": 1,
+    "sc_esm1b": 29,
+    "sc_polyphen2_hvar": 33,
+    "sc_mutpred": 59,
+    "sc_sift": 61,
+    "sc_sift4g": 65,
+    "sc_clinpred": 153,
+    "sc_varity_r": 3,
+    "sc_mpc": 4,
+    "sc_deogen2": 33
+   }
+  }
+ },
+ "gnomad": {
+  "gnomad_exome": {
+   "release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)",
+   "n_records": 26313,
+   "n_with_global_af": 26312,
+   "n_records_without_global_af": 1,
+   "n_global_af_equal_0": 970,
+   "filter_counts": {
+    "PASS": 24979,
+    "AC0": 550,
+    "AC0;RF": 421,
+    "RF": 363
+   },
+   "coordinates_vs_query": {
+    "agree": 26313,
+    "not_given": 0,
+    "CONTRADICT": 0
+   },
+   "n_block_is_list": 0,
+   "n_several_distinct_global_af": 0,
+   "n_non_numeric_af_ignored": 0,
+   "max_AN_observed": 251496,
+   "popmax_groups_served": {
+    "afr": true,
+    "amr": true,
+    "eas": true,
+    "nfe": true,
+    "sas": true
+   }
+  },
+  "gnomad_genome": {
+   "release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)",
+   "n_records": 22789,
+   "n_with_global_af": 22787,
+   "n_records_without_global_af": 2,
+   "n_global_af_equal_0": 157,
+   "filter_counts": {
+    "PASS": 22447,
+    "AS_VQSR": 183,
+    "AC0": 106,
+    "AC0;AS_VQSR": 53
+   },
+   "coordinates_vs_query": {
+    "agree": 22789,
+    "not_given": 0,
+    "CONTRADICT": 0
+   },
+   "n_block_is_list": 0,
+   "n_several_distinct_global_af": 0,
+   "n_non_numeric_af_ignored": 0,
+   "max_AN_observed": 152302,
+   "popmax_groups_served": {
+    "afr": true,
+    "amr": true,
+    "eas": true,
+    "nfe": true,
+    "sas": true
+   }
+  },
+  "any_source": {
+   "af_present_1": 30659,
+   "af_present_0": 24051,
+   "af_present_unknown_not_queried": 0,
+   "present_only_in_records_failing_gnomad_qc": 928,
+   "af_any_equal_0": 645,
+   "in_all_sources": 18440
+  }
+ },
+ "sanity": {
+  "auroc_note": "plausibility check only: each predictor oriented by higher_is_pathogenic, label y, variants covered by that predictor",
+  "auroc": {
+   "overall": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   },
+   "fit": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   },
+   "dev": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   },
+   "test_db": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   },
+   "test_time": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   },
+   "test_gene": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   },
+   "vus": {
+    "sc_alphamissense": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_revel": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_metarnn": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_addaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_bayesdel_noaf": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_vest4": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_primateai": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_esm1b": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_polyphen2_hvar": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mutpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_cadd_phred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_eve": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_sift4g": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_clinpred": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_varity_r": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_mpc": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    },
+    "sc_deogen2": {
+     "n": 0,
+     "n_pathogenic": 0,
+     "n_benign": 0,
+     "auroc": null
+    }
+   }
+  },
+  "spearman_alphamissense_revel": {
+   "rho": 0.6549,
+   "n": 50085
+  },
+  "known_variants": [
+   {
+    "variant_id": "GJB2:M34T",
+    "in_table": false
+   },
+   {
+    "variant_id": "GJB2:V37I",
+    "in_table": false
+   },
+   {
+    "variant_id": "SLC26A4:L236P",
+    "in_table": false
+   },
+   {
+    "variant_id": "MYO7A:R212H",
+    "in_table": false
+   },
+   {
+    "variant_id": "KCNQ4:G285S",
+    "in_table": false
+   }
+  ]
+ },
+ "versions": {
+  "written_by": "code/data/05_annotate_dbnsfp.py",
+  "access_date": "2026-10-07",
+  "access_utc": {
+   "first_query": "2026-10-07T16:14:55Z",
+   "last_query": "2026-10-07T16:37:58Z"
+  },
+  "service": {
+   "name": "MyVariant.info",
+   "endpoint": "POST https://myvariant.info/v1/variant",
+   "assembly": "hg38",
+   "fields_requested": "dbnsfp,gnomad_exome,gnomad_genome",
+   "build_version": "20250624",
+   "build_date": "2025-06-24T16:27:39.012502-07:00",
+   "metadata_urls": {
+    "metadata_hg38": "https://myvariant.info/v1/metadata?assembly=hg38",
+    "metadata_default": "https://myvariant.info/v1/metadata",
+    "fields_hg38": "https://myvariant.info/v1/metadata/fields?assembly=hg38",
+    "probe": "https://myvariant.info/v1/variant/chr13:g.20189481A>G?assembly=hg38&fields=all"
+   },
+   "metadata_snapshot": "data/annotations/_myvariant_cache/metadata__20261007T161440Z.json",
+   "metadata_fetched_utc": "2026-10-07T16:14:40Z",
+   "server_state_per_cached_answer": [
+    {
+     "build_date": "2025-06-24T16:27:39.012502-07:00",
+     "build_version": "20250624",
+     "dbnsfp_version": "4.8a",
+     "gnomad_version_string": "2.1.1",
+     "n_ids": 54710
+    }
+   ]
+  },
+  "dbnsfp": {
+   "version": "4.8a",
+   "metadata_src_dbnsfp_hg38_index": {
+    "license_url_short": "http://bit.ly/2VLnQBz",
+    "code": {
+     "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+     "repo": "https://github.com/biothings/myvariant.info.git",
+     "commit": "1c767a2",
+     "branch": "master",
+     "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+    },
+    "stats": {
+     "dbnsfp_hg38_v1": 83293580
+    },
+    "download_date": "2025-01-17T09:00:00.028000",
+    "version": "4.8a",
+    "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+    "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+    "upload_date": {
+     "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+     "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+     "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+     "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+    }
+   },
+   "metadata_src_dbnsfp_default_endpoint": {
+    "license_url_short": "http://bit.ly/2VLnQBz",
+    "code": {
+     "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+     "repo": "https://github.com/biothings/myvariant.info.git",
+     "commit": "1c767a2",
+     "branch": "master",
+     "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+    },
+    "stats": {
+     "dbnsfp_hg19_v1": 82755468
+    },
+    "download_date": "2025-01-17T09:00:00.028000",
+    "version": "4.8a",
+    "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+    "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+    "upload_date": {
+     "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+     "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+     "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+     "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+    }
+   },
+   "coordinates": "GRCh38; every dbnsfp block is checked (dbnsfp.chrom / hg38.start / ref / alt = query)",
+   "parser_notes": "MyVariant.info dbNSFP parser named in the API metadata (src.dbnsfp.code): https://github.com/biothings/myvariant.info/blob/1c767a2/src/hub/dataload/sources/dbnsfp/dbnsfp_parser_48a_v1.py (consulted 2026-10-06): no gnomAD column is mapped; \";\"-separated per-transcript values are split, missing entries dropped and a single remaining value returned as scalar; rows with the same genomic id keep the fields of the first row and only collect the `aa` objects of all rows (function load_file).",
+   "gnomad_fields_inside_dbnsfp": [],
+   "other_population_blocks_inside_dbnsfp_not_used": [
+    "1000gp3",
+    "alfa",
+    "alspac",
+    "esp6500",
+    "exac",
+    "exac_nonpsych",
+    "exac_nontcga",
+    "twinsuk",
+    "uk10k"
+   ]
+  },
+  "gnomad": {
+   "metadata_src_gnomad_hg38_index": {
+    "license": "ODbL",
+    "license_url_short": "http://bit.ly/2I1cl1I",
+    "code": {
+     "file": "src/hub/dataload/sources/gnomad/gnomad_upload.py",
+     "repo": "https://github.com/biothings/myvariant.info.git",
+     "commit": "2d0396d",
+     "branch": "production",
+     "url": "https://github.com/biothings/myvariant.info/tree/2d0396d40be9471cc439b72b81785f5af2df9413/src/hub/dataload/sources/gnomad/gnomad_upload.py"
+    },
+    "stats": {
+     "gnomad_exomes_hg38": 17189364,
+     "gnomad_genomes_hg38": 759302267
+    },
+    "download_date": "2019-05-20T14:54:02.962000",
+    "version": "2.1.1",
+    "url": "http://gnomad.broadinstitute.org",
+    "license_url": "http://gnomad.broadinstitute.org/terms",
+    "upload_date": {
+     "gnomad_genomes_hg19": "2019-12-02T21:52:29.014000",
+     "gnomad_exomes_hg19": "2019-12-02T21:52:28.974000",
+     "gnomad_exomes_hg38": "2019-12-02T21:52:28.994000",
+     "gnomad_genomes_hg38": "2019-12-02T21:52:29.034000"
+    }
+   },
+   "note": "The API metadata gives ONE version string for the whole gnomAD source; the release behind each object is given in af_fields.",
+   "release_basis": "MyVariant.info hub uploader, module docstring \"Versions of data\" (gnomAD_exome_hg38: v2.1.1 => 2.1.1/exomes/liftover_grch38; gnomAD_genome_hg38: v3.1.1 => 3.1.1/genomes): https://github.com/biothings/myvariant.info/blob/master/src/hub/dataload/sources/gnomad/gnomad_upload.py (last changed by commit b0f5003, 2021-06-10; consulted 2026-10-06). The parsers of that hub read AC / AN / AF / nhomalt per population only, not popmax / grpmax / faf95; a record without FILTER flag (PASS) is stored without `filter` field.",
+   "top_level_gnomad_objects_in_hg38_index": [
+    "gnomad_exome",
+    "gnomad_genome"
+   ],
+   "af_fields": {
+    "gnomad_exome": {
+     "columns": [
+      "af_gnomad_exome",
+      "af_gnomad_exome_popmax_derived",
+      "af_any",
+      "af_popmax_any_derived",
+      "af_present"
+     ],
+     "source_path_global_af": "gnomad_exome.af.af",
+     "gnomad_release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)",
+     "evidence_in_retrieved_records": {
+      "n_records": 26313,
+      "max_AN_observed": 251496,
+      "max_AN_possible_for_release": 251496,
+      "max_AN_consistent_with_release": true,
+      "af_keys": [
+       "af",
+       "af_afr",
+       "af_afr_female",
+       "af_afr_male",
+       "af_amr",
+       "af_amr_female",
+       "af_amr_male",
+       "af_asj",
+       "af_asj_female",
+       "af_asj_male",
+       "af_eas",
+       "af_eas_female",
+       "af_eas_jpn",
+       "af_eas_kor",
+       "af_eas_male",
+       "af_eas_oea",
+       "af_female",
+       "af_fin",
+       "af_fin_female",
+       "af_fin_male",
+       "af_male",
+       "af_nfe",
+       "af_nfe_bgr",
+       "af_nfe_est",
+       "af_nfe_female",
+       "af_nfe_male",
+       "af_nfe_nwe",
+       "af_nfe_onf",
+       "af_nfe_seu",
+       "af_nfe_swe",
+       "af_oth",
+       "af_oth_female",
+       "af_oth_male",
+       "af_sas",
+       "af_sas_female",
+       "af_sas_male"
+      ]
+     },
+     "documents_in_index": {
+      "gnomad_exomes_hg38": 17189364
+     }
+    },
+    "gnomad_genome": {
+     "columns": [
+      "af_gnomad_genome",
+      "af_gnomad_genome_popmax_derived",
+      "af_any",
+      "af_popmax_any_derived",
+      "af_present"
+     ],
+     "source_path_global_af": "gnomad_genome.af.af",
+     "gnomad_release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)",
+     "evidence_in_retrieved_records": {
+      "n_records": 22789,
+      "max_AN_observed": 152302,
+      "max_AN_possible_for_release": 152312,
+      "max_AN_consistent_with_release": true,
+      "af_keys": [
+       "af",
+       "af_afr",
+       "af_afr_xx",
+       "af_afr_xy",
+       "af_ami",
+       "af_ami_xx",
+       "af_ami_xy",
+       "af_amr",
+       "af_amr_xx",
+       "af_amr_xy",
+       "af_asj",
+       "af_asj_xx",
+       "af_asj_xy",
+       "af_eas",
+       "af_eas_xx",
+       "af_eas_xy",
+       "af_fin",
+       "af_fin_xx",
+       "af_fin_xy",
+       "af_mid",
+       "af_mid_xx",
+       "af_mid_xy",
+       "af_nfe",
+       "af_nfe_xx",
+       "af_nfe_xy",
+       "af_oth",
+       "af_oth_xx",
+       "af_oth_xy",
+       "af_sas",
+       "af_sas_xx",
+       "af_sas_xy",
+       "af_xx",
+       "af_xy"
+      ]
+     },
+     "documents_in_index": {
+      "gnomad_genomes_hg38": 759302267
+     }
+    }
+   },
+   "not_served": {
+    "gnomAD v4.x": "not in MyVariant.info (exomes are v2.1.1, genomes v3.1.1)",
+    "joint (exome + genome) AF": "no such field",
+    "gnomAD fields inside dbnsfp": "none served",
+    "official popmax / grpmax / faf95": {
+     "status": "not parsed by the hub; af_popmax is in the index field list but carries no value",
+     "gnomad_exome.af.af_popmax": {
+      "in_index_field_list": true,
+      "n_values_in_retrieved_records": 0
+     },
+     "gnomad_genome.af.af_popmax": {
+      "in_index_field_list": true,
+      "n_values_in_retrieved_records": 0
+     }
+    }
+   }
+  },
+  "probe": {
+   "id": "chr13:g.20189481A>G",
+   "top_level_keys": [
+    "_id",
+    "_version",
+    "chrom",
+    "clingen",
+    "clinvar",
+    "dbnsfp",
+    "dbsnp",
+    "emv",
+    "evs",
+    "gnomad_exome",
+    "gnomad_genome",
+    "hg38",
+    "observed",
+    "snpeff",
+    "uniprot",
+    "vcf"
+   ]
+  }
+ }
+}

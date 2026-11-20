@@ -1,0 +1,53 @@
+=== feat_plm_only/seed1 config: {"backbone": "facebook/esm2_t30_150M_UR50D", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.1, "lora_targets": ["query", "value"], "window": 32, "feature_groups": ["plm", "cons", "struct", "hear"], "use_lm_logits": false, "use_sequence": false, "beta_ddg": 0.0, "epochs": 10, "batch_size": 8, "lr_lora": 0.0001, "lr_head": 0.001, "weight_decay": 0.01, "warmup_frac": 0.06, "grad_clip": 1.0, "head_dropout": 0.3, "seed": 1, "device": "mps", "arm": "feat_plm_only", "dev_gene_fold": null, "cv_fold": null, "exclude_genes": []}
+train n=7361 (P=4205) features=103 ddg_targets=0 trainable=71,233 steps=9210
+  ep0 step 200/921 loss=0.5840 elapsed=0.0min
+  ep0 step 400/921 loss=0.3467 elapsed=0.0min
+  ep0 step 600/921 loss=0.3313 elapsed=0.1min
+  ep0 step 800/921 loss=0.3083 elapsed=0.1min
+epoch 0: {"epoch": 0, "loss": 0.38189455196458594, "loss_path": 0.38189455196458594, "loss_ddg": null, "time_min": 0.0829140822092692, "dev": {"n": 889, "auroc": 0.9593516580480999, "auprc": 0.9708259522051144}}
+  ep1 step 200/921 loss=0.3020 elapsed=0.1min
+  ep1 step 400/921 loss=0.2692 elapsed=0.1min
+  ep1 step 600/921 loss=0.3275 elapsed=0.1min
+  ep1 step 800/921 loss=0.2807 elapsed=0.2min
+epoch 1: {"epoch": 1, "loss": 0.2940721677158161, "loss_path": 0.2940721677158161, "loss_ddg": null, "time_min": 0.16223578055699667, "dev": {"n": 889, "auroc": 0.9599544447180497, "auprc": 0.971214155319317}}
+  ep2 step 200/921 loss=0.2965 elapsed=0.2min
+  ep2 step 400/921 loss=0.2782 elapsed=0.2min
+  ep2 step 600/921 loss=0.2913 elapsed=0.2min
+  ep2 step 800/921 loss=0.2828 elapsed=0.2min
+epoch 2: {"epoch": 2, "loss": 0.28171930625406777, "loss_path": 0.28171930625406777, "loss_ddg": null, "time_min": 0.2416530648867289, "dev": {"n": 889, "auroc": 0.964094434868259, "auprc": 0.9728315745770161}}
+  ep3 step 200/921 loss=0.2503 elapsed=0.3min
+  ep3 step 400/921 loss=0.2787 elapsed=0.3min
+  ep3 step 600/921 loss=0.2810 elapsed=0.3min
+  ep3 step 800/921 loss=0.2806 elapsed=0.3min
+epoch 3: {"epoch": 3, "loss": 0.2768874377661859, "loss_path": 0.2768874377661859, "loss_ddg": null, "time_min": 0.32148399750391643, "dev": {"n": 889, "auroc": 0.9637276327669702, "auprc": 0.9730436523303077}}
+  ep4 step 200/921 loss=0.2561 elapsed=0.3min
+  ep4 step 400/921 loss=0.2727 elapsed=0.4min
+  ep4 step 600/921 loss=0.2700 elapsed=0.4min
+  ep4 step 800/921 loss=0.2757 elapsed=0.4min
+epoch 4: {"epoch": 4, "loss": 0.26711244098914194, "loss_path": 0.26711244098914194, "loss_ddg": null, "time_min": 0.40106706221898397, "dev": {"n": 889, "auroc": 0.9647716079783305, "auprc": 0.9742571885101227}}
+  ep5 step 200/921 loss=0.2605 elapsed=0.4min
+  ep5 step 400/921 loss=0.2758 elapsed=0.4min
+  ep5 step 600/921 loss=0.2396 elapsed=0.5min
+  ep5 step 800/921 loss=0.2665 elapsed=0.5min
+epoch 5: {"epoch": 5, "loss": 0.253000473603859, "loss_path": 0.253000473603859, "loss_ddg": null, "time_min": 0.48099215030670167, "dev": {"n": 889, "auroc": 0.9658078880407125, "auprc": 0.9753466882448069}}
+  ep6 step 200/921 loss=0.2768 elapsed=0.5min
+  ep6 step 400/921 loss=0.2377 elapsed=0.5min
+  ep6 step 600/921 loss=0.2376 elapsed=0.5min
+  ep6 step 800/921 loss=0.2584 elapsed=0.6min
+epoch 6: {"epoch": 6, "loss": 0.2530921842927168, "loss_path": 0.2530921842927168, "loss_ddg": null, "time_min": 0.5615176320075989, "dev": {"n": 889, "auroc": 0.9637609784125419, "auprc": 0.9743196204541429}}
+  ep7 step 200/921 loss=0.2504 elapsed=0.6min
+  ep7 step 400/921 loss=0.2389 elapsed=0.6min
+  ep7 step 600/921 loss=0.2168 elapsed=0.6min
+  ep7 step 800/921 loss=0.2645 elapsed=0.6min
+epoch 7: {"epoch": 7, "loss": 0.24252439098204867, "loss_path": 0.24252439098204867, "loss_ddg": null, "time_min": 0.6415670831998189, "dev": {"n": 889, "auroc": 0.9639405318886973, "auprc": 0.9742609444486391}}
+  ep8 step 200/921 loss=0.2251 elapsed=0.7min
+  ep8 step 400/921 loss=0.2445 elapsed=0.7min
+  ep8 step 600/921 loss=0.2343 elapsed=0.7min
+  ep8 step 800/921 loss=0.2316 elapsed=0.7min
+epoch 8: {"epoch": 8, "loss": 0.23301947321416816, "loss_path": 0.23301947321416816, "loss_ddg": null, "time_min": 0.7209691127141317, "dev": {"n": 889, "auroc": 0.9640790445703029, "auprc": 0.9741764104982353}}
+  ep9 step 200/921 loss=0.2228 elapsed=0.7min
+  ep9 step 400/921 loss=0.2064 elapsed=0.8min
+  ep9 step 600/921 loss=0.2673 elapsed=0.8min
+  ep9 step 800/921 loss=0.2327 elapsed=0.8min
+epoch 9: {"epoch": 9, "loss": 0.23399854454287225, "loss_path": 0.23399854454287225, "loss_ddg": null, "time_min": 0.8004078269004822, "dev": {"n": 889, "auroc": 0.9640841746696216, "auprc": 0.9741612762643549}}
+done in 0.8 min: {"dev": {"n": 889, "auroc": 0.9640841746696216, "auprc": 0.9741612762643549}, "test_db": {"n": 1127, "auroc": 0.7464569160997732, "auprc": 0.9769262263041862}, "test_time": {"n": 1233, "auroc": 0.9734541914434562, "auprc": 0.9751089754205041}, "test_gene": {"n": 1201, "auroc": 0.7587893615960455, "auprc": 0.8979285736894109}}

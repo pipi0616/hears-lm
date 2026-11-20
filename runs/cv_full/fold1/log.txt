@@ -1,0 +1,21 @@
+=== cv_full/fold1 config: {"backbone": "facebook/esm2_t30_150M_UR50D", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.1, "lora_targets": ["query", "value"], "window": 32, "feature_groups": ["plm", "cons", "struct", "hear"], "use_lm_logits": false, "use_sequence": true, "beta_ddg": 0.3, "epochs": 3, "batch_size": 8, "lr_lora": 0.0001, "lr_head": 0.001, "weight_decay": 0.01, "warmup_frac": 0.06, "grad_clip": 1.0, "head_dropout": 0.3, "seed": 0, "device": "mps", "arm": "cv_full", "dev_gene_fold": null, "cv_fold": 1, "exclude_genes": []}
+train n=9081 (P=6039) features=103 ddg_targets=6850 trainable=1,791,682 steps=3408
+  ep0 step 200/1136 loss=0.6730 elapsed=2.2min
+  ep0 step 400/1136 loss=0.4535 elapsed=4.6min
+  ep0 step 600/1136 loss=0.4214 elapsed=6.8min
+  ep0 step 800/1136 loss=0.3882 elapsed=9.1min
+  ep0 step 1000/1136 loss=0.3871 elapsed=11.3min
+epoch 0: {"epoch": 0, "loss": 0.457492762956847, "loss_path": 0.3313904419372475, "loss_ddg": 0.4203410564071636, "time_min": 12.836660130818684}
+  ep1 step 200/1136 loss=0.3498 elapsed=15.1min
+  ep1 step 400/1136 loss=0.3125 elapsed=17.3min
+  ep1 step 600/1136 loss=0.3255 elapsed=19.6min
+  ep1 step 800/1136 loss=0.3112 elapsed=22.0min
+  ep1 step 1000/1136 loss=0.2980 elapsed=24.3min
+epoch 1: {"epoch": 1, "loss": 0.3149122105920392, "loss_path": 0.248528094524862, "loss_ddg": 0.22128037830356026, "time_min": 25.863643713792165}
+  ep2 step 200/1136 loss=0.2728 elapsed=28.2min
+  ep2 step 400/1136 loss=0.2432 elapsed=30.5min
+  ep2 step 600/1136 loss=0.2448 elapsed=32.8min
+  ep2 step 800/1136 loss=0.2625 elapsed=35.1min
+  ep2 step 1000/1136 loss=0.2489 elapsed=37.3min
+epoch 2: {"epoch": 2, "loss": 0.2518543403638317, "loss_path": 0.20644580518179076, "loss_ddg": 0.15136177852523552, "time_min": 38.86747953097026}
+done in 40.3 min: {"cvtest": {"n": 2228, "auroc": 0.8698844924447888, "auprc": 0.8892438759263062, "ddg_spearman": 0.8343867472821883, "n_ddg": 1846}}

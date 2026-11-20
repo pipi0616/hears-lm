@@ -1,0 +1,191 @@
+{
+  "dvd_missense_mapped": 44429,
+  "dvd_prediction_only": 33017,
+  "dvd_clinvar_only": 4313,
+  "dvd_independent_records": 7083,
+  "dvd_labels_overridden_by_consensus_vus": 563,
+  "dvd_labels_overridden_by_expert_panel_vus": 34,
+  "protein_variants_any_source": 67101,
+  "labelled_any": 11323,
+  "cross_source_conflict_final": 11,
+  "cross_source_conflict_train": 6,
+  "clinvar_internal_PB_conflict_2026": 0,
+  "dvd_internal_PB_conflict": 0,
+  "partitions": {
+    "fit": {
+      "n": 7361,
+      "P": 4205,
+      "B": 3156,
+      "genes": 150,
+      "positions": 6088,
+      "pos_in_fit": 7361,
+      "source": {
+        "clinvar": 3082,
+        "dvd": 2051,
+        "clinvar+dvd": 1797,
+        "clinvar2025_only": 431
+      }
+    },
+    "dev": {
+      "n": 889,
+      "P": 496,
+      "B": 393,
+      "genes": 125,
+      "positions": 744,
+      "pos_in_fit": 0,
+      "source": {
+        "clinvar": 360,
+        "clinvar+dvd": 238,
+        "dvd": 228,
+        "clinvar2025_only": 63
+      }
+    },
+    "test_db": {
+      "n": 1127,
+      "P": 1071,
+      "B": 56,
+      "genes": 91,
+      "positions": 1078,
+      "pos_in_fit": 282,
+      "source": {
+        "dvd": 977,
+        "clinvar+dvd": 150
+      }
+    },
+    "test_time": {
+      "n": 1233,
+      "P": 613,
+      "B": 620,
+      "genes": 119,
+      "positions": 1195,
+      "pos_in_fit": 314,
+      "source": {
+        "clinvar": 1128,
+        "clinvar+dvd": 105
+      }
+    },
+    "test_gene": {
+      "n": 1201,
+      "P": 883,
+      "B": 318,
+      "genes": 10,
+      "positions": 1042,
+      "pos_in_fit": 0,
+      "source": {
+        "dvd": 623,
+        "clinvar+dvd": 291,
+        "clinvar": 287
+      }
+    }
+  },
+  "test_time_prev_state": {
+    "ABSENT": 1023,
+    "VUS": 105,
+    "CONFLICT": 73,
+    "LOWSTAR": 27,
+    "OTHER": 5
+  },
+  "test_db_clinvar_state_2026": {
+    "CONFLICT": 504,
+    "VUS": 295,
+    "P": 149,
+    "LOWSTAR": 94,
+    "OTHER": 65,
+    "ABSENT": 19,
+    "B": 1
+  },
+  "test_db_prev_state_2025": {
+    "CONFLICT": 554,
+    "VUS": 289,
+    "LOWSTAR": 119,
+    "ABSENT": 87,
+    "OTHER": 78
+  },
+  "train_label_drift": {
+    "fit_dev_n": 8250,
+    "label_changed_by_2026": 0,
+    "no_longer_definitive_2026": 502
+  },
+  "cv": {
+    "n": 11309,
+    "P": 7199,
+    "B": 4110,
+    "genes": 161,
+    "grouping": "leave-gene-family-out (data/cv_folds_summary.json, code/data/04b_cv_folds_by_family.py)",
+    "n_families": 105,
+    "folds": {
+      "0": {
+        "n": 2399,
+        "P": 1681,
+        "B": 718,
+        "genes": 9
+      },
+      "1": {
+        "n": 2228,
+        "P": 1160,
+        "B": 1068,
+        "genes": 29
+      },
+      "2": {
+        "n": 2228,
+        "P": 1501,
+        "B": 727,
+        "genes": 46
+      },
+      "3": {
+        "n": 2227,
+        "P": 1451,
+        "B": 776,
+        "genes": 39
+      },
+      "4": {
+        "n": 2227,
+        "P": 1406,
+        "B": 821,
+        "genes": 38
+      }
+    }
+  },
+  "genes_total": 161,
+  "train_snapshot": "2025-01",
+  "eval_snapshot": "2026-04",
+  "holdout_genes": [
+    "OTOF",
+    "CLDN14",
+    "STRC",
+    "TECTA",
+    "WFS1",
+    "TMC1",
+    "CDH23",
+    "LOXHD1",
+    "TBC1D24",
+    "ACTG1"
+  ],
+  "cv_superseded_single_gene_folds": {
+    "0": {
+      "n": 2262,
+      "P": 1504,
+      "genes": 31
+    },
+    "1": {
+      "n": 2263,
+      "P": 1645,
+      "genes": 33
+    },
+    "2": {
+      "n": 2262,
+      "P": 1480,
+      "genes": 32
+    },
+    "3": {
+      "n": 2262,
+      "P": 1175,
+      "genes": 32
+    },
+    "4": {
+      "n": 2260,
+      "P": 1395,
+      "genes": 33
+    }
+  }
+}

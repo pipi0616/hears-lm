@@ -1,0 +1,278 @@
+{
+ "n_genes": 163,
+ "n_families": 105,
+ "n_multi_gene_families": 30,
+ "multi_gene_families": {
+  "COL11A1": [
+   "COL11A1",
+   "COL11A2",
+   "COL2A1",
+   "COL4A5",
+   "COL9A1",
+   "COL9A2",
+   "COL9A3",
+   "MN1",
+   "TRIOBP"
+  ],
+  "LETM1": [
+   "LETM1",
+   "MYH14",
+   "MYH9",
+   "MYO15A",
+   "MYO3A",
+   "MYO6",
+   "MYO7A",
+   "TPRN"
+  ],
+  "KCNE1": [
+   "KCNE1",
+   "KCNJ10",
+   "KCNJ16",
+   "KCNQ1",
+   "KCNQ4"
+  ],
+  "ADGRV1": [
+   "ADGRV1",
+   "PDZD7",
+   "USH2A",
+   "WHRN"
+  ],
+  "CLDN14": [
+   "CLDN14",
+   "CLDN9",
+   "SLC52A2",
+   "SLC52A3"
+  ],
+  "BCS1L": [
+   "BCS1L",
+   "PSMC3",
+   "SPATA5",
+   "SPATA5L1"
+  ],
+  "HARS2": [
+   "HARS2",
+   "KARS",
+   "LARS2"
+  ],
+  "EYA1": [
+   "EYA1",
+   "EYA4",
+   "SIX1"
+  ],
+  "CABP2": [
+   "CABP2",
+   "CIB2",
+   "PLS1"
+  ],
+  "CEACAM16": [
+   "CEACAM16",
+   "ILDR1",
+   "MPZL2"
+  ],
+  "LRTOMT": [
+   "LRTOMT",
+   "OTOA",
+   "STRC"
+  ],
+  "HGF": [
+   "HGF",
+   "MASP1",
+   "TMPRSS3"
+  ],
+  "OTOG": [
+   "OTOG",
+   "OTOGL"
+  ],
+  "EPS8": [
+   "EPS8",
+   "EPS8L2"
+  ],
+  "LHX3": [
+   "LHX3",
+   "LMX1A"
+  ],
+  "EDN3": [
+   "EDN3",
+   "EDNRB"
+  ],
+  "USH1C": [
+   "USH1C",
+   "USH1G"
+  ],
+  "CDC14A": [
+   "CDC14A",
+   "PTPRQ"
+  ],
+  "ATP11A": [
+   "ATP11A",
+   "ATP2B2"
+  ],
+  "DFNA5": [
+   "DFNA5",
+   "DFNB59"
+  ],
+  "ATP6V1B1": [
+   "ATP6V1B1",
+   "ATP6V1B2"
+  ],
+  "MITF": [
+   "MITF",
+   "SOX10"
+  ],
+  "AP1S1": [
+   "AP1S1",
+   "OPA1"
+  ],
+  "GRXCR1": [
+   "GRXCR1",
+   "GRXCR2"
+  ],
+  "CDH23": [
+   "CDH23",
+   "PCDH15"
+  ],
+  "SALL1": [
+   "SALL1",
+   "SALL4"
+  ],
+  "POU3F4": [
+   "POU3F4",
+   "POU4F3"
+  ],
+  "GJB2": [
+   "GJB2",
+   "GJB6"
+  ],
+  "PAX2": [
+   "PAX2",
+   "PAX3"
+  ],
+  "SLC26A4": [
+   "SLC26A4",
+   "SLC26A5"
+  ]
+ },
+ "n_sequence_links": 69,
+ "folds": {
+  "0": {
+   "n": 2399,
+   "P": 1681,
+   "B": 718,
+   "genes": 9
+  },
+  "1": {
+   "n": 2228,
+   "P": 1160,
+   "B": 1068,
+   "genes": 29
+  },
+  "2": {
+   "n": 2228,
+   "P": 1501,
+   "B": 727,
+   "genes": 46
+  },
+  "3": {
+   "n": 2227,
+   "P": 1451,
+   "B": 776,
+   "genes": 39
+  },
+  "4": {
+   "n": 2227,
+   "P": 1406,
+   "B": 821,
+   "genes": 38
+  }
+ },
+ "holdout_genes_with_family_member_in_fit": [
+  {
+   "gene": "CDH23",
+   "family_genes": "CDH23|PCDH15"
+  },
+  {
+   "gene": "CLDN14",
+   "family_genes": "CLDN14|CLDN9|SLC52A2|SLC52A3"
+  },
+  {
+   "gene": "STRC",
+   "family_genes": "LRTOMT|OTOA|STRC"
+  }
+ ],
+ "sequence_links": [
+  "AP1S1-OPA1 (0.31)",
+  "ATP6V1B1-ATP6V1B2 (0.89)",
+  "CABP2-CIB2 (0.33)",
+  "CDH23-PCDH15 (0.32)",
+  "CLDN14-CLDN9 (0.47)",
+  "CLDN9-SLC52A2 (0.34)",
+  "COL11A1-COL11A2 (0.69)",
+  "COL11A1-COL2A1 (0.50)",
+  "COL11A1-COL4A5 (0.54)",
+  "COL11A1-COL9A1 (0.53)",
+  "COL11A1-COL9A2 (0.50)",
+  "COL11A1-COL9A3 (0.51)",
+  "COL11A1-MN1 (0.32)",
+  "COL11A2-COL2A1 (0.49)",
+  "COL11A2-COL4A5 (0.53)",
+  "COL11A2-COL9A1 (0.52)",
+  "COL11A2-COL9A2 (0.50)",
+  "COL11A2-COL9A3 (0.52)",
+  "COL11A2-MN1 (0.32)",
+  "COL2A1-COL4A5 (0.51)",
+  "COL2A1-COL9A1 (0.50)",
+  "COL2A1-COL9A2 (0.50)",
+  "COL2A1-COL9A3 (0.53)",
+  "COL2A1-MN1 (0.31)",
+  "COL4A5-COL9A1 (0.55)",
+  "COL4A5-COL9A2 (0.53)",
+  "COL4A5-COL9A3 (0.55)",
+  "COL4A5-MN1 (0.31)",
+  "COL9A1-COL9A2 (0.58)",
+  "COL9A1-COL9A3 (0.51)",
+  "COL9A1-MN1 (0.32)",
+  "COL9A2-COL9A3 (0.53)",
+  "COL9A2-MN1 (0.34)",
+  "COL9A3-MN1 (0.35)",
+  "COL9A3-TRIOBP (0.33)",
+  "DFNA5-DFNB59 (0.37)",
+  "EPS8-EPS8L2 (0.49)",
+  "EYA1-EYA4 (0.75)",
+  "GJB2-GJB6 (0.77)",
+  "GRXCR1-GRXCR2 (0.39)",
+  "HGF-TMPRSS3 (0.32)",
+  "ILDR1-MPZL2 (0.30)",
+  "KCNJ10-KCNJ16 (0.41)",
+  "KCNQ1-KCNQ4 (0.48)",
+  "LETM1-MYH14 (0.30)",
+  "LHX3-LMX1A (0.47)",
+  "LRTOMT-STRC (0.32)",
+  "MASP1-TMPRSS3 (0.33)",
+  "MYH14-MYH9 (0.66)",
+  "MYH14-MYO3A (0.32)",
+  "MYH14-MYO6 (0.35)",
+  "MYH14-MYO7A (0.35)",
+  "MYH9-MYO3A (0.33)",
+  "MYH9-MYO6 (0.37)",
+  "MYO15A-MYO6 (0.40)",
+  "MYO15A-MYO7A (0.35)",
+  "MYO15A-TPRN (0.31)",
+  "MYO3A-MYO6 (0.33)",
+  "MYO6-MYO7A (0.37)",
+  "OTOG-OTOGL (0.42)",
+  "PAX2-PAX3 (0.52)",
+  "PDZD7-WHRN (0.32)",
+  "POU3F4-POU4F3 (0.45)",
+  "PSMC3-SPATA5 (0.35)",
+  "PSMC3-SPATA5L1 (0.39)",
+  "SALL1-SALL4 (0.50)",
+  "SLC26A4-SLC26A5 (0.39)",
+  "SLC52A2-SLC52A3 (0.47)",
+  "SPATA5-SPATA5L1 (0.47)"
+ ],
+ "criteria": {
+  "min_identity": 0.3,
+  "min_coverage_of_shorter_protein": 0.5,
+  "min_aligned_pairs": 100
+ }
+}

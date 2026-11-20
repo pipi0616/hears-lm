@@ -1,0 +1,7 @@
+partition,definition,n,P_LP,B_LB,frac_P,genes,residues,label_source_clinvar_only,label_source_dvd_only,label_source_both,label_source_clinvar2025_only,frac_at_training_residue
+fit,"training: ClinVar 2025-01 (>=1 star) and DVD evidence-based labels, 90% of residue positions",7361,4205,3156,0.571,150,6088,3082.0,2051.0,1797.0,431.0,
+dev,development: remaining 10% of residue positions of the training pool (model selection only),889,496,393,0.558,125,744,360.0,228.0,238.0,63.0,0.0
+test_time,"definitive ClinVar classification first present in 2026-04 (absent, VUS, conflicting or 0-star in 2025-01)",1233,613,620,0.497,119,1195,1128.0,0.0,105.0,0.0,0.255
+test_db,"DVD literature-curated (P/LP >= 2 PMIDs; B/LB >= 1 PMID, not MAF-based) without a definitive ClinVar classification in 2025-01",1127,1071,56,0.95,91,1078,0.0,977.0,150.0,0.0,0.25
+test_gene,all labelled variants of 10 genes withheld from training,1201,883,318,0.735,10,1042,287.0,623.0,291.0,0.0,0.0
+cross-validation pool,all variants with a final (2026-04) label; 5 folds of whole gene families,11309,7199,4110,0.637,161,9073,,,,,

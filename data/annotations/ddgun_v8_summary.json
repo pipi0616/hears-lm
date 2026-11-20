@@ -1,0 +1,224 @@
+{
+  "rows_in": 128167,
+  "gene_symbols_in": 210,
+  "genes_in_reference_set": 128,
+  "renamed_symbols": {
+    "GSDME": "DFNA5",
+    "PJVK": "DFNB59",
+    "KARS1": "KARS"
+  },
+  "renamed_symbol_rows": {
+    "GSDME": 375,
+    "KARS1": 470,
+    "PJVK": 221
+  },
+  "renamed_symbols_confirmed_by_accession": [
+    "GSDME",
+    "PJVK"
+  ],
+  "genes_outside_reference_set": 82,
+  "rows_outside_reference_set": 44907,
+  "np_accessions_needed": 150,
+  "np_accessions_from_extra_file": [
+    "NP_001077354.2",
+    "NP_001120652.1",
+    "NP_001123561.1",
+    "NP_001166896.1",
+    "NP_001167587.1",
+    "NP_001167588.1",
+    "NP_001191382.1",
+    "NP_001265660.1",
+    "NP_001287828.1",
+    "NP_001306139.1",
+    "NP_001333819.1",
+    "NP_001350464.1",
+    "NP_001355068.1",
+    "NP_001355794.1",
+    "NP_001355795.1",
+    "NP_001356294.1",
+    "NP_002794.1",
+    "NP_004443.3",
+    "NP_056078.2",
+    "NP_775862.3",
+    "NP_996767.1",
+    "NP_996768.1"
+  ],
+  "np_accessions_unavailable": [],
+  "np_gene_pairs": 150,
+  "np_identical_to_reference": 110,
+  "np_unrelated_to_reference": {
+    "NP_001191382.1": "SLC26A5",
+    "NP_002794.1": "SLC26A5"
+  },
+  "require_context_rule": true,
+  "min_identical_run": 11,
+  "rows_by_status": {
+    "ok": 82323,
+    "gene_not_in_reference_set": 44907,
+    "not_in_reference_isoform": 494,
+    "ref_mismatch_reference": 260,
+    "source_protein_unrelated": 92,
+    "unverified_alignment_context": 91
+  },
+  "failures_by_gene": {
+    "not_in_reference_isoform": {
+      "PCDH15": 222,
+      "EDNRB": 62,
+      "ESRRB": 43,
+      "HSD17B4": 39,
+      "P2RX2": 27,
+      "KARS": 25,
+      "CABP2": 21,
+      "CDC14A": 20,
+      "SLC4A11": 12,
+      "RDX": 9,
+      "MASP1": 7,
+      "OTOG": 4,
+      "ABHD12": 2,
+      "TMPRSS3": 1
+    },
+    "ref_mismatch_reference": {
+      "MASP1": 115,
+      "CABP2": 26,
+      "WHRN": 23,
+      "OTOG": 16,
+      "KARS": 13,
+      "OTOF": 12,
+      "PCDH15": 11,
+      "SLC4A11": 9,
+      "ABHD12": 8,
+      "CDC14A": 8,
+      "MYO6": 8,
+      "SLC26A5": 7,
+      "HSD17B4": 4
+    },
+    "source_protein_unrelated": {
+      "SLC26A5": 92
+    },
+    "unverified_alignment_context": {
+      "MASP1": 52,
+      "OTOF": 16,
+      "CABP2": 14,
+      "KARS": 6,
+      "OTOG": 1,
+      "PCDH15": 1,
+      "WHRN": 1
+    }
+  },
+  "rows_ok": 82323,
+  "rows_ok_renumbered": 11251,
+  "duplicates": {
+    "duplicate_rows_removed": 618,
+    "variant_ids_with_duplicates": 611,
+    "ddg_identical": 611,
+    "ddg_differs": 0,
+    "max_abs_ddg_difference": 0.0,
+    "same_np_groups": 611,
+    "same_np_ddg_differs": 0,
+    "cross_np_groups": 0,
+    "cross_np_ddg_differs": 0
+  },
+  "rows_out": 81705,
+  "genes_out": 128,
+  "labelled_variants_with_ddg": {
+    "dev": {
+      "n": 889,
+      "n_ddg": 708,
+      "frac_ddg": 0.7964
+    },
+    "fit": {
+      "n": 7361,
+      "n_ddg": 5772,
+      "frac_ddg": 0.7841
+    },
+    "test_db": {
+      "n": 1127,
+      "n_ddg": 1059,
+      "frac_ddg": 0.9397
+    },
+    "test_gene": {
+      "n": 1201,
+      "n_ddg": 1020,
+      "frac_ddg": 0.8493
+    },
+    "test_time": {
+      "n": 1233,
+      "n_ddg": 576,
+      "frac_ddg": 0.4672
+    },
+    "all": {
+      "n": 11811,
+      "n_ddg": 9135,
+      "frac_ddg": 0.7734
+    }
+  },
+  "labelled_ddg_by_y": {
+    "B_LB": {
+      "n": 3888,
+      "mean_ddg": 0.1857,
+      "median_ddg": 0.1
+    },
+    "P_LP": {
+      "n": 5247,
+      "mean_ddg": 0.8286,
+      "median_ddg": 0.5
+    }
+  },
+  "ddg_by_tollefson_class_all_rows": {
+    "Benign": {
+      "n": 1659,
+      "mean_ddg": 0.1313
+    },
+    "Benign*": {
+      "n": 66,
+      "mean_ddg": 0.0985
+    },
+    "Likely benign": {
+      "n": 27907,
+      "mean_ddg": 0.0728
+    },
+    "Likely pathogenic": {
+      "n": 2441,
+      "mean_ddg": 0.6033
+    },
+    "Pathogenic": {
+      "n": 6328,
+      "mean_ddg": 0.8001
+    },
+    "Unknown significance": {
+      "n": 89766,
+      "mean_ddg": 0.3326
+    }
+  },
+  "sign_checks": [
+    {
+      "set": "all rows of Table S4",
+      "n": 128167,
+      "mean_ddg": 0.3015,
+      "median_ddg": 0.1,
+      "frac_positive": 0.5857,
+      "frac_negative": 0.2673,
+      "spearman_ddg_vs_norm_sasa": -0.2042,
+      "spearman_ddg_vs_norm_sasa_plddt70": -0.2497,
+      "mean_ddg_buried_lt0.2": 0.7019,
+      "mean_ddg_exposed_gt0.5": 0.1177,
+      "n_buried_hydrophobic_to_charged_plddt70": 1288,
+      "mean_ddg_buried_hydrophobic_to_charged_plddt70": 2.4171
+    },
+    {
+      "set": "ddgun_v8.csv",
+      "n": 81705,
+      "mean_ddg": 0.3269,
+      "median_ddg": 0.1,
+      "frac_positive": 0.5979,
+      "frac_negative": 0.2641,
+      "spearman_ddg_vs_norm_sasa": -0.2173,
+      "spearman_ddg_vs_norm_sasa_plddt70": -0.2636,
+      "mean_ddg_buried_lt0.2": 0.7416,
+      "mean_ddg_exposed_gt0.5": 0.1261,
+      "n_buried_hydrophobic_to_charged_plddt70": 890,
+      "mean_ddg_buried_hydrophobic_to_charged_plddt70": 2.4312
+    }
+  ],
+  "sign_convention": "positive ddg = destabilising (opposite sign to native DDGun output)"
+}

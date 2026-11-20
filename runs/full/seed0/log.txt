@@ -1,0 +1,18 @@
+=== full/seed0 config: {"backbone": "facebook/esm2_t30_150M_UR50D", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.1, "lora_targets": ["query", "value"], "window": 32, "feature_groups": ["plm", "cons", "struct", "hear"], "use_lm_logits": false, "use_sequence": true, "beta_ddg": 0.3, "epochs": 3, "batch_size": 8, "lr_lora": 0.0001, "lr_head": 0.001, "weight_decay": 0.01, "warmup_frac": 0.06, "grad_clip": 1.0, "head_dropout": 0.3, "seed": 0, "device": "mps", "arm": "full", "dev_gene_fold": null, "cv_fold": null, "exclude_genes": []}
+train n=7361 (P=4205) features=103 ddg_targets=5772 trainable=1,791,682 steps=2763
+  ep0 step 200/921 loss=0.6759 elapsed=3.6min
+  ep0 step 400/921 loss=0.4186 elapsed=7.2min
+  ep0 step 600/921 loss=0.4127 elapsed=10.8min
+  ep0 step 800/921 loss=0.3609 elapsed=14.4min
+epoch 0: {"epoch": 0, "loss": 0.4536061317565872, "loss_path": 0.32779990629486166, "loss_ddg": 0.4193540665479812, "time_min": 16.519668865203858, "dev": {"n": 889, "auroc": 0.9633300500697694, "auprc": 0.9723469323644403, "ddg_spearman": 0.8321237616866957, "n_ddg": 708}}
+  ep1 step 200/921 loss=0.3234 elapsed=21.1min
+  ep1 step 400/921 loss=0.3182 elapsed=24.8min
+  ep1 step 600/921 loss=0.3128 elapsed=28.4min
+  ep1 step 800/921 loss=0.3215 elapsed=32.0min
+epoch 1: {"epoch": 1, "loss": 0.30895672946153097, "loss_path": 0.24497536230826272, "loss_ddg": 0.2132712164484207, "time_min": 34.10615859826406, "dev": {"n": 889, "auroc": 0.9674854305179349, "auprc": 0.9764117662419388, "ddg_spearman": 0.8580440873356795, "n_ddg": 708}}
+  ep2 step 200/921 loss=0.2294 elapsed=38.6min
+  ep2 step 400/921 loss=0.2201 elapsed=42.2min
+  ep2 step 600/921 loss=0.2260 elapsed=45.7min
+  ep2 step 800/921 loss=0.2665 elapsed=49.3min
+epoch 2: {"epoch": 2, "loss": 0.2371200335431484, "loss_path": 0.1945488204136511, "loss_ddg": 0.14190403933035933, "time_min": 51.45065506299337, "dev": {"n": 889, "auroc": 0.9673623081342854, "auprc": 0.9764729830600863, "ddg_spearman": 0.8598527235857907, "n_ddg": 708}}
+done in 57.0 min: {"dev": {"n": 889, "auroc": 0.9673623081342854, "auprc": 0.9764729830600863, "ddg_spearman": 0.8598527235857907, "n_ddg": 708}, "test_db": {"n": 1127, "auroc": 0.7583033213285314, "auprc": 0.9808667644854696, "ddg_spearman": 0.8562298050594983, "n_ddg": 1059}, "test_time": {"n": 1233, "auroc": 0.9782244908698626, "auprc": 0.9782029875512659, "ddg_spearman": 0.7905830213458749, "n_ddg": 576}, "test_gene": {"n": 1201, "auroc": 0.8205339145423335, "auprc": 0.9248172162282741, "ddg_spearman": 0.8208620418962393, "n_ddg": 1020}}

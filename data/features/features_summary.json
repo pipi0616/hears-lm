@@ -1,0 +1,134 @@
+{
+ "n_features": {
+  "cons": 6,
+  "af": 3,
+  "struct": 9,
+  "plm": 4,
+  "hear_celltype": 37,
+  "hear_hpo": 12,
+  "hear_cgd": 9,
+  "hear_impc": 10,
+  "hear_network": 3,
+  "hear_constraint": 12,
+  "hear": 84
+ },
+ "missing_by_partition": {
+  "plm": {
+   "fit": 0.0,
+   "dev": 0.0,
+   "test_db": 0.0,
+   "test_time": 0.0,
+   "test_gene": 0.0
+  },
+  "cons": {
+   "fit": 0.0020377666077978536,
+   "dev": 0.0011248593925759281,
+   "test_db": 0.0026619343389529724,
+   "test_time": 0.0,
+   "test_gene": 0.0016652789342214821
+  },
+  "struct": {
+   "fit": 0.0,
+   "dev": 0.0,
+   "test_db": 0.0,
+   "test_time": 0.0,
+   "test_gene": 0.0
+  },
+  "hear": {
+   "fit": 0.0,
+   "dev": 0.0,
+   "test_db": 0.0,
+   "test_time": 0.0,
+   "test_gene": 0.0
+  },
+  "af": {
+   "fit": 0.0,
+   "dev": 0.0,
+   "test_db": 0.0,
+   "test_time": 0.0,
+   "test_gene": 0.0
+  }
+ },
+ "top_label_auroc": [
+  {
+   "feature": "afx_log10",
+   "auroc_label": 0.9263926251113331
+  },
+  {
+   "feature": "afx_present",
+   "auroc_label": 0.8690621943518866
+  },
+  {
+   "feature": "plm_llr",
+   "auroc_label": 0.8421245454367349
+  },
+  {
+   "feature": "plm_lp_mut",
+   "auroc_label": 0.8417459750523322
+  },
+  {
+   "feature": "cons_phylop100",
+   "auroc_label": 0.8134613268952254
+  },
+  {
+   "feature": "plm_entropy",
+   "auroc_label": 0.8091495126961235
+  },
+  {
+   "feature": "plm_lp_wt",
+   "auroc_label": 0.8010721137399046
+  },
+  {
+   "feature": "cons_phylop_mammal",
+   "auroc_label": 0.7723948043023197
+  },
+  {
+   "feature": "cons_phastcons100",
+   "auroc_label": 0.7133964861675626
+  },
+  {
+   "feature": "cons_gerp_rs",
+   "auroc_label": 0.7118803584965089
+  },
+  {
+   "feature": "impc_vestibular_significant",
+   "auroc_label": 0.6833322407237445
+  },
+  {
+   "feature": "kelley_mouse_adult_Hair_cell",
+   "auroc_label": 0.6556066695903392
+  }
+ ],
+ "top_missingness_auroc": [
+  {
+   "feature": "plddt",
+   "auroc_label_from_missingness": 0.5773868621608955,
+   "missing_frac": 0.19263686999049043
+  },
+  {
+   "feature": "gnomad_lof_oe_upper",
+   "auroc_label_from_missingness": 0.572905354389804,
+   "missing_frac": 0.1279717429697052
+  },
+  {
+   "feature": "gnomad_lof_pLI",
+   "auroc_label_from_missingness": 0.572905354389804,
+   "missing_frac": 0.1279717429697052
+  },
+  {
+   "feature": "gnomad_loeuf_constrained",
+   "auroc_label_from_missingness": 0.572905354389804,
+   "missing_frac": 0.1279717429697052
+  },
+  {
+   "feature": "gnomad_mis_z",
+   "auroc_label_from_missingness": 0.572905354389804,
+   "missing_frac": 0.1279717429697052
+  },
+  {
+   "feature": "gnomad_mis_oe",
+   "auroc_label_from_missingness": 0.572905354389804,
+   "missing_frac": 0.1279717429697052
+  }
+ ]
+}

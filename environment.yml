@@ -1,0 +1,18 @@
+# Conda environment used for every analysis of the HEARS-LM v2 revision (Apple M4, macOS; MPS backend)
+name: hearslm
+channels: [conda-forge, defaults]
+dependencies:
+  - python=3.9.21
+  - pip
+  - pip:
+      - torch==2.8.0
+      - transformers==4.57.6
+      - peft==0.17.1
+      - scikit-learn==1.6.1
+      - scipy==1.13.1
+      - numpy==2.0.2
+      - pandas==2.3.2
+      - biopython==1.85
+      - matplotlib==3.9.2
+      - openpyxl
+      - requests

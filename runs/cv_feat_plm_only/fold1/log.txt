@@ -1,0 +1,63 @@
+=== cv_feat_plm_only/fold1 config: {"backbone": "facebook/esm2_t30_150M_UR50D", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.1, "lora_targets": ["query", "value"], "window": 32, "feature_groups": ["plm", "cons", "struct", "hear"], "use_lm_logits": false, "use_sequence": false, "beta_ddg": 0.0, "epochs": 10, "batch_size": 8, "lr_lora": 0.0001, "lr_head": 0.001, "weight_decay": 0.01, "warmup_frac": 0.06, "grad_clip": 1.0, "head_dropout": 0.3, "seed": 0, "device": "mps", "arm": "cv_feat_plm_only", "dev_gene_fold": null, "cv_fold": 1, "exclude_genes": []}
+train n=9081 (P=6039) features=103 ddg_targets=0 trainable=71,233 steps=11360
+  ep0 step 200/1136 loss=0.6153 elapsed=0.1min
+  ep0 step 400/1136 loss=0.3430 elapsed=0.2min
+  ep0 step 600/1136 loss=0.3509 elapsed=0.4min
+  ep0 step 800/1136 loss=0.3011 elapsed=0.5min
+  ep0 step 1000/1136 loss=0.3186 elapsed=0.6min
+epoch 0: {"epoch": 0, "loss": 0.38139840159409444, "loss_path": 0.38139840159409444, "loss_ddg": null, "time_min": 0.7142136494318644}
+  ep1 step 200/1136 loss=0.3156 elapsed=0.8min
+  ep1 step 400/1136 loss=0.2876 elapsed=0.9min
+  ep1 step 600/1136 loss=0.3146 elapsed=1.1min
+  ep1 step 800/1136 loss=0.2860 elapsed=1.2min
+  ep1 step 1000/1136 loss=0.3025 elapsed=1.3min
+epoch 1: {"epoch": 1, "loss": 0.30062747397798223, "loss_path": 0.30062747397798223, "loss_ddg": null, "time_min": 1.373996663093567}
+  ep2 step 200/1136 loss=0.2884 elapsed=1.5min
+  ep2 step 400/1136 loss=0.2773 elapsed=1.6min
+  ep2 step 600/1136 loss=0.2774 elapsed=1.7min
+  ep2 step 800/1136 loss=0.3051 elapsed=1.9min
+  ep2 step 1000/1136 loss=0.3083 elapsed=2.0min
+epoch 2: {"epoch": 2, "loss": 0.28891086542099514, "loss_path": 0.28891086542099514, "loss_ddg": null, "time_min": 2.0563655138015746}
+  ep3 step 200/1136 loss=0.2623 elapsed=2.2min
+  ep3 step 400/1136 loss=0.2827 elapsed=2.3min
+  ep3 step 600/1136 loss=0.2923 elapsed=2.4min
+  ep3 step 800/1136 loss=0.2866 elapsed=2.5min
+  ep3 step 1000/1136 loss=0.2702 elapsed=2.7min
+epoch 3: {"epoch": 3, "loss": 0.2828010050030622, "loss_path": 0.2828010050030622, "loss_ddg": null, "time_min": 2.7376736640930175}
+  ep4 step 200/1136 loss=0.2874 elapsed=2.9min
+  ep4 step 400/1136 loss=0.2679 elapsed=3.0min
+  ep4 step 600/1136 loss=0.2556 elapsed=3.1min
+  ep4 step 800/1136 loss=0.3120 elapsed=3.2min
+  ep4 step 1000/1136 loss=0.2594 elapsed=3.3min
+epoch 4: {"epoch": 4, "loss": 0.27377048165690726, "loss_path": 0.27377048165690726, "loss_ddg": null, "time_min": 3.4175334135691324}
+  ep5 step 200/1136 loss=0.2458 elapsed=3.5min
+  ep5 step 400/1136 loss=0.2888 elapsed=3.7min
+  ep5 step 600/1136 loss=0.2610 elapsed=3.8min
+  ep5 step 800/1136 loss=0.2697 elapsed=3.9min
+  ep5 step 1000/1136 loss=0.2829 elapsed=4.0min
+epoch 5: {"epoch": 5, "loss": 0.26679822222134864, "loss_path": 0.26679822222134864, "loss_ddg": null, "time_min": 4.116851981480917}
+  ep6 step 200/1136 loss=0.2724 elapsed=4.2min
+  ep6 step 400/1136 loss=0.2873 elapsed=4.4min
+  ep6 step 600/1136 loss=0.2350 elapsed=4.5min
+  ep6 step 800/1136 loss=0.2475 elapsed=4.6min
+  ep6 step 1000/1136 loss=0.2338 elapsed=4.7min
+epoch 6: {"epoch": 6, "loss": 0.25781319994327956, "loss_path": 0.25781319994327956, "loss_ddg": null, "time_min": 4.823669695854187}
+  ep7 step 200/1136 loss=0.2639 elapsed=4.9min
+  ep7 step 400/1136 loss=0.2119 elapsed=5.1min
+  ep7 step 600/1136 loss=0.2475 elapsed=5.2min
+  ep7 step 800/1136 loss=0.2395 elapsed=5.3min
+  ep7 step 1000/1136 loss=0.2721 elapsed=5.4min
+epoch 7: {"epoch": 7, "loss": 0.24885783988426904, "loss_path": 0.24885783988426904, "loss_ddg": null, "time_min": 5.507035446166992}
+  ep8 step 200/1136 loss=0.2508 elapsed=5.6min
+  ep8 step 400/1136 loss=0.2004 elapsed=5.7min
+  ep8 step 600/1136 loss=0.2646 elapsed=5.9min
+  ep8 step 800/1136 loss=0.2432 elapsed=6.0min
+  ep8 step 1000/1136 loss=0.2680 elapsed=6.1min
+epoch 8: {"epoch": 8, "loss": 0.24391372596673278, "loss_path": 0.24391372596673278, "loss_ddg": null, "time_min": 6.179948997497559}
+  ep9 step 200/1136 loss=0.2014 elapsed=6.3min
+  ep9 step 400/1136 loss=0.2499 elapsed=6.4min
+  ep9 step 600/1136 loss=0.2531 elapsed=6.5min
+  ep9 step 800/1136 loss=0.2750 elapsed=6.6min
+  ep9 step 1000/1136 loss=0.2465 elapsed=6.8min
+epoch 9: {"epoch": 9, "loss": 0.24444986902124866, "loss_path": 0.24444986902124866, "loss_ddg": null, "time_min": 6.830311214923858}
+done in 6.8 min: {"cvtest": {"n": 2228, "auroc": 0.8351188169959963, "auprc": 0.8548698831504573}}

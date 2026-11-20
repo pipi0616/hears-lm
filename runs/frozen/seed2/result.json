@@ -1,0 +1,54 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 0,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.0,
+  "epochs": 5,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 2,
+  "device": "mps",
+  "arm": "frozen"
+ },
+ "n_train": 7361,
+ "n_features": 0,
+ "dev_curve_epochs": {
+  "5": 0.9206681441352704,
+  "10": 0.9051701140934089,
+  "20": 0.8807739267832224,
+  "40": 0.8807303209390134
+ },
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.9172976688828696
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.6789632519674537
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.945725674893438
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.7619999002827695
+  }
+ }
+}

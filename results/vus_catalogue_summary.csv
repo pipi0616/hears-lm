@@ -1,0 +1,36 @@
+cv_state,evidence,residue_context,n
+CONFLICT,BP4_moderate,P/LP missense at same residue,8
+CONFLICT,BP4_moderate,no P/LP missense within 5 residues,957
+CONFLICT,BP4_moderate,within 5 residues of a P/LP residue,112
+CONFLICT,BP4_supporting,P/LP missense at same residue,27
+CONFLICT,BP4_supporting,no P/LP missense within 5 residues,1204
+CONFLICT,BP4_supporting,within 5 residues of a P/LP residue,327
+CONFLICT,PP3_moderate,P/LP missense at same residue,6
+CONFLICT,PP3_moderate,within 5 residues of a P/LP residue,5
+CONFLICT,PP3_supporting,P/LP missense at same residue,126
+CONFLICT,PP3_supporting,no P/LP missense within 5 residues,63
+CONFLICT,PP3_supporting,within 5 residues of a P/LP residue,103
+CONFLICT,indeterminate,P/LP missense at same residue,93
+CONFLICT,indeterminate,no P/LP missense within 5 residues,706
+CONFLICT,indeterminate,within 5 residues of a P/LP residue,290
+CONFLICT,not assigned (gene absent from the training data of the scoring model),P/LP missense at same residue,59
+CONFLICT,not assigned (gene absent from the training data of the scoring model),no P/LP missense within 5 residues,301
+CONFLICT,not assigned (gene absent from the training data of the scoring model),within 5 residues of a P/LP residue,175
+VUS,BP4_moderate,P/LP missense at same residue,30
+VUS,BP4_moderate,no P/LP missense within 5 residues,6556
+VUS,BP4_moderate,within 5 residues of a P/LP residue,455
+VUS,BP4_supporting,P/LP missense at same residue,113
+VUS,BP4_supporting,no P/LP missense within 5 residues,12842
+VUS,BP4_supporting,within 5 residues of a P/LP residue,2013
+VUS,PP3_moderate,P/LP missense at same residue,33
+VUS,PP3_moderate,no P/LP missense within 5 residues,25
+VUS,PP3_moderate,within 5 residues of a P/LP residue,34
+VUS,PP3_supporting,P/LP missense at same residue,558
+VUS,PP3_supporting,no P/LP missense within 5 residues,1921
+VUS,PP3_supporting,within 5 residues of a P/LP residue,1678
+VUS,indeterminate,P/LP missense at same residue,582
+VUS,indeterminate,no P/LP missense within 5 residues,12409
+VUS,indeterminate,within 5 residues of a P/LP residue,4429
+VUS,not assigned (gene absent from the training data of the scoring model),P/LP missense at same residue,310
+VUS,not assigned (gene absent from the training data of the scoring model),no P/LP missense within 5 residues,3061
+VUS,not assigned (gene absent from the training data of the scoring model),within 5 residues of a P/LP residue,2139

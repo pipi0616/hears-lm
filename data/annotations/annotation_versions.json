@@ -1,0 +1,845 @@
+{
+  "myvariant_dbnsfp_gnomad": {
+    "written_by": "code/data/05_annotate_dbnsfp.py",
+    "access_date": "2026-10-06",
+    "access_utc": {
+      "first_query": "2026-10-06T18:42:43Z",
+      "last_query": "2026-10-06T18:47:30Z"
+    },
+    "service": {
+      "name": "MyVariant.info",
+      "endpoint": "POST https://myvariant.info/v1/variant",
+      "assembly": "hg38",
+      "fields_requested": "dbnsfp,gnomad_exome,gnomad_genome",
+      "build_version": "20250624",
+      "build_date": "2025-06-24T16:27:39.012502-07:00",
+      "metadata_urls": {
+        "metadata_hg38": "https://myvariant.info/v1/metadata?assembly=hg38",
+        "metadata_default": "https://myvariant.info/v1/metadata",
+        "fields_hg38": "https://myvariant.info/v1/metadata/fields?assembly=hg38",
+        "probe": "https://myvariant.info/v1/variant/chr13:g.20189481A>G?assembly=hg38&fields=all"
+      },
+      "metadata_snapshot": "data/annotations/_myvariant_cache/metadata__20261006T184228Z.json",
+      "metadata_fetched_utc": "2026-10-06T18:42:28Z",
+      "server_state_per_cached_answer": [
+        {
+          "build_date": "2025-06-24T16:27:39.012502-07:00",
+          "build_version": "20250624",
+          "dbnsfp_version": "4.8a",
+          "gnomad_version_string": "2.1.1",
+          "n_ids": 11790
+        }
+      ]
+    },
+    "dbnsfp": {
+      "version": "4.8a",
+      "metadata_src_dbnsfp_hg38_index": {
+        "license_url_short": "http://bit.ly/2VLnQBz",
+        "code": {
+          "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "1c767a2",
+          "branch": "master",
+          "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+        },
+        "stats": {
+          "dbnsfp_hg38_v1": 83293580
+        },
+        "download_date": "2025-01-17T09:00:00.028000",
+        "version": "4.8a",
+        "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "upload_date": {
+          "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+          "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+          "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+          "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+        }
+      },
+      "metadata_src_dbnsfp_default_endpoint": {
+        "license_url_short": "http://bit.ly/2VLnQBz",
+        "code": {
+          "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "1c767a2",
+          "branch": "master",
+          "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+        },
+        "stats": {
+          "dbnsfp_hg19_v1": 82755468
+        },
+        "download_date": "2025-01-17T09:00:00.028000",
+        "version": "4.8a",
+        "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "upload_date": {
+          "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+          "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+          "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+          "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+        }
+      },
+      "coordinates": "GRCh38; every dbnsfp block is checked (dbnsfp.chrom / hg38.start / ref / alt = query)",
+      "parser_notes": "MyVariant.info dbNSFP parser named in the API metadata (src.dbnsfp.code): https://github.com/biothings/myvariant.info/blob/1c767a2/src/hub/dataload/sources/dbnsfp/dbnsfp_parser_48a_v1.py (consulted 2026-10-06): no gnomAD column is mapped; \";\"-separated per-transcript values are split, missing entries dropped and a single remaining value returned as scalar; rows with the same genomic id keep the fields of the first row and only collect the `aa` objects of all rows (function load_file).",
+      "gnomad_fields_inside_dbnsfp": [],
+      "other_population_blocks_inside_dbnsfp_not_used": [
+        "1000gp3",
+        "alfa",
+        "alspac",
+        "esp6500",
+        "exac",
+        "exac_nonpsych",
+        "exac_nontcga",
+        "twinsuk",
+        "uk10k"
+      ]
+    },
+    "gnomad": {
+      "metadata_src_gnomad_hg38_index": {
+        "license": "ODbL",
+        "license_url_short": "http://bit.ly/2I1cl1I",
+        "code": {
+          "file": "src/hub/dataload/sources/gnomad/gnomad_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "2d0396d",
+          "branch": "production",
+          "url": "https://github.com/biothings/myvariant.info/tree/2d0396d40be9471cc439b72b81785f5af2df9413/src/hub/dataload/sources/gnomad/gnomad_upload.py"
+        },
+        "stats": {
+          "gnomad_exomes_hg38": 17189364,
+          "gnomad_genomes_hg38": 759302267
+        },
+        "download_date": "2019-05-20T14:54:02.962000",
+        "version": "2.1.1",
+        "url": "http://gnomad.broadinstitute.org",
+        "license_url": "http://gnomad.broadinstitute.org/terms",
+        "upload_date": {
+          "gnomad_genomes_hg19": "2019-12-02T21:52:29.014000",
+          "gnomad_exomes_hg19": "2019-12-02T21:52:28.974000",
+          "gnomad_exomes_hg38": "2019-12-02T21:52:28.994000",
+          "gnomad_genomes_hg38": "2019-12-02T21:52:29.034000"
+        }
+      },
+      "note": "The API metadata gives ONE version string for the whole gnomAD source; the release behind each object is given in af_fields.",
+      "release_basis": "MyVariant.info hub uploader, module docstring \"Versions of data\" (gnomAD_exome_hg38: v2.1.1 => 2.1.1/exomes/liftover_grch38; gnomAD_genome_hg38: v3.1.1 => 3.1.1/genomes): https://github.com/biothings/myvariant.info/blob/master/src/hub/dataload/sources/gnomad/gnomad_upload.py (last changed by commit b0f5003, 2021-06-10; consulted 2026-10-06). The parsers of that hub read AC / AN / AF / nhomalt per population only, not popmax / grpmax / faf95; a record without FILTER flag (PASS) is stored without `filter` field.",
+      "top_level_gnomad_objects_in_hg38_index": [
+        "gnomad_exome",
+        "gnomad_genome"
+      ],
+      "af_fields": {
+        "gnomad_exome": {
+          "columns": [
+            "af_gnomad_exome",
+            "af_gnomad_exome_popmax_derived",
+            "af_any",
+            "af_popmax_any_derived",
+            "af_present"
+          ],
+          "source_path_global_af": "gnomad_exome.af.af",
+          "gnomad_release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)",
+          "evidence_in_retrieved_records": {
+            "n_records": 5799,
+            "max_AN_observed": 251496,
+            "max_AN_possible_for_release": 251496,
+            "max_AN_consistent_with_release": true,
+            "af_keys": [
+              "af",
+              "af_afr",
+              "af_afr_female",
+              "af_afr_male",
+              "af_amr",
+              "af_amr_female",
+              "af_amr_male",
+              "af_asj",
+              "af_asj_female",
+              "af_asj_male",
+              "af_eas",
+              "af_eas_female",
+              "af_eas_jpn",
+              "af_eas_kor",
+              "af_eas_male",
+              "af_eas_oea",
+              "af_female",
+              "af_fin",
+              "af_fin_female",
+              "af_fin_male",
+              "af_male",
+              "af_nfe",
+              "af_nfe_bgr",
+              "af_nfe_est",
+              "af_nfe_female",
+              "af_nfe_male",
+              "af_nfe_nwe",
+              "af_nfe_onf",
+              "af_nfe_seu",
+              "af_nfe_swe",
+              "af_oth",
+              "af_oth_female",
+              "af_oth_male",
+              "af_sas",
+              "af_sas_female",
+              "af_sas_male"
+            ]
+          },
+          "documents_in_index": {
+            "gnomad_exomes_hg38": 17189364
+          }
+        },
+        "gnomad_genome": {
+          "columns": [
+            "af_gnomad_genome",
+            "af_gnomad_genome_popmax_derived",
+            "af_any",
+            "af_popmax_any_derived",
+            "af_present"
+          ],
+          "source_path_global_af": "gnomad_genome.af.af",
+          "gnomad_release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)",
+          "evidence_in_retrieved_records": {
+            "n_records": 4756,
+            "max_AN_observed": 152290,
+            "max_AN_possible_for_release": 152312,
+            "max_AN_consistent_with_release": true,
+            "af_keys": [
+              "af",
+              "af_afr",
+              "af_afr_xx",
+              "af_afr_xy",
+              "af_ami",
+              "af_ami_xx",
+              "af_ami_xy",
+              "af_amr",
+              "af_amr_xx",
+              "af_amr_xy",
+              "af_asj",
+              "af_asj_xx",
+              "af_asj_xy",
+              "af_eas",
+              "af_eas_xx",
+              "af_eas_xy",
+              "af_fin",
+              "af_fin_xx",
+              "af_fin_xy",
+              "af_mid",
+              "af_mid_xx",
+              "af_mid_xy",
+              "af_nfe",
+              "af_nfe_xx",
+              "af_nfe_xy",
+              "af_oth",
+              "af_oth_xx",
+              "af_oth_xy",
+              "af_sas",
+              "af_sas_xx",
+              "af_sas_xy",
+              "af_xx",
+              "af_xy"
+            ]
+          },
+          "documents_in_index": {
+            "gnomad_genomes_hg38": 759302267
+          }
+        }
+      },
+      "not_served": {
+        "gnomAD v4.x": "not in MyVariant.info (exomes are v2.1.1, genomes v3.1.1)",
+        "joint (exome + genome) AF": "no such field",
+        "gnomAD fields inside dbnsfp": "none served",
+        "official popmax / grpmax / faf95": {
+          "status": "not parsed by the hub; af_popmax is in the index field list but carries no value",
+          "gnomad_exome.af.af_popmax": {
+            "in_index_field_list": true,
+            "n_values_in_retrieved_records": 0
+          },
+          "gnomad_genome.af.af_popmax": {
+            "in_index_field_list": true,
+            "n_values_in_retrieved_records": 0
+          }
+        }
+      }
+    },
+    "probe": {
+      "id": "chr13:g.20189481A>G",
+      "top_level_keys": [
+        "_id",
+        "_version",
+        "chrom",
+        "clingen",
+        "clinvar",
+        "dbnsfp",
+        "dbsnp",
+        "emv",
+        "evs",
+        "gnomad_exome",
+        "gnomad_genome",
+        "hg38",
+        "observed",
+        "snpeff",
+        "uniprot",
+        "vcf"
+      ]
+    }
+  },
+  "myvariant_dbnsfp_gnomad_vus": {
+    "written_by": "code/data/05_annotate_dbnsfp.py",
+    "access_date": "2026-10-07",
+    "access_utc": {
+      "first_query": "2026-10-07T16:14:55Z",
+      "last_query": "2026-10-07T16:37:58Z"
+    },
+    "service": {
+      "name": "MyVariant.info",
+      "endpoint": "POST https://myvariant.info/v1/variant",
+      "assembly": "hg38",
+      "fields_requested": "dbnsfp,gnomad_exome,gnomad_genome",
+      "build_version": "20250624",
+      "build_date": "2025-06-24T16:27:39.012502-07:00",
+      "metadata_urls": {
+        "metadata_hg38": "https://myvariant.info/v1/metadata?assembly=hg38",
+        "metadata_default": "https://myvariant.info/v1/metadata",
+        "fields_hg38": "https://myvariant.info/v1/metadata/fields?assembly=hg38",
+        "probe": "https://myvariant.info/v1/variant/chr13:g.20189481A>G?assembly=hg38&fields=all"
+      },
+      "metadata_snapshot": "data/annotations/_myvariant_cache/metadata__20261007T161440Z.json",
+      "metadata_fetched_utc": "2026-10-07T16:14:40Z",
+      "server_state_per_cached_answer": [
+        {
+          "build_date": "2025-06-24T16:27:39.012502-07:00",
+          "build_version": "20250624",
+          "dbnsfp_version": "4.8a",
+          "gnomad_version_string": "2.1.1",
+          "n_ids": 54710
+        }
+      ]
+    },
+    "dbnsfp": {
+      "version": "4.8a",
+      "metadata_src_dbnsfp_hg38_index": {
+        "license_url_short": "http://bit.ly/2VLnQBz",
+        "code": {
+          "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "1c767a2",
+          "branch": "master",
+          "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+        },
+        "stats": {
+          "dbnsfp_hg38_v1": 83293580
+        },
+        "download_date": "2025-01-17T09:00:00.028000",
+        "version": "4.8a",
+        "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "upload_date": {
+          "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+          "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+          "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+          "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+        }
+      },
+      "metadata_src_dbnsfp_default_endpoint": {
+        "license_url_short": "http://bit.ly/2VLnQBz",
+        "code": {
+          "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "1c767a2",
+          "branch": "master",
+          "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+        },
+        "stats": {
+          "dbnsfp_hg19_v1": 82755468
+        },
+        "download_date": "2025-01-17T09:00:00.028000",
+        "version": "4.8a",
+        "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "upload_date": {
+          "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+          "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+          "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+          "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+        }
+      },
+      "coordinates": "GRCh38; every dbnsfp block is checked (dbnsfp.chrom / hg38.start / ref / alt = query)",
+      "parser_notes": "MyVariant.info dbNSFP parser named in the API metadata (src.dbnsfp.code): https://github.com/biothings/myvariant.info/blob/1c767a2/src/hub/dataload/sources/dbnsfp/dbnsfp_parser_48a_v1.py (consulted 2026-10-06): no gnomAD column is mapped; \";\"-separated per-transcript values are split, missing entries dropped and a single remaining value returned as scalar; rows with the same genomic id keep the fields of the first row and only collect the `aa` objects of all rows (function load_file).",
+      "gnomad_fields_inside_dbnsfp": [],
+      "other_population_blocks_inside_dbnsfp_not_used": [
+        "1000gp3",
+        "alfa",
+        "alspac",
+        "esp6500",
+        "exac",
+        "exac_nonpsych",
+        "exac_nontcga",
+        "twinsuk",
+        "uk10k"
+      ]
+    },
+    "gnomad": {
+      "metadata_src_gnomad_hg38_index": {
+        "license": "ODbL",
+        "license_url_short": "http://bit.ly/2I1cl1I",
+        "code": {
+          "file": "src/hub/dataload/sources/gnomad/gnomad_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "2d0396d",
+          "branch": "production",
+          "url": "https://github.com/biothings/myvariant.info/tree/2d0396d40be9471cc439b72b81785f5af2df9413/src/hub/dataload/sources/gnomad/gnomad_upload.py"
+        },
+        "stats": {
+          "gnomad_exomes_hg38": 17189364,
+          "gnomad_genomes_hg38": 759302267
+        },
+        "download_date": "2019-05-20T14:54:02.962000",
+        "version": "2.1.1",
+        "url": "http://gnomad.broadinstitute.org",
+        "license_url": "http://gnomad.broadinstitute.org/terms",
+        "upload_date": {
+          "gnomad_genomes_hg19": "2019-12-02T21:52:29.014000",
+          "gnomad_exomes_hg19": "2019-12-02T21:52:28.974000",
+          "gnomad_exomes_hg38": "2019-12-02T21:52:28.994000",
+          "gnomad_genomes_hg38": "2019-12-02T21:52:29.034000"
+        }
+      },
+      "note": "The API metadata gives ONE version string for the whole gnomAD source; the release behind each object is given in af_fields.",
+      "release_basis": "MyVariant.info hub uploader, module docstring \"Versions of data\" (gnomAD_exome_hg38: v2.1.1 => 2.1.1/exomes/liftover_grch38; gnomAD_genome_hg38: v3.1.1 => 3.1.1/genomes): https://github.com/biothings/myvariant.info/blob/master/src/hub/dataload/sources/gnomad/gnomad_upload.py (last changed by commit b0f5003, 2021-06-10; consulted 2026-10-06). The parsers of that hub read AC / AN / AF / nhomalt per population only, not popmax / grpmax / faf95; a record without FILTER flag (PASS) is stored without `filter` field.",
+      "top_level_gnomad_objects_in_hg38_index": [
+        "gnomad_exome",
+        "gnomad_genome"
+      ],
+      "af_fields": {
+        "gnomad_exome": {
+          "columns": [
+            "af_gnomad_exome",
+            "af_gnomad_exome_popmax_derived",
+            "af_any",
+            "af_popmax_any_derived",
+            "af_present"
+          ],
+          "source_path_global_af": "gnomad_exome.af.af",
+          "gnomad_release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)",
+          "evidence_in_retrieved_records": {
+            "n_records": 26313,
+            "max_AN_observed": 251496,
+            "max_AN_possible_for_release": 251496,
+            "max_AN_consistent_with_release": true,
+            "af_keys": [
+              "af",
+              "af_afr",
+              "af_afr_female",
+              "af_afr_male",
+              "af_amr",
+              "af_amr_female",
+              "af_amr_male",
+              "af_asj",
+              "af_asj_female",
+              "af_asj_male",
+              "af_eas",
+              "af_eas_female",
+              "af_eas_jpn",
+              "af_eas_kor",
+              "af_eas_male",
+              "af_eas_oea",
+              "af_female",
+              "af_fin",
+              "af_fin_female",
+              "af_fin_male",
+              "af_male",
+              "af_nfe",
+              "af_nfe_bgr",
+              "af_nfe_est",
+              "af_nfe_female",
+              "af_nfe_male",
+              "af_nfe_nwe",
+              "af_nfe_onf",
+              "af_nfe_seu",
+              "af_nfe_swe",
+              "af_oth",
+              "af_oth_female",
+              "af_oth_male",
+              "af_sas",
+              "af_sas_female",
+              "af_sas_male"
+            ]
+          },
+          "documents_in_index": {
+            "gnomad_exomes_hg38": 17189364
+          }
+        },
+        "gnomad_genome": {
+          "columns": [
+            "af_gnomad_genome",
+            "af_gnomad_genome_popmax_derived",
+            "af_any",
+            "af_popmax_any_derived",
+            "af_present"
+          ],
+          "source_path_global_af": "gnomad_genome.af.af",
+          "gnomad_release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)",
+          "evidence_in_retrieved_records": {
+            "n_records": 22789,
+            "max_AN_observed": 152302,
+            "max_AN_possible_for_release": 152312,
+            "max_AN_consistent_with_release": true,
+            "af_keys": [
+              "af",
+              "af_afr",
+              "af_afr_xx",
+              "af_afr_xy",
+              "af_ami",
+              "af_ami_xx",
+              "af_ami_xy",
+              "af_amr",
+              "af_amr_xx",
+              "af_amr_xy",
+              "af_asj",
+              "af_asj_xx",
+              "af_asj_xy",
+              "af_eas",
+              "af_eas_xx",
+              "af_eas_xy",
+              "af_fin",
+              "af_fin_xx",
+              "af_fin_xy",
+              "af_mid",
+              "af_mid_xx",
+              "af_mid_xy",
+              "af_nfe",
+              "af_nfe_xx",
+              "af_nfe_xy",
+              "af_oth",
+              "af_oth_xx",
+              "af_oth_xy",
+              "af_sas",
+              "af_sas_xx",
+              "af_sas_xy",
+              "af_xx",
+              "af_xy"
+            ]
+          },
+          "documents_in_index": {
+            "gnomad_genomes_hg38": 759302267
+          }
+        }
+      },
+      "not_served": {
+        "gnomAD v4.x": "not in MyVariant.info (exomes are v2.1.1, genomes v3.1.1)",
+        "joint (exome + genome) AF": "no such field",
+        "gnomAD fields inside dbnsfp": "none served",
+        "official popmax / grpmax / faf95": {
+          "status": "not parsed by the hub; af_popmax is in the index field list but carries no value",
+          "gnomad_exome.af.af_popmax": {
+            "in_index_field_list": true,
+            "n_values_in_retrieved_records": 0
+          },
+          "gnomad_genome.af.af_popmax": {
+            "in_index_field_list": true,
+            "n_values_in_retrieved_records": 0
+          }
+        }
+      }
+    },
+    "probe": {
+      "id": "chr13:g.20189481A>G",
+      "top_level_keys": [
+        "_id",
+        "_version",
+        "chrom",
+        "clingen",
+        "clinvar",
+        "dbnsfp",
+        "dbsnp",
+        "emv",
+        "evs",
+        "gnomad_exome",
+        "gnomad_genome",
+        "hg38",
+        "observed",
+        "snpeff",
+        "uniprot",
+        "vcf"
+      ]
+    }
+  },
+  "myvariant_dbnsfp_gnomad_vus_added": {
+    "written_by": "code/data/05_annotate_dbnsfp.py",
+    "access_date": "2026-10-06",
+    "access_utc": {
+      "first_query": "2026-10-06T18:42:43Z",
+      "last_query": "2026-10-06T18:47:30Z"
+    },
+    "service": {
+      "name": "MyVariant.info",
+      "endpoint": "POST https://myvariant.info/v1/variant",
+      "assembly": "hg38",
+      "fields_requested": "dbnsfp,gnomad_exome,gnomad_genome",
+      "build_version": "20250624",
+      "build_date": "2025-06-24T16:27:39.012502-07:00",
+      "metadata_urls": {
+        "metadata_hg38": "https://myvariant.info/v1/metadata?assembly=hg38",
+        "metadata_default": "https://myvariant.info/v1/metadata",
+        "fields_hg38": "https://myvariant.info/v1/metadata/fields?assembly=hg38",
+        "probe": "https://myvariant.info/v1/variant/chr13:g.20189481A>G?assembly=hg38&fields=all"
+      },
+      "metadata_snapshot": "data/annotations/_myvariant_cache/metadata__20261007T161440Z.json",
+      "metadata_fetched_utc": "2026-10-07T16:14:40Z",
+      "server_state_per_cached_answer": [
+        {
+          "build_date": "2025-06-24T16:27:39.012502-07:00",
+          "build_version": "20250624",
+          "dbnsfp_version": "4.8a",
+          "gnomad_version_string": "2.1.1",
+          "n_ids": 556
+        }
+      ]
+    },
+    "dbnsfp": {
+      "version": "4.8a",
+      "metadata_src_dbnsfp_hg38_index": {
+        "license_url_short": "http://bit.ly/2VLnQBz",
+        "code": {
+          "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "1c767a2",
+          "branch": "master",
+          "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+        },
+        "stats": {
+          "dbnsfp_hg38_v1": 83293580
+        },
+        "download_date": "2025-01-17T09:00:00.028000",
+        "version": "4.8a",
+        "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "upload_date": {
+          "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+          "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+          "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+          "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+        }
+      },
+      "metadata_src_dbnsfp_default_endpoint": {
+        "license_url_short": "http://bit.ly/2VLnQBz",
+        "code": {
+          "file": "src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "1c767a2",
+          "branch": "master",
+          "url": "https://github.com/biothings/myvariant.info/tree/1c767a24e3c6ae8578fb44df9f9363975b272a9d/src/hub/dataload/sources/dbnsfp/dbnsfp_upload.py"
+        },
+        "stats": {
+          "dbnsfp_hg19_v1": 82755468
+        },
+        "download_date": "2025-01-17T09:00:00.028000",
+        "version": "4.8a",
+        "url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "license_url": "https://sites.google.com/site/jpopgen/dbNSFP",
+        "upload_date": {
+          "dbnsfp_hg38_v1": "2025-02-19T00:59:15.143000",
+          "dbnsfp_hg38_v2": "2025-02-19T00:59:22.903000",
+          "dbnsfp_hg19_v1": "2025-02-19T00:59:06.903000",
+          "dbnsfp_hg19_v2": "2025-02-19T00:59:11.114000"
+        }
+      },
+      "coordinates": "GRCh38; every dbnsfp block is checked (dbnsfp.chrom / hg38.start / ref / alt = query)",
+      "parser_notes": "MyVariant.info dbNSFP parser named in the API metadata (src.dbnsfp.code): https://github.com/biothings/myvariant.info/blob/1c767a2/src/hub/dataload/sources/dbnsfp/dbnsfp_parser_48a_v1.py (consulted 2026-10-06): no gnomAD column is mapped; \";\"-separated per-transcript values are split, missing entries dropped and a single remaining value returned as scalar; rows with the same genomic id keep the fields of the first row and only collect the `aa` objects of all rows (function load_file).",
+      "gnomad_fields_inside_dbnsfp": [],
+      "other_population_blocks_inside_dbnsfp_not_used": [
+        "1000gp3",
+        "alfa",
+        "alspac",
+        "esp6500",
+        "exac",
+        "exac_nonpsych",
+        "exac_nontcga",
+        "twinsuk",
+        "uk10k"
+      ]
+    },
+    "gnomad": {
+      "metadata_src_gnomad_hg38_index": {
+        "license": "ODbL",
+        "license_url_short": "http://bit.ly/2I1cl1I",
+        "code": {
+          "file": "src/hub/dataload/sources/gnomad/gnomad_upload.py",
+          "repo": "https://github.com/biothings/myvariant.info.git",
+          "commit": "2d0396d",
+          "branch": "production",
+          "url": "https://github.com/biothings/myvariant.info/tree/2d0396d40be9471cc439b72b81785f5af2df9413/src/hub/dataload/sources/gnomad/gnomad_upload.py"
+        },
+        "stats": {
+          "gnomad_exomes_hg38": 17189364,
+          "gnomad_genomes_hg38": 759302267
+        },
+        "download_date": "2019-05-20T14:54:02.962000",
+        "version": "2.1.1",
+        "url": "http://gnomad.broadinstitute.org",
+        "license_url": "http://gnomad.broadinstitute.org/terms",
+        "upload_date": {
+          "gnomad_genomes_hg19": "2019-12-02T21:52:29.014000",
+          "gnomad_exomes_hg19": "2019-12-02T21:52:28.974000",
+          "gnomad_exomes_hg38": "2019-12-02T21:52:28.994000",
+          "gnomad_genomes_hg38": "2019-12-02T21:52:29.034000"
+        }
+      },
+      "note": "The API metadata gives ONE version string for the whole gnomAD source; the release behind each object is given in af_fields.",
+      "release_basis": "MyVariant.info hub uploader, module docstring \"Versions of data\" (gnomAD_exome_hg38: v2.1.1 => 2.1.1/exomes/liftover_grch38; gnomAD_genome_hg38: v3.1.1 => 3.1.1/genomes): https://github.com/biothings/myvariant.info/blob/master/src/hub/dataload/sources/gnomad/gnomad_upload.py (last changed by commit b0f5003, 2021-06-10; consulted 2026-10-06). The parsers of that hub read AC / AN / AF / nhomalt per population only, not popmax / grpmax / faf95; a record without FILTER flag (PASS) is stored without `filter` field.",
+      "top_level_gnomad_objects_in_hg38_index": [
+        "gnomad_exome",
+        "gnomad_genome"
+      ],
+      "af_fields": {
+        "gnomad_exome": {
+          "columns": [
+            "af_gnomad_exome",
+            "af_gnomad_exome_popmax_derived",
+            "af_any",
+            "af_popmax_any_derived",
+            "af_present"
+          ],
+          "source_path_global_af": "gnomad_exome.af.af",
+          "gnomad_release": "gnomAD v2.1.1 exomes, lifted over to GRCh38 (125,748 exomes)",
+          "evidence_in_retrieved_records": {
+            "n_records": 443,
+            "max_AN_observed": 251494,
+            "max_AN_possible_for_release": 251496,
+            "max_AN_consistent_with_release": true,
+            "af_keys": [
+              "af",
+              "af_afr",
+              "af_afr_female",
+              "af_afr_male",
+              "af_amr",
+              "af_amr_female",
+              "af_amr_male",
+              "af_asj",
+              "af_asj_female",
+              "af_asj_male",
+              "af_eas",
+              "af_eas_female",
+              "af_eas_jpn",
+              "af_eas_kor",
+              "af_eas_male",
+              "af_eas_oea",
+              "af_female",
+              "af_fin",
+              "af_fin_female",
+              "af_fin_male",
+              "af_male",
+              "af_nfe",
+              "af_nfe_bgr",
+              "af_nfe_est",
+              "af_nfe_female",
+              "af_nfe_male",
+              "af_nfe_nwe",
+              "af_nfe_onf",
+              "af_nfe_seu",
+              "af_nfe_swe",
+              "af_oth",
+              "af_oth_female",
+              "af_oth_male",
+              "af_sas",
+              "af_sas_female",
+              "af_sas_male"
+            ]
+          },
+          "documents_in_index": {
+            "gnomad_exomes_hg38": 17189364
+          }
+        },
+        "gnomad_genome": {
+          "columns": [
+            "af_gnomad_genome",
+            "af_gnomad_genome_popmax_derived",
+            "af_any",
+            "af_popmax_any_derived",
+            "af_present"
+          ],
+          "source_path_global_af": "gnomad_genome.af.af",
+          "gnomad_release": "gnomAD v3.1.1 genomes, GRCh38 (76,156 genomes)",
+          "evidence_in_retrieved_records": {
+            "n_records": 391,
+            "max_AN_observed": 152280,
+            "max_AN_possible_for_release": 152312,
+            "max_AN_consistent_with_release": true,
+            "af_keys": [
+              "af",
+              "af_afr",
+              "af_afr_xx",
+              "af_afr_xy",
+              "af_ami",
+              "af_ami_xx",
+              "af_ami_xy",
+              "af_amr",
+              "af_amr_xx",
+              "af_amr_xy",
+              "af_asj",
+              "af_asj_xx",
+              "af_asj_xy",
+              "af_eas",
+              "af_eas_xx",
+              "af_eas_xy",
+              "af_fin",
+              "af_fin_xx",
+              "af_fin_xy",
+              "af_mid",
+              "af_mid_xx",
+              "af_mid_xy",
+              "af_nfe",
+              "af_nfe_xx",
+              "af_nfe_xy",
+              "af_oth",
+              "af_oth_xx",
+              "af_oth_xy",
+              "af_sas",
+              "af_sas_xx",
+              "af_sas_xy",
+              "af_xx",
+              "af_xy"
+            ]
+          },
+          "documents_in_index": {
+            "gnomad_genomes_hg38": 759302267
+          }
+        }
+      },
+      "not_served": {
+        "gnomAD v4.x": "not in MyVariant.info (exomes are v2.1.1, genomes v3.1.1)",
+        "joint (exome + genome) AF": "no such field",
+        "gnomAD fields inside dbnsfp": "none served",
+        "official popmax / grpmax / faf95": {
+          "status": "not parsed by the hub; af_popmax is in the index field list but carries no value",
+          "gnomad_exome.af.af_popmax": {
+            "in_index_field_list": true,
+            "n_values_in_retrieved_records": 0
+          },
+          "gnomad_genome.af.af_popmax": {
+            "in_index_field_list": true,
+            "n_values_in_retrieved_records": 0
+          }
+        }
+      }
+    },
+    "probe": {
+      "id": "chr13:g.20189481A>G",
+      "top_level_keys": [
+        "_id",
+        "_version",
+        "chrom",
+        "clingen",
+        "clinvar",
+        "dbnsfp",
+        "dbsnp",
+        "emv",
+        "evs",
+        "gnomad_exome",
+        "gnomad_genome",
+        "hg38",
+        "observed",
+        "snpeff",
+        "uniprot",
+        "vcf"
+      ]
+    }
+  }
+}

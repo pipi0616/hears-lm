@@ -1,0 +1,96 @@
+{
+ "config": {
+  "backbone": "facebook/esm2_t30_150M_UR50D",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.1,
+  "lora_targets": [
+   "query",
+   "value"
+  ],
+  "window": 32,
+  "feature_groups": [],
+  "use_lm_logits": false,
+  "use_sequence": true,
+  "beta_ddg": 0.0,
+  "epochs": 3,
+  "batch_size": 8,
+  "lr_lora": 0.0001,
+  "lr_head": 0.001,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.06,
+  "grad_clip": 1.0,
+  "head_dropout": 0.3,
+  "seed": 2,
+  "device": "mps",
+  "arm": "seq",
+  "dev_gene_fold": null,
+  "cv_fold": null,
+  "exclude_genes": []
+ },
+ "n_train": 7361,
+ "n_features": 0,
+ "feat_cols": [],
+ "n_trainable": 1753601,
+ "final": {
+  "dev": {
+   "n": 889,
+   "auroc": 0.9320877452187474,
+   "auprc": 0.948175987742886
+  },
+  "test_db": {
+   "n": 1127,
+   "auroc": 0.6701930772308923,
+   "auprc": 0.9711967653330674
+  },
+  "test_time": {
+   "n": 1233,
+   "auroc": 0.9490291006683156,
+   "auprc": 0.9552727055422001
+  },
+  "test_gene": {
+   "n": 1201,
+   "auroc": 0.7879548708305734,
+   "auprc": 0.9075271444779642
+  }
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "loss": 0.4186133518117307,
+   "loss_path": 0.4186133518117307,
+   "loss_ddg": null,
+   "time_min": 11.012057232856751,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9225765410818353,
+    "auprc": 0.9392246253428527
+   }
+  },
+  {
+   "epoch": 1,
+   "loss": 0.30790017591486,
+   "loss_path": 0.30790017591486,
+   "loss_ddg": null,
+   "time_min": 22.6610991636912,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9335241730279898,
+    "auprc": 0.9496459502563778
+   }
+  },
+  {
+   "epoch": 2,
+   "loss": 0.23662722622602825,
+   "loss_path": 0.23662722622602825,
+   "loss_ddg": null,
+   "time_min": 34.9069376150767,
+   "dev": {
+    "n": 889,
+    "auroc": 0.9320877452187474,
+    "auprc": 0.948175987742886
+   }
+  }
+ ],
+ "runtime_min": 38.774040416876474
+}

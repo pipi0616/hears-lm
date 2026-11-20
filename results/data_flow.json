@@ -1,0 +1,144 @@
+{
+ "panel_genes_with_protein": 163,
+ "clinvar_2026_04_missense_records": 66082,
+ "clinvar_2025_01_missense_records": 50692,
+ "clinvar_2026_04_missense_vus_records": 50485,
+ "clinvar_2026_04_missense_conflicting_records": 5987,
+ "dvd_missense_records": 45333,
+ "dvd_prediction_only_benign_excluded": 33017,
+ "dvd_clinvar_only_not_independent": 4313,
+ "canonicalisation": {
+  "n_genes": 163,
+  "n_reference_identical_to_uniprot": 137,
+  "n_source_transcripts": 305,
+  "n_source_identical_to_reference": 276,
+  "clinvar_2025-01": {
+   "ok": 50414,
+   "not_in_reference_isoform": 233,
+   "ref_mismatch_reference": 45,
+   "renumbered": 22,
+   "ok_without_uniprot_pos": 514
+  },
+  "clinvar_2025-06": {
+   "ok": 56724,
+   "not_in_reference_isoform": 242,
+   "ref_mismatch_reference": 58,
+   "renumbered": 26,
+   "ok_without_uniprot_pos": 591
+  },
+  "clinvar_2026-01": {
+   "ok": 62387,
+   "not_in_reference_isoform": 280,
+   "ref_mismatch_reference": 69,
+   "renumbered": 27,
+   "ok_without_uniprot_pos": 663
+  },
+  "clinvar_2026-04": {
+   "ok": 65713,
+   "not_in_reference_isoform": 289,
+   "ref_mismatch_reference": 80,
+   "renumbered": 31,
+   "ok_without_uniprot_pos": 696
+  },
+  "dvd": {
+   "ok": 44429,
+   "not_in_reference_isoform": 416,
+   "ref_mismatch_reference": 52,
+   "renumbered": 5916,
+   "ok_without_uniprot_pos": 854
+  }
+ },
+ "dvd_labels_overridden_by_consensus_vus": 563,
+ "cross_source_conflicts_removed_final": 11,
+ "cross_source_conflicts_removed_train": 6,
+ "labelled_protein_variants": 11811,
+ "genes_with_labels": 161,
+ "partitions": {
+  "fit": {
+   "n": 7361,
+   "P": 4205,
+   "B": 3156,
+   "genes": 150
+  },
+  "dev": {
+   "n": 889,
+   "P": 496,
+   "B": 393,
+   "genes": 125
+  },
+  "test_time": {
+   "n": 1233,
+   "P": 613,
+   "B": 620,
+   "genes": 119
+  },
+  "test_db": {
+   "n": 1127,
+   "P": 1071,
+   "B": 56,
+   "genes": 91
+  },
+  "test_gene": {
+   "n": 1201,
+   "P": 883,
+   "B": 318,
+   "genes": 10
+  },
+  "cross-validation pool": {
+   "n": 11309,
+   "P": 7199,
+   "B": 4110,
+   "genes": 161
+  }
+ },
+ "gene_families": {
+  "n_families": 105,
+  "n_multi_gene_families": 30
+ },
+ "cv_folds": {
+  "0": {
+   "n": 2399,
+   "P": 1681,
+   "B": 718,
+   "genes": 9
+  },
+  "1": {
+   "n": 2228,
+   "P": 1160,
+   "B": 1068,
+   "genes": 29
+  },
+  "2": {
+   "n": 2228,
+   "P": 1501,
+   "B": 727,
+   "genes": 46
+  },
+  "3": {
+   "n": 2227,
+   "P": 1451,
+   "B": 776,
+   "genes": 39
+  },
+  "4": {
+   "n": 2227,
+   "P": 1406,
+   "B": 821,
+   "genes": 38
+  }
+ },
+ "holdout_genes_with_homologue_in_training": [
+  {
+   "gene": "CDH23",
+   "family_genes": "CDH23|PCDH15"
+  },
+  {
+   "gene": "CLDN14",
+   "family_genes": "CLDN14|CLDN9|SLC52A2|SLC52A3"
+  },
+  {
+   "gene": "STRC",
+   "family_genes": "LRTOMT|OTOA|STRC"
+  }
+ ]
+}
